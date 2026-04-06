@@ -28,6 +28,60 @@
         .btn-wa:hover {
             background: linear-gradient(45deg, #128C7E, #25D366);
         }
+        .btn-portfolio {
+            background: linear-gradient(45deg, #D4AF37, #b8860b);
+            color: black;
+            font-weight: bold;
+        }
+        .btn-portfolio:hover {
+            background: linear-gradient(45deg, #b8860b, #D4AF37);
+            transform: scale(1.05);
+        }
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        /* Style untuk Logo Bulat */
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #D4AF37;
+        }
+        /* Style Background Tangan Mengetik */
+        .bg-typing {
+            background-image: url('https://i.imgur.com/5gqV2yY.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        .bg-typing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Gelap biar tulisan jelas */
+            z-index: 1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        /* Efek Klik */
+        .clickable-title {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .clickable-title:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 10px #D4AF37;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -35,60 +89,140 @@
     <!-- NAVBAR -->
     <nav class="bg-black text-white py-4 px-6 sticky top-0 z-50 shadow-xl">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-black text-gold">AW PRINTING</h1>
+            <!-- Logo dan Nama Usaha -->
+            <div class="flex items-center gap-3">
+                <img src="https://i.imgur.com/d790VfL.png" alt="Logo AW Printing" class="logo-circle">
+                <h1 class="text-3xl font-black text-gold">AW PRINTING</h1>
+            </div>
             <div class="hidden md:flex gap-8">
                 <a href="#home" class="hover:text-gold transition">Beranda</a>
                 <a href="#layanan" class="hover:text-gold transition">Layanan</a>
+                <a href="#portofolio" class="hover:text-gold transition">Portofolio</a>
                 <a href="#keunggulan" class="hover:text-gold transition">Keunggulan</a>
                 <a href="#kontak" class="hover:text-gold transition">Kontak</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (BISA DIKLIK) -->
     <section id="home" class="hero-gradient text-white py-20 px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-5xl md:text-6xl font-black mb-6">PENGETIKAN & DESAIN</h2>
+            <!-- JUDUL YANG BISA DIKLIK -->
+            <a href="https://wa.me/6282187662626" class="block">
+                <h2 class="text-5xl md:text-6xl font-black mb-6 text-gold clickable-title">
+                    SELAMAT DATANG DI WEBSITE AW PRINTING
+                </h2>
+            </a>
             <p class="text-2xl mb-4 font-light">Kami Siap Membantu Anda!</p>
-            <div class="inline-block border-2 border-gold px-8 py-3 rounded-full text-xl font-semibold text-gold mt-4">
-                <i class="fas fa-truck mr-2"></i> SIAP ANTAR HASIL
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+                <div class="inline-block border-2 border-gold px-8 py-3 rounded-full text-xl font-semibold text-gold">
+                    <i class="fas fa-truck mr-2"></i> SIAP ANTAR HASIL
+                </div>
+                
+                <!-- TOMBOL LIHAT PORTOFOLIO -->
+                <a href="#portofolio" class="btn-portfolio px-8 py-3 rounded-full text-xl font-bold shadow-lg transition">
+                    <i class="fas fa-images mr-2"></i> LIHAT PORTOFOLIO
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- LAYANAN KAMI -->
-    <section id="layanan" class="py-16 px-6">
-        <div class="container mx-auto max-w-4xl">
-            <h3 class="text-4xl font-bold text-center mb-12 text-red-900">MENERIMA JASA</h3>
+    <!-- BAGIAN LAYANAN DENGAN BACKGROUND -->
+    <section id="layanan" class="py-16 px-6 bg-typing text-white">
+        <div class="content-wrapper container mx-auto max-w-4xl">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gold">MENERIMA JASA</h3>
             
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Item 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-800 hover:shadow-xl transition">
-                    <i class="fas fa-keyboard text-red-800 text-4xl mb-4"></i>
+                <div class="bg-black/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border-l-4 border-gold hover:shadow-xl transition">
+                    <i class="fas fa-keyboard text-gold text-4xl mb-4"></i>
                     <h4 class="text-xl font-bold mb-2">Pengetikan Dokumen</h4>
                     <p>Pengetikan Laporan, Makalah, dan Dokumen Lainnya</p>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-800 hover:shadow-xl transition">
-                    <i class="fas fa-print text-red-800 text-4xl mb-4"></i>
+                <div class="bg-black/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border-l-4 border-gold hover:shadow-xl transition">
+                    <i class="fas fa-print text-gold text-4xl mb-4"></i>
                     <h4 class="text-xl font-bold mb-2">Print Out</h4>
                     <p>Cetak Hitam Putih maupun Berwarna dengan Kualitas Tinggi</p>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-800 hover:shadow-xl transition">
-                    <i class="fas fa-book-open text-red-800 text-4xl mb-4"></i>
+                <div class="bg-black/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border-l-4 border-gold hover:shadow-xl transition">
+                    <i class="fas fa-book-open text-gold text-4xl mb-4"></i>
                     <h4 class="text-xl font-bold mb-2">Majalah & Buku</h4>
                     <p>Desain Layout dan Pencetakan Majalah</p>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-800 hover:shadow-xl transition">
-                    <i class="fas fa-flag text-red-800 text-4xl mb-4"></i>
+                <div class="bg-black/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border-l-4 border-gold hover:shadow-xl transition">
+                    <i class="fas fa-flag text-gold text-4xl mb-4"></i>
                     <h4 class="text-xl font-bold mb-2">Media Promosi</h4>
                     <p>Desain & Cetak Baliho, Spanduk, Banner, dan Lain-lain</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTOFOLIO / GALERI -->
+    <section id="portofolio" class="py-16 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-4 text-red-900">PORTOFOLIO KAMI</h3>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Hasil kerja nyata yang telah kami selesaikan dengan kualitas terbaik dan ketepatan waktu.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Foto 1 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/f3d2Z9x.jpg" alt="Hasil Cetak Brosur" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/d8f4KpF.jpg" alt="Desain Cover Majalah" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/0f0fYvE.jpg" alt="Halaman Dalam Buku" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/54c4RzD.jpg" alt="Spanduk dan Leaflet" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/0e74hXh.jpg" alt="Proses Cetak Mesin" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/93b5mzF.jpg" alt="Roll Banner" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 7 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/84b6wFz.jpg" alt="Banner Peta Rumah" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 8 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/6b3cQbT.jpg" alt="Backdrop Pameran" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 9 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/8fa8FvL.jpg" alt="Pemasangan Backdrop" class="w-full h-64 object-cover gallery-img">
+                </div>
+
+                <!-- Foto 10 -->
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://i.imgur.com/f3d4ZJL.jpg" alt="Stand Pameran Saung Tani" class="w-full h-64 object-cover gallery-img">
+                </div>
+
             </div>
         </div>
     </section>
@@ -132,7 +266,15 @@
                 </a>
             </div>
 
-            <p class="mt-12 text-sm text-gray-500">© 2024 AW Printing - Solusi Cetak & Desain Terpercaya</p>
+            <!-- IKON WA BESAR DI BAWAH -->
+            <div class="mt-10">
+                <a href="https://wa.me/6282187662626" class="inline-block">
+                     <i class="fab fa-whatsapp text-6xl text-green-500 hover:text-green-400 transition"></i>
+                </a>
+                <p class="text-sm text-gray-400 mt-2">Klik ikon untuk chat WA</p>
+            </div>
+
+            <p class="mt-8 text-sm text-gray-500">© 2024 AW Printing - Solusi Cetak & Desain Terpercaya</p>
         </div>
     </footer>
 
