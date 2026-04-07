@@ -19,20 +19,16 @@
             color: #D4AF37; /* Warna Emas */
             padding: 20px;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
         }
 
         .header img {
-            height: 80px;
+            height: 100px;
             width: auto;
+            margin-bottom: 10px;
         }
 
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin: 0;
             font-family: 'Times New Roman', serif;
             letter-spacing: 3px;
@@ -45,8 +41,25 @@
             display: block;
         }
 
-        /* Style Judul */
-        h2 {
+        /* Style Banner */
+        .banner-img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Style Konten Utama */
+        .content {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .content h2 {
             text-align: center;
             font-size: 2.5em;
             margin: 30px 0;
@@ -122,19 +135,21 @@
             background-color: #000;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             margin-top: 50px;
+            font-size: 1.2em;
         }
 
         .wa-button {
             display: inline-block;
             background-color: #25D366;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
+            margin: 15px 0;
+            font-size: 1.1em;
         }
     </style>
 </head>
@@ -150,9 +165,32 @@
     <img class="banner-bg" src="Background laptop.jpg" alt="Background AW Solutions">
 
     <!-- BANNER 1 DAN 2 -->
-    <div style="padding: 20px; text-align: center;">
-        <img src="Banner 01.jpg" alt="Banner 1" style="max-width: 90%; height: auto; margin-bottom: 20px;">
-        <img src="Banner 02.jpg" alt="Banner 2" style="max-width: 90%; height: auto;">
+    <img class="banner-img" src="Banner 01.jpg" alt="Banner 1">
+    <img class="banner-img" src="Banner 02.jpg" alt="Banner 2">
+
+    <!-- BAGIAN TULISAN LAYANAN -->
+    <div class="content">
+        <h3 style="text-align: center; font-size: 1.5em;">PENGETIKAN & DESAIN</h3>
+        <p style="text-align: center; font-weight: bold;">Kami siap membantu!</p>
+
+        <p style="margin-top: 20px;"><strong>MENERIMA :</strong></p>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li>✅ PENGETIKAN LAPORAN, MAKALAH, DSB NYA;</li>
+            <li>✅ PRINT OUT (HITAM, PUTIH DAN WARNA)</li>
+            <li>✅ DESAIN DAN CETAK MAJALAH</li>
+            <li>✅ DESAIN DAN CETAK BAHAN-BAHAN PAMERAN (BALIHO, SPANDUK, BANNER, DLL.)</li>
+        </ul>
+
+        <p style="margin-top: 30px;"><strong>KEUNGGULAN KAMI :</strong></p>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li>✅ CEPAT SELESAI</li>
+            <li>✅ PEKERJAAN RAPI</li>
+            <li>✅ HARGA BERSAHABAT</li>
+            <li>✅ BERKUALITAS</li>
+            <li>✅ PEMBAYARAN MUDAH</li>
+        </ul>
+
+        <p style="text-align: center; font-style: italic; margin-top: 20px;">(Siap Antar Hasil)</p>
     </div>
 
     <!-- JUDUL PORTFOLIO -->
@@ -194,7 +232,6 @@
         <div class="gallery-item" onclick="openLightbox('Backdrop 02.jpg')">
             <img src="Backdrop 02.jpg" alt="Backdrop AW Solutions">
         </div>
-
     </div>
 
     <!-- Kotak untuk menampilkan gambar besar saat diklik -->
@@ -205,14 +242,16 @@
 
     <!-- BAGIAN BAWAH: KONTAK DAN WHATSAPP -->
     <div class="footer">
-        <p>Untuk pemesanan atau informasi lebih lanjut, hubungi kami melalui:</p>
+        <p>HUBUNGI : ALDI</p>
+        <p>📞 0821 8766 2626</p>
+        <p>📞 0822 5329 5313</p>
         
-        <!-- TOMBOL WHATSAPP DENGAN NOMOR ASLI SEPERTI SEBELUMNYA -->
-        <a class="wa-button" href="https://wa.me/628xxxxxxxxxx" target="_blank">
-            📞 CHAT VIA WHATSAPP
+        <!-- TOMBOL WHATSAPP DENGAN NOMOR YANG BENAR -->
+        <a class="wa-button" href="https://wa.me/6282187662626" target="_blank">
+            💬 CHAT VIA WHATSAPP
         </a>
         
-        <p style="margin-top: 15px;">© 2025 AW Solutions - All Rights Reserved</p>
+        <p style="margin-top: 20px; font-size: 0.9em;">© 2025 AW Solutions - All Rights Reserved</p>
     </div>
 
     <script>
