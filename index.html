@@ -5,23 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AW Solutions - Professional Design & Service</title>
     
-    <!-- Link Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ===================================== */
-        /* VARIABEL WARNA & GLOBAL STYLE */
-        /* ===================================== */
         :root {
             --black: #000000;
             --dark: #111111;
-            --gray: #2c2c2c;
             --light-gray: #e0e0e0;
             --gold: #D4AF37;
-            --gold-light: #F0E68C;
-            --blue-glow: #00aaff;
         }
 
         * {
@@ -34,16 +27,15 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--black);
             color: #fff;
-            line-height: 1.6;
             overflow-x: hidden;
         }
 
         /* ===================================== */
-        /* STYLE NAVBAR / MENU */
+        /* MENU NAVIGASI - SEKARANG RAPI SEJAJAR */
         /* ===================================== */
         .navbar {
             background: transparent;
-            padding: 30px 15px;
+            padding: 25px 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -55,22 +47,23 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
             justify-content: center;
+            gap: 20px; /* Jarak diperkecil biar muat sejajar */
             text-align: center;
-            flex-wrap: wrap;
+            width: 100%;
+            flex-wrap: nowrap; /* Kunci biar tidak turun ke bawah */
         }
 
         .nav-links a {
             color: var(--light-gray) !important;
             text-decoration: none !important;
-            font-size: 1.1em;
+            font-size: 1em; /* Ukuran font diperkecil */
             font-family: 'Playfair Display', serif;
             text-transform: uppercase;
-            padding: 8px 12px;
-            transition: all 0.3s;
-            letter-spacing: 2px;
+            padding: 5px 8px;
+            letter-spacing: 1px;
             border-bottom: none !important;
+            white-space: nowrap; /* Kunci biar tulisan tidak putus */
         }
 
         .nav-links a:hover, .nav-links a.active {
@@ -78,10 +71,10 @@
         }
 
         /* ===================================== */
-        /* STYLE HEADER / BACKGROUND UTAMA */
+        /* BAGIAN HOME */
         /* ===================================== */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Background laptop.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Background laptop.jpg');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -89,40 +82,18 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding-top: 100px;
-            overflow: hidden;
+            padding-top: 80px;
         }
 
+        /* GAMBAR BUSINESS REPORT - SEKARANG DISEMBUNYIKAN */
         .hero-overlay-image {
-            position: absolute;
-            top: 18%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70%;
-            max-width: 500px;
-            opacity: 0.8;
-            z-index: 1;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0, 170, 255, 0.2);
-        }
-
-        .hero-divider {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            background: rgba(0, 0, 0, 0.5);
-            transform: translateY(-50%);
-            z-index: 2;
-            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            display: none; /* Ini yang bikin gambar hilang */
         }
 
         .hero-content {
             text-align: center;
             z-index: 3;
             position: relative;
-            margin-top: 80px;
         }
 
         .logo-circle {
@@ -136,16 +107,12 @@
             justify-content: center;
             align-items: center;
             background-color: rgba(0,0,0,0.8);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-            position: relative;
-            z-index: 4;
         }
 
         .logo-circle .big-letters {
             font-size: 3.5em;
             font-weight: 700;
             color: white;
-            line-height: 1;
             font-family: 'Playfair Display', serif;
         }
 
@@ -153,35 +120,26 @@
             font-size: 0.8em;
             color: #ccc;
             letter-spacing: 2px;
-            margin-top: 5px;
         }
 
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3em;
+            font-size: 2.8em;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            text-shadow: 0 0 15px rgba(0,0,0,0.5);
-            line-height: 1.2;
+            letter-spacing: 4px;
         }
 
-        .hero-content h1 .aw-text {
-            color: white;
-        }
-
-        .hero-content h1 .solutions-text {
-            color: var(--gold);
-        }
+        .hero-content h1 .aw-text { color: white; }
+        .hero-content h1 .solutions-text { color: var(--gold); }
 
         .hero-subtitle {
             font-size: 1.2em;
             color: #f0f0f0;
-            letter-spacing: 2px;
             margin-top: 10px;
         }
 
         /* ===================================== */
-        /* STYLE KONTEN DINAMIS */
+        /* STYLE KONTEN LAINNYA */
         /* ===================================== */
         .content-section {
             display: none;
@@ -192,34 +150,22 @@
 
         .content-section.active {
             display: block;
-            animation: fadeIn 0.5s ease-in;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===================================== */
-        /* STYLE ISI KONTEN */
-        /* ===================================== */
         .section-title {
             text-align: center;
             margin-bottom: 40px;
         }
 
         .section-title h2 {
-            font-size: 2.8em;
+            font-size: 2.5em;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 800;
         }
 
         .section-title h2 span {
             color: var(--gold);
         }
 
-        /* --- STYLE LAYANAN --- */
         .services-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -238,20 +184,16 @@
         .service-box h3 {
             color: var(--gold);
             margin-bottom: 15px;
-            font-size: 1.6em;
+            font-size: 1.5em;
             text-align: center;
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 1px;
         }
 
         .service-box p {
             color: #f0f0f0;
             font-size: 1em;
             margin: 12px 0;
-            line-height: 1.8;
         }
 
-        /* --- STYLE PORTOFOLIO --- */
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -264,27 +206,15 @@
             border: 2px solid #333;
             border-radius: 8px;
             overflow: hidden;
-            transition: all 0.3s;
             aspect-ratio: 4/5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #1a1a1a;
-        }
-
-        .gallery-item:hover {
-            border-color: var(--gold);
-            transform: scale(1.02);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
 
-        /* --- STYLE KONTAK --- */
         .contact-info {
             text-align: center;
             max-width: 500px;
@@ -298,8 +228,6 @@
         .contact-info p {
             font-size: 1.2em;
             margin: 15px 0;
-            color: #ddd;
-            text-align: center;
         }
 
         .wa-button {
@@ -311,20 +239,11 @@
             text-decoration: none !important;
             font-weight: 600;
             margin-top: 20px;
-            transition: all 0.3s;
-        }
-
-        .wa-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <!-- ===================================== -->
-    <!-- MENU NAVIGASI -->
-    <!-- ===================================== -->
     <div class="navbar">
         <div class="nav-links">
             <a href="#" onclick="showSection('home')" class="active">HOME</a>
@@ -334,12 +253,8 @@
         </div>
     </div>
 
-    <!-- ===================================== -->
-    <!-- HALAMAN UTAMA / HOME -->
-    <!-- ===================================== -->
     <div class="hero" id="home-section">
         <img src="Overlay business report.png" alt="Business Report" class="hero-overlay-image">
-        <div class="hero-divider"></div>
 
         <div class="hero-content">
             <div class="logo-circle">
@@ -351,9 +266,6 @@
         </div>
     </div>
 
-    <!-- ===================================== -->
-    <!-- BAGIAN LAYANAN -->
-    <!-- ===================================== -->
     <div id="services-section" class="content-section">
         <div class="section-title">
             <h2>LAYANAN <span>KAMI</span></h2>
@@ -379,14 +291,11 @@
                 <p>✅ HARGA BERSAHABAT</p>
                 <p>✅ BERKUALITAS</p>
                 <p>✅ PEMBAYARAN MUDAH</p>
-                <p style="margin-top: 15px; font-style: italic; text-align: center;">🚗 (Siap Antar Hasil)</p>
+                <p style="margin-top: 15px; font-style: italic;">🚗 (Siap Antar Hasil)</p>
             </div>
         </div>
     </div>
 
-    <!-- ===================================== -->
-    <!-- BAGIAN PORTOFOLIO -->
-    <!-- ===================================== -->
     <div id="portfolio-section" class="content-section">
         <div class="section-title">
             <h2>PORTO <span>FOLIO</span></h2>
@@ -403,9 +312,6 @@
         </div>
     </div>
 
-    <!-- ===================================== -->
-    <!-- BAGIAN KONTAK -->
-    <!-- ===================================== -->
     <div id="contact-section" class="content-section">
         <div class="section-title">
             <h2>HUBUNGI <span>KAMI</span></h2>
@@ -420,9 +326,30 @@
         </div>
     </div>
 
-    <!-- ===================================== -->
-    <!-- SCRIPT JAVASCRIPT -->
-    <!-- ===================================== -->
     <script>
         function showSection(section) {
-            document.querySelectorAll('.
+            document.querySelectorAll('.content-section').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            if(section !== 'home') {
+                document.getElementById('home-section').style.display = 'none';
+            } else {
+                document.getElementById('home-section').style.display = 'flex';
+            }
+
+            if(section !== 'home') {
+                document.getElementById(section + '-section').classList.add('active');
+            }
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if(link.textContent.toLowerCase().includes(section)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
