@@ -172,22 +172,34 @@
             border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 16px;
         }
-        /* STYLE KHUSUS JUDUL PAMERAN AGAR ELEGAN */
+        /* STYLE KHUSUS JUDUL PAMERAN */
         .pameran-title {
             text-align: center;
             margin-bottom: 25px;
-            line-height: 1.4;
+            line-height: 1.5;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,149,0,0.2); /* GARIS ORANYE */
         }
-        .pameran-title .line {
+        .pameran-title .baris-utama {
             display: block;
             font-size: 36px;
             font-weight: bold;
             color: var(--primary-color);
             margin: 8px 0;
         }
-        .pameran-title .sub {
-            font-size: 22px;
-            margin-top: 15px;
+        .pameran-title .baris-kedua {
+            display: block;
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 8px 0;
+        }
+        .pameran-title .sub-judul {
+            font-size: 24px;
+            margin-top: 20px;
+            color: var(--primary-color);
+            border: none;
+            padding-bottom: 0;
         }
     </style>
 </head>
@@ -266,16 +278,13 @@
             </ul>
         </section>
 
-        <!-- BAGIAN PAMERAN DIPERBAIKI TULISANNYA -->
+        <!-- BAGIAN PAMERAN DENGAN GARIS -->
         <section class="service-box">
             <div class="pameran-title">
-                <span class="line">🎖️ MELAYANI</span>
-                <span class="line">KEBUTUHAN</span>
-                <span class="line">PAMERAN</span>
-                <span class="line">PROYEK PERUBAHAN</span>
-                <span class="line">DAN AKSI PERUBAHAN</span>
-                <span class="line sub">Desain & Cetak :</span>
+                <span class="baris-utama">🎖️ MELAYANI KEBUTUHAN PAMERAN</span>
+                <span class="baris-kedua">PROYEK PERUBAHAN DAN AKSI PERUBAHAN</span>
             </div>
+            <h4 class="sub-judul">Desain & Cetak :</h4>
             <ul>
                 <li>Majalah</li>
                 <li>Baliho / Backdrop</li>
@@ -302,7 +311,7 @@
                 <li>Pengerjaan Rapi dan Teliti</li>
                 <li>Harga Bersahabat</li>
                 <li>Kualitas Terjamin</li>
-                <li>Sistem Pembayaran Fleksibel</li>
+                <li>Pembayaran Mudah</li>
                 <li>📦 Layanan Antar Hasil Tersedia</li>
             </ul>
 
