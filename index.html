@@ -3,633 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AW Solutions - Jasa Tugas Diklat PKN, PKA, PKP</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
+    <title>AW Solutions - Jasa Desain & Cetak</title>
     <style>
-        :root {
-            --black: #000000;
-            --dark: #111111;
-            --light-gray: #e0e0e0;
-            --gold: #D4AF37;
-            --orange: #FF9500;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--black);
+            background-color: #000;
             color: #fff;
-            overflow-x: hidden;
-            text-align: center;
+            line-height: 1.6;
         }
 
-        /* ===================================== */
-        /* MENU NAVIGASI */
-        /* ===================================== */
-        .navbar {
-            background: transparent;
-            padding: 25px 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            width: 100%;
+        /* NAVIGATION */
+        nav {
+            position: fixed;
             top: 0;
-            z-index: 100;
-        }
-
-        .nav-links {
+            width: 100%;
+            background: rgba(0,0,0,0.9);
+            padding: 20px 50px;
+            z-index: 1000;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            text-align: center;
-            width: 100%;
-            flex-wrap: nowrap;
+            gap: 40px;
         }
 
-        .nav-links a {
-            color: var(--light-gray) !important;
-            text-decoration: none !important;
-            font-size: 0.9em;
-            font-family: 'Playfair Display', serif;
-            text-transform: uppercase;
-            padding: 5px 5px;
-            letter-spacing: 1px;
-            border-bottom: none !important;
-            white-space: nowrap;
-            cursor: pointer;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 500;
+            transition: 0.3s;
         }
 
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--gold) !important;
-            background-color: rgba(212, 175, 55, 0.1);
-            border-radius: 5px;
+        nav a:hover, nav a.active {
+            color: #D4AF37;
+            border-bottom: 2px solid #D4AF37;
         }
 
-        /* ===================================== */
-        /* BAGIAN HOME */
-        /* ===================================== */
+        /* HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Background laptop.jpg');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding-top: 80px;
-            width: 100%;
-        }
-
-        .hero-content {
-            text-align: center;
-            z-index: 3;
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            padding: 0 15px;
-            margin-top: 15vh;
-        }
-
-        /* ===================================== */
-        /* LOGO BULAT */
-        /* ===================================== */
-        .logo-circle {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 15px;
-            border: 2px solid var(--gold);
-            border-radius: 50%;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #000000;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-            transition: all 0.3s ease;
+            text-align: center;
+            padding-top: 80px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('background.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
-        .logo-circle:hover {
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
-        }
-
-        .logo-circle .big-letters {
+        .logo {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 3em;
-            font-weight: 700;
-            color: #ffffff;
-            font-family: 'Playfair Display', serif;
-            line-height: 1;
+            font-weight: bold;
+            color: #D4AF37;
+            margin-bottom: 20px;
         }
 
-        .logo-circle .small-text {
-            font-size: 0.6em;
-            color: var(--gold);
-            letter-spacing: 2px;
-            margin-top: 2px;
+        .hero h1 {
+            font-size: 3.5em;
+            color: #D4AF37;
+            margin-bottom: 10px;
         }
 
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            line-height: 1.2;
-            margin-top: 15px;
+        .hero p {
+            font-size: 1.3em;
+            max-width: 600px;
+            color: #ccc;
         }
 
-        .hero-content h1 .aw-text { color: white; }
-        .hero-content h1 .solutions-text { color: var(--gold); }
-
-        .hero-subtitle {
-            font-size: 1.1em;
-            color: #f0f0f0;
-            margin-top: 8px;
-        }
-
-        /* ===================================== */
-        /* STYLE KONTEN DINAMIS */
-        /* ===================================== */
-        .content-section {
-            display: none;
-            padding: 100px 15px 30px;
-            background: var(--dark);
-            min-height: 100vh;
-            text-align: left;
-        }
-
-        .content-section.active {
-            display: block;
+        /* SECTION */
+        section {
+            padding: 100px 50px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title h2 {
             font-size: 2.5em;
-            text-transform: uppercase;
+            color: #D4AF37;
+            margin-bottom: 50px;
         }
 
-        .section-title h2 span {
-            color: var(--orange);
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        /* ===================================== */
-        /* STYLE ISI KONTEN / ARTIKEL */
-        /* ===================================== */
-        .article-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.05);
+        .service-card {
+            background: #111;
             padding: 30px;
             border-radius: 10px;
-            border: 1px solid #444;
-            line-height: 1.8;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            border: 1px solid #333;
+            transition: 0.3s;
         }
 
-        .article-content p {
+        .service-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #D4AF37;
             margin-bottom: 15px;
-            color: #ddd;
-        }
-
-        .section-heading-orange {
-            text-align: center;
-            color: var(--orange);
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .sub-heading-gold {
-            text-align: center;
-            color: var(--gold);
             font-size: 1.5em;
-            margin: 10px 0 25px;
-            font-weight: 600;
         }
 
-        .divider-line {
-            width: 60%;
-            margin: 0 auto 20px;
-            border: none;
-            border-top: 1px solid rgba(255,149,0,0.3);
-        }
-
-        .keunggulan {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin: 25px 0;
-        }
-
-        .item {
-            background: rgba(255, 149, 0, 0.15);
-            padding: 12px 20px;
-            border-radius: 30px;
-            border: 1px solid var(--orange);
-            font-size: 0.95em;
-            font-weight: 600;
-            color: #fff;
-            transition: all 0.3s ease;
-        }
-
-        .item:hover {
-            background: var(--orange);
-            color: var(--dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 149, 0, 0.4);
-        }
-
-        .service-box {
-            background: rgba(255,255,255,0.07);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #555;
-            margin: 20px 0;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            text-align: left;
-        }
-
-        .service-box h3 {
-            color: var(--gold);
-            margin-bottom: 15px;
-            font-size: 1.4em;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            padding-bottom: 8px;
-        }
-
-        .service-box ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .service-box ul li {
-            padding: 8px 0;
-            color: #eee;
-            font-size: 1em;
-            line-height: 1.5;
-            display: flex;
-            align-items: center;
-        }
-
-        /* STYLE ICON CENTANG HIJAU */
-        .check-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            flex-shrink: 0;
-        }
-
-        .how-to-order ol {
-            list-style-type: decimal;
-            padding-left: 25px;
-            margin-top: 15px;
-        }
-        .how-to-order ol li {
-            margin-bottom: 10px;
-            color: #ddd;
-        }
-        .how-to-order ol li strong {
-            color: var(--gold);
-        }
-
-        /* ===================================== */
-        /* STYLE GALERI / PORTOFOLIO */
-        /* ===================================== */
+        /* GALLERY */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            max-width: 900px;
-            margin: 0 auto;
         }
 
         .gallery-item {
-            border: 2px solid var(--gold);
-            border-radius: 8px;
+            position: relative;
             overflow: hidden;
-            aspect-ratio: 1/1;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            border: 2px solid #333;
         }
 
-        .gallery-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-        }
-
-        .gallery-item img {
+        .gallery-item img, .gallery-item video {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
 
-        /* ===================================== */
-        /* STYLE KONTAK & WHATSAPP */
-        /* ===================================== */
-        .contact-info {
-            text-align: center;
-            max-width: 500px;
+        /* CONTACT */
+        .contact-container {
+            max-width: 800px;
             margin: 0 auto;
-            background: rgba(255,255,255,0.05);
-            padding: 40px 30px;
+            background: #111;
+            padding: 40px;
             border-radius: 10px;
-            border: 1px solid #444;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            border: 1px solid #333;
         }
 
-        .contact-info h3 {
-            color: var(--orange);
-            font-size: 1.8em;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
-        .contact-info p {
-            font-size: 1.3em;
-            margin: 15px 0;
-            color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .contact-box {
+            text-align: center;
+            padding: 20px;
         }
 
-        .contact-info p::before {
-            content: '📞';
-            color: var(--gold);
+        .contact-box h4 {
+            color: #D4AF37;
+            margin-bottom: 10px;
         }
 
-        .wa-button {
-            display: block;
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            color: white !important;
-            padding: 15px;
-            border-radius: 30px;
-            text-decoration: none !important;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            font-size: 1.1em;
-            letter-spacing: 0.5px;
-        }
-
-        .wa-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
-            background: linear-gradient(45deg, #128C7E, #25D366);
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#layanan">LAYANAN</a>
+        <a href="#portofolio">PORTOFOLIO</a>
+        <a href="#kontak">KONTAK</a>
+    </nav>
 
-    <div class="navbar">
-        <div class="nav-links">
-            <a onclick="showSection('home')" class="active">HOME</a>
-            <a onclick="showSection('services')">LAYANAN</a>
-            <a onclick="showSection('portfolio')">PORTOFOLIO</a>
-            <a onclick="showSection('contact')">KONTAK</a>
-        </div>
-    </div>
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="logo">AW</div>
+        <h1>AW SOLUTIONS</h1>
+        <p>(Jasa Tugas Diklat PKN, PKA, PKP)<br>Pengetikan, Desain & Cetak</p>
+    </section>
 
-    <!-- ===================================== -->
-    <!-- HALAMAN HOME -->
-    <!-- ===================================== -->
-    <div id="home-section" class="content-section">
-        <div class="hero">
-            <div class="hero-content">
-                <div class="logo-circle">
-                    <span class="big-letters">AW</span>
-                    <span class="small-text">SOLUTIONS</span>
-                </div>
-                <h1><span class="aw-text">AW</span> <span class="solutions-text">SOLUTIONS</span></h1>
-                <p class="hero-subtitle">
-                    (Jasa Tugas Diklat PKN, PKA, PKP)<br>
-                    Pengetikan, Desain & Cetak
-                </p>
+    <!-- LAYANAN SECTION -->
+    <section id="layanan">
+        <h2 class="section-title">LAYANAN KAMI</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Pengetikan & Editing</h3>
+                <p>Jasa pengetikan rapi, editing dokumen, skripsi, makalah, laporan, dan dokumen resmi lainnya.</p>
+            </div>
+            <div class="service-card">
+                <h3>Desain Grafis</h3>
+                <p>Desain logo, banner, spanduk, backdrop, kartu nama, kalender, dan berbagai kebutuhan promosi.</p>
+            </div>
+            <div class="service-card">
+                <h3>Jasa Cetak</h3>
+                <p>Cetak berbagai jenis kebutuhan: brosur, majalah, buku, undangan, stiker, dan bahan promosi lainnya.</p>
+            </div>
+            <div class="service-card">
+                <h3>Jasa Diklat</h3>
+                <p>Bantuan penyusunan tugas-tugas Diklat PKN, PKA, PKP dengan standar kualitas terbaik.</p>
             </div>
         </div>
-    </div>
-
-    <!-- ===================================== -->
-    <!-- HALAMAN LAYANAN / JASA -->
-    <!-- ===================================== -->
-    <div id="services-section" class="content-section">
-        <div class="section-title">
-            <h2>LAYANAN <span>KAMI</span></h2>
-        </div>
-
-        <div class="article-content">
-
-            <!-- BAGIAN DIKLAT -->
-            <h2 class="section-heading-orange">🔹 JASA TUGAS DIKLAT 🔹</h2>
-
-            <p>Sedang sibuk dengan pekerjaan dan kesulitan menyelesaikan tugas diklat? Tenang saja, kami hadir sebagai solusi terbaik untuk membantu Anda menyelesaikan <strong>tugas diklat PKN, PKA, dan PKP</strong> dengan hasil yang berkualitas, sesuai standar, dan tepat waktu.</p>
-
-            <div class="keunggulan">
-                <div class="item">✅ Tim Berpengalaman</div>
-                <div class="item">✅ Hasil Berkualitas</div>
-                <div class="item">✅ Tepat Waktu</div>
-                <div class="item">✅ Revisi Gratis</div>
-                <div class="item">✅ Privasi Terjaga</div>
-            </div>
-
-            <div class="service-box">
-                <h3>🔹 Diklat PKN</h3>
-                <ul>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Essay Agenda I, Agenda II, Agenda III</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                    <li><img src="https://cdn
--icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Tugas Individu Observasi Lapangan (OL)</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Rancangan Proyek Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Laporan Implementasi Proyek Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Desain Infografis dan Majalah Proyek Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Bahan Tayang Seminar Proyek Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Video Presentasi</li>
-                </ul>
-            </div>
-
-            <div class="service-box">
-                <h3>🔹 Diklat PKA</h3>
-                <ul>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Essay Agenda I, Agenda II, Agenda III</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Tugas Individu Studi Lapangan (Stula)</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Rancangan Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Laporan Implementasi Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Desain Infografis dan Majalah Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Bahan Tayang Seminar Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Video Presentasi</li>
-                </ul>
-            </div>
-
-            <div class="service-box">
-                <h3>🔹 Diklat PKP</h3>
-                <ul>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Essay Agenda I, Agenda II, Agenda III</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Tugas Individu Studi Lapangan (Stula)</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Rancangan Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Laporan Implementasi Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Desain Infografis dan Majalah Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Bahan Tayang Seminar Aksi Perubahan</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Video Presentasi</li>
-                </ul>
-            </div>
-
-<hr style="margin: 30px auto; border-color: #333; border-width:2px; max-width: 80%;">
-
-<!-- BAGIAN PAMERAN -->
-<h2 class="section-heading-orange" style="font-size: 1.5em; font-weight: 600;">
-    🔹 MELAYANI KEBUTUHAN PAMERAN 🔹
-</h2>
-<hr class="divider-line">
-<h3 class="sub-heading-gold">PROYEK PERUBAHAN & AKSI PERUBAHAN</h3>
-        
-            <p style="text-align:center; font-size:1.2em; color:#fff;">🤝 Kami siap membantu mewujudkan kebutuhan administrasi dan desain Anda!</p>
-
-            <div class="service-box">
-                <h3>DESAIN & CETAK :</h3>
-                <ul>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Majalah</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Baliho / Backdrop</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Spanduk</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> X-Banner, dll</li>
-                </ul>
-            </div>
-
-            <div class="service-box">
-                <h3>KEUNGGULAN KAMI</h3>
-                <ul>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Cepat Selesai</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Pekerjaan Rapi</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Harga Bersahabat</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Berkualitas</li>
-                    <li><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Check" class="check-icon"> Pembayaran Mudah</li>
-                </ul>
-                <p style="text-align:center; margin-top:15px;">🚗 (Siap Antar Hasil)</p>
-            </div>
-
-            <hr style="margin: 20px auto; border-color: #333; max-width: 80%;">
-
-            <div class="how-to-order">
-                <h3 style="text-align:center; color: var(--orange); margin-top:20px; font-size: 1.6em;">📞 Cara Pemesanan</h3>
-                <ol>
-                    <li><strong>Hubungi Kami:</strong> Sampaikan jenis tugas, topik, dan tenggat waktu.</li>
-                    <li><strong>Konsultasi:</strong> Diskusi detail materi dan format penulisan.</li>
-                    <li><strong>Proses:</strong> Tim kami segera menyusun tugas sesuai kesepakatan.</li>
-                    <li><strong>Pengiriman:</strong> Hasil dikirimkan rapi dan siap cetak.</li>
-                </ol>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ===================================== -->
-    <!-- HALAMAN PORTOFOLIO -->
-    <!-- ===================================== -->
-    <div id="portfolio-section" class="content-section">
-        <div class="section-title">
-            <h2>PORTO <span>FOLIO</span></h2>
-            <p class="portfolio-description">(Cetak Majalah, Baliho/Backdrop, Spanduk, X-Banner, dll. untuk bahan Ujian dan Pameran)</p>
-        </div>
+    </section>
+    <!-- PORTOFOLIO SECTION -->
+    <section id="portofolio">
+        <h2 class="section-title">PORTOFOLIO</h2>
         <div class="gallery">
-    <div class="gallery-item"><img src="Banner 01.jpg" alt="Banner 01"></div>
-    <div class="gallery-item"><img src="Banner 02.jpg" alt="Banner 02"></div>
-    <div class="gallery-item"><img src="Majalah 01.jpg" alt="Majalah 01"></div>
-    <div class="gallery-item"><img src="Majalah 02.jpg" alt="Majalah 02"></div>
-    <div class="gallery-item"><img src="Majalah 03.jpg" alt="Majalah 03"></div>
-    <div class="gallery-item"><img src="Majalah 04.jpg" alt="Majalah 04"></div>
-    <div class="gallery-item"><img src="Majalah 05.jpg" alt="Majalah 05"></div>
-    <div class="gallery-item"><img src="Spanduk nama stand.jpg" alt="Spanduk nama stand"></div>
-    <div class="gallery-item"><img src="Backdrop 01.jpg" alt="Backdrop 01"></div>
-    <div class="gallery-item"><img src="Backdrop 02.jpg" alt="Backdrop 02"></div>
-    <div class="gallery-item"><img src="Spanduk 02.jpg" alt="Spanduk 02"></div>
-    <div class="gallery-item"><img src="Backdrop 03.jpg" alt="Backdrop 03"></div>
+            <div class="gallery-item"><img src="Banner 01.jpg" alt="Banner 01"></div>
+            <div class="gallery-item"><img src="Banner 02.jpg" alt="Banner 02"></div>
+            <div class="gallery-item"><img src="Majalah 01.jpg" alt="Majalah 01"></div>
+            <div class="gallery-item"><img src="Majalah 02.jpg" alt="Majalah 02"></div>
+            <div class="gallery-item"><img src="Majalah 03.jpg" alt="Majalah 03"></div>
+            <div class="gallery-item"><img src="Majalah 04.jpg" alt="Majalah 04"></div>
+            <div class="gallery-item"><img src="Majalah 05.jpg" alt="Majalah 05"></div>
+            <div class="gallery-item"><img src="Spanduk nama stand.jpg" alt="Spanduk nama stand"></div>
+            <div class="gallery-item"><img src="Backdrop 01.jpg" alt="Backdrop 01"></div>
+            <div class="gallery-item"><img src="Backdrop 02.jpg" alt="Backdrop 02"></div>
+            <div class="gallery-item"><img src="Spanduk 02.jpg" alt="Spanduk 02"></div>
+            <div class="gallery-item"><img src="Backdrop 03.jpg" alt="Backdrop 03"></div>
 
-    <!-- VIDEO PRODUK -->
-    <div class="gallery-item">
-        <video controls style="width:100%; height:100%; object-fit:cover;">
-            <source src="Catak Majalah 02.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="gallery-item">
-        <video controls style="width:100%; height:100%; object-fit:cover;">
-            <source src="Cetak Majalah 01.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="gallery-item">
-        <video controls style="width:100%; height:100%; object-fit:cover;">
-            <source src="Model Stand Pameran.mp4" type="video/mp4">
-        </video>
-    </div>
-</div>
-
-    <!-- ===================================== -->
-    <!-- HALAMAN KONTAK -->
-    <!-- ===================================== -->
-    <div id="contact-section" class="content-section">
-        <div class="section-title">
-            <h2>HUBUNGI <span>KAMI</span></h2>
+            <!-- VIDEO PRODUK -->
+            <div class="gallery-item">
+                <video controls style="width:100%; height:100%; object-fit:cover;">
+                    <source src="Catak Majalah 02.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="gallery-item">
+                <video controls style="width:100%; height:100%; object-fit:cover;">
+                    <source src="Cetak Majalah 01.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="gallery-item">
+                <video controls style="width:100%; height:100%; object-fit:cover;">
+                    <source src="Model Stand Pameran.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
-        <div class="contact-info">
-            <h3>ADMIN :</h3>
-            <p class="phone-number">0821 8766 2626</p>
-            <p class="phone-number">0859 7515 3455</p>
+    </section>
 
-            <a href="https://wa.me/6282187662626" class="wa-button">CHAT VIA WHATSAPP 1</a>
-            <a href="https://wa.me/6285975153455" class="wa-button">CHAT VIA WHATSAPP 2</a>
+    <!-- KONTAK SECTION -->
+    <section id="kontak">
+        <h2 class="section-title">HUBUNGI KAMI</h2>
+        <div class="contact-container">
+            <p style="text-align:center; font-size:1.2em; margin-bottom:30px;">Kami siap melayani kebutuhan Anda dengan profesional dan tepat waktu.</p>
+            
+            <div class="contact-info">
+                <div class="contact-box">
+                    <h4>📍 Alamat</h4>
+                    <p>Jl. Contoh Alamat No. 123, Kota Anda</p>
+                </div>
+                <div class="contact-box">
+                    <h4>📞 Telepon / WA</h4>
+                    <p>+62 812-3456-7890</p>
+                </div>
+                <div class="contact-box">
+                    <h4>✉️ Email</h4>
+                    <p>awsolutions@email.com</p>
+                </div>
+                <div class="contact-box">
+                    <h4>⏰ Jam Kerja</h4>
+                    <p>Senin - Sabtu: 08.00 - 17.00</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- ===================================== -->
-    <!-- JAVASCRIPT UNTUK MENU -->
-    <!-- ===================================== -->
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 AW Solutions - All Rights Reserved</p>
+    </footer>
+
     <script>
-        function showSection(sectionId) {
-            document.getElementById('home-section').style.display = 'none';
-            document.getElementById('services-section').style.display = 'none';
-            document.getElementById('portfolio-section').style.display = 'none';
-            document.getElementById('contact-section').style.display = 'none';
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
 
-            var links = document.querySelectorAll('.nav-links a');
-            links.forEach(function(link) {
-                link.classList.remove('active');
+                // Update active menu
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Highlight active menu on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            const navHeight = 80;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navHeight - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
             });
 
-            document.getElementById(sectionId + '-section').style.display = 'block';
-
-            var clickedLink = document.querySelector('.nav-links a[onclick="showSection(\'' + sectionId + '\')"]');
-            if (clickedLink) {
-                clickedLink.classList.add('active');
-            }
-        }
-
-        window.onload = function() {
-            document.getElementById('home-section').style.display = 'block';
-            var homeLink = document.querySelector('.nav-links a[onclick="showSection(\'home\')"]');
-            if (homeLink) {
-                homeLink.classList.add('active');
-            }
-        }
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
+        
