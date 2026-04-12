@@ -62,11 +62,11 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-    <!-- Header / Navigasi -->
-    <header class="bg-secondary text-white py-2 px-3 shadow-md sticky top-0 z-50">
+    <!-- Header / Navigasi - Tulisan menu diperbesar sedikit -->
+    <header class="bg-secondary text-white py-1 px-2 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex justify-center items-center">
-            <!-- Menu Navigasi -->
-            <nav class="flex flex-wrap justify-center gap-5 md:gap-8 text-base font-bold py-1">
+            <!-- Menu Navigasi - Ukuran font diperbesar sedikit -->
+            <nav class="flex flex-wrap justify-center gap-3 md:gap-5 text-base font-bold py-1">
                 <a href="#" class="menu-link active py-1 px-1" onclick="changePage('beranda')">Beranda</a>
                 <a href="#" class="menu-link py-1 px-1" onclick="changePage('profil')">Profil</a>
                 <a href="#" class="menu-link py-1 px-1" onclick="changePage('portofolio')">Portofolio</a>
@@ -77,37 +77,37 @@
     </header>
 
     <main class="container mx-auto">
-        <!-- Halaman Beranda -->
+        <!-- Halaman Beranda - Tinggi disesuaikan agar muat satu layar HP -->
         <section id="beranda" class="page-content active">
             <!-- Bagian Gambar Utama / Hero -->
-            <div class="relative bg-secondary text-white overflow-hidden h-auto min-h-[480px] md:min-h-[520px]">
+            <div class="relative bg-secondary text-white overflow-hidden h-auto min-h-[320px] md:min-h-[360px]">
                 <div class="absolute inset-0 z-0">
                     <img src="Laptop 01.jpg" alt="Background Laptop" class="w-full h-full object-cover object-center opacity-50">
                 </div>
-                <div class="relative z-10 p-6 md:p-10 text-shadow h-full flex flex-col justify-center items-center text-center">
-                    <!-- Logo dipindah ke tengah di atas tulisan -->
-                    <div class="flex flex-col items-center mb-5">
-                        <img src="AW SOLUTIONS Logo.jpg" alt="Logo AW Solutions" class="w-16 h-16 rounded-full object-cover mb-2">
+                <div class="relative z-10 p-4 md:p-6 text-shadow h-full flex flex-col justify-center items-center text-center">
+                    <!-- Logo -->
+                    <div class="flex flex-col items-center mb-3">
+                        <img src="AW SOLUTIONS Logo.jpg" alt="Logo AW Solutions" class="w-12 h-12 rounded-full object-cover mb-1">
                         <div class="flex items-center gap-2">
-                            <span class="text-primary text-3xl font-black">AW</span>
-                            <span class="text-white text-xl font-bold">Solutions</span>
+                            <span class="text-primary text-2xl font-black">AW</span>
+                            <span class="text-white text-lg font-bold">Solutions</span>
                         </div>
                     </div>
                     
-                    <h1 class="text-[clamp(2.2rem,7vw,3.5rem)] font-black mb-3 text-white leading-tight">
+                    <h1 class="text-[clamp(1.6rem,7vw,2.6rem)] font-black mb-2 text-white leading-tight">
                         Jasa Tugas Diklat PKN, PKA, PKP
                     </h1>
-                    <p class="text-[clamp(1.2rem,4vw,1.7rem)] mb-2 max-w-3xl text-white font-bold leading-relaxed whitespace-nowrap">
-                        Pengetikan Desain & Cetak Solusi
+                    <p class="text-[clamp(1.1rem,4vw,1.5rem)] mb-1 max-w-3xl text-white font-bold leading-relaxed">
+                        Pengetikan • Desain & Cetak
                     </p>
-                    <p class="text-[clamp(1rem,3vw,1.2rem)] mb-8 max-w-2xl text-white font-bold leading-relaxed whitespace-nowrap">
-                        terpercaya dokumen berkualitas tinggi
+                    <p class="text-[clamp(0.9rem,3vw,1.1rem)] mb-4 max-w-2xl text-white font-bold leading-relaxed">
+                        Solusi terpercaya dokumen berkualitas tinggi
                     </p>
-                    <div class="flex flex-wrap gap-4 justify-center">
-                        <a href="#" onclick="changePage('layanan')" class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg text-lg">
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <a href="#" onclick="changePage('layanan')" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 shadow-lg text-base">
                             Layanan Kami
                         </a>
-                        <a href="#" onclick="changePage('kontak')" class="bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold py-3 px-8 rounded-full transition-all duration-300 text-lg">
+                        <a href="#" onclick="changePage('kontak')" class="bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold py-2 px-6 rounded-full transition-all duration-300 text-base">
                             Hubungi Kami
                         </a>
                     </div>
@@ -116,30 +116,30 @@
         </section>
 
         <!-- Halaman Profil -->
-        <section id="profil" class="page-content py-12 px-6">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-black mb-6 text-gray-800 border-b pb-3">Profil Kami</h2>
-                <p class="text-gray-700 leading-relaxed mb-4 font-bold">
+        <section id="profil" class="page-content py-8 px-4">
+            <div class="max-w-4xl mx-auto bg-white p-5 rounded-lg shadow-md">
+                <h2 class="text-2xl font-black mb-4 text-gray-800 border-b pb-2">Profil Kami</h2>
+                <p class="text-gray-700 leading-relaxed mb-3 font-bold text-sm md:text-base">
                     Kami adalah penyedia jasa profesional yang berfokus pada penyusunan dokumen, pengetikan, desain, dan percetakan. Berpengalaman dalam menangani kebutuhan <strong>Tugas Diklat PKN, PKA, maupun PKP</strong> dengan kualitas terbaik dan ketepatan waktu.
                 </p>
-                <p class="text-gray-700 leading-relaxed mb-4 font-bold">
+                <p class="text-gray-700 leading-relaxed mb-3 font-bold text-sm md:text-base">
                     Dengan tim yang terampil dan peralatan yang memadai, kami berkomitmen untuk memberikan hasil kerja yang rapi, sesuai aturan, dan memuaskan klien. Kami memahami pentingnya <strong>Tugas Diklat PKN, PKA, dan PKP</strong> bagi pengembangan karir Anda, sehingga kami selalu berusaha memberikan yang terbaik.
                 </p>
-                <p class="text-gray-700 leading-relaxed font-bold">
+                <p class="text-gray-700 leading-relaxed font-bold text-sm md:text-base">
                     Berlokasi di Makassar, Sulawesi Selatan, kami siap melayani kebutuhan Anda baik secara langsung maupun daring.
                 </p>
             </div>
         </section>
         <!-- Halaman Layanan -->
-        <section id="layanan" class="page-content py-12 px-6">
+        <section id="layanan" class="page-content py-8 px-4">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-8 text-gray-800 text-center">Layanan Unggulan</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <h2 class="text-2xl font-black mb-6 text-gray-800 text-center">Layanan Unggulan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <!-- Layanan PKN -->
-                    <div id="layanan-pkn" class="bg-light p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
-                        <i class="fa fa-file-text-o text-3xl text-gray-700 mb-3 block text-center"></i>
-                        <h3 class="font-bold text-gray-800 text-center mb-4 text-lg">Tugas Diklat PKN</h3>
-                        <ul class="text-lg text-gray-600 space-y-3 text-left font-bold pl-2">
+                    <div id="layanan-pkn" class="bg-light p-5 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
+                        <i class="fa fa-file-text-o text-2xl text-gray-700 mb-2 block text-center"></i>
+                        <h3 class="font-bold text-gray-800 text-center mb-3 text-base md:text-lg">Tugas Diklat PKN</h3>
+                        <ul class="text-base text-gray-600 space-y-2 text-left font-bold pl-2">
                             <li class="list-item-custom">
                                 <i class="fa fa-check-circle text-green-500 mr-2"></i>
                                 <span>Essay Agenda I, Agenda II, Agenda III</span>
@@ -180,10 +180,10 @@
                     </div>
                     
                     <!-- Layanan PKA -->
-                    <div id="layanan-pka" class="bg-light p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
-                        <i class="fa fa-file-text-o text-3xl text-gray-700 mb-3 block text-center"></i>
-                        <h3 class="font-bold text-gray-800 text-center mb-4 text-lg">Tugas Diklat PKA</h3>
-                        <ul class="text-lg text-gray-600 space-y-3 text-left font-bold pl-2">
+                    <div id="layanan-pka" class="bg-light p-5 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
+                        <i class="fa fa-file-text-o text-2xl text-gray-700 mb-2 block text-center"></i>
+                        <h3 class="font-bold text-gray-800 text-center mb-3 text-base md:text-lg">Tugas Diklat PKA</h3>
+                        <ul class="text-base text-gray-600 space-y-2 text-left font-bold pl-2">
                             <li class="list-item-custom">
                                 <i class="fa fa-check-circle text-green-500 mr-2"></i>
                                 <span>Essay Agenda I, Agenda II, Agenda III</span>
@@ -224,10 +224,10 @@
                     </div>
                     
                     <!-- Layanan PKP -->
-                    <div id="layanan-pkp" class="bg-light p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
-                        <i class="fa fa-file-image-o text-3xl text-gray-700 mb-3 block text-center"></i>
-                        <h3 class="font-bold text-gray-800 text-center mb-4 text-lg">Tugas Diklat PKP</h3>
-                        <ul class="text-lg text-gray-600 space-y-3 text-left font-bold pl-2">
+                    <div id="layanan-pkp" class="bg-light p-5 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
+                        <i class="fa fa-file-image-o text-2xl text-gray-700 mb-2 block text-center"></i>
+                        <h3 class="font-bold text-gray-800 text-center mb-3 text-base md:text-lg">Tugas Diklat PKP</h3>
+                        <ul class="text-base text-gray-600 space-y-2 text-left font-bold pl-2">
                             <li class="list-item-custom">
                                 <i class="fa fa-check-circle text-green-500 mr-2"></i>
                                 <span>Essay Agenda I, Agenda II, Agenda III</span>
@@ -253,7 +253,7 @@
                                 <span>Desain Infografis dan Majalah Aksi Perubahan</span>
                             </li>
                             <li class="list-item-custom">
-                                                            <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                <i class="fa fa-check-circle text-green-500 mr-2"></i>
                                 <span>Bahan Tayang Seminar Aksi Perubahan</span>
                             </li>
                             <li class="list-item-custom">
@@ -266,16 +266,44 @@
                             </li>
                         </ul>
                     </div>
+
+                    <!-- Layanan Desain & Cetak -->
+                    <div id="layanan-cetak" class="bg-light p-5 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
+                        <i class="fa fa-print text-2xl text-gray-700 mb-2 block text-center"></i>
+                        <h3 class="font-bold text-gray-800 text-center mb-3 text-base md:text-lg">Desain & Cetak</h3>
+                        <ul class="text-base text-gray-600 space-y-2 text-left font-bold pl-2">
+                            <li class="list-item-custom">
+                                <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                <span>Majalah</span>
+                            </li>
+                            <li class="list-item-custom">
+                                <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                <span>Infografis</span>
+                            </li>
+                            <li class="list-item-custom">
+                                <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                <span>Baliho/Backdrop</span>
+                            </li>
+                            <li class="list-item-custom">
+                                <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                <span>Spanduk</span>
+                            </li>
+                            <li class="list-item-custom">
+                                <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                <span>X-Banner, dll.</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Halaman Portofolio -->
-        <section id="portofolio" class="page-content py-12 px-6">
+        <!-- Halaman Portofolio - Video sudah dimasukkan kembali -->
+        <section id="portofolio" class="page-content py-8 px-4">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-black mb-8 text-gray-800 text-center">Hasil Karya Kami</h2>
-                <p class="text-center text-gray-700 mb-12 font-bold">Berikut adalah beberapa contoh dokumen dan desain yang pernah kami kerjakan untuk kebutuhan <strong>Tugas Diklat PKN, PKA, maupun PKP</strong>:</p>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <h2 class="text-2xl font-black mb-6 text-gray-800 text-center">Hasil Karya Kami</h2>
+                <p class="text-center text-gray-700 mb-10 font-bold text-sm md:text-base">Berikut adalah beberapa contoh dokumen dan desain yang pernah kami kerjakan untuk kebutuhan <strong>Tugas Diklat PKN, PKA, maupun PKP</strong>:</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                     <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow">
                         <img src="Majalah 01.jpg" alt="Contoh Hasil Karya" class="w-full h-full object-cover">
                     </div>
@@ -298,36 +326,39 @@
                         <img src="Spanduk nama stand.jpg" alt="Contoh Hasil Karya" class="w-full h-full object-cover">
                     </div>
                     <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow">
-                        <video src="Model Stand Pameran.mp4" controls class="w-full h-full object-cover"></video>
+                        <video src="Cetak Majalah 01.mp4" controls class="w-full h-full object-cover"></video>
+                    </div>
+                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow">
+                        <video src="Cetak Majalah 02.mp4" controls class="w-full h-full object-cover"></video>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Halaman Kontak -->
-        <section id="kontak" class="page-content py-12 px-6">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                <h2 class="text-3xl font-black mb-8 text-gray-800 text-center">Hubungi Kami</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section id="kontak" class="page-content py-8 px-4">
+            <div class="max-w-4xl mx-auto bg-white p-5 rounded-lg shadow-md">
+                <h2 class="text-2xl font-black mb-6 text-gray-800 text-center">Hubungi Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <h3 class="text-xl font-bold mb-4 text-gray-700">Informasi Kontak</h3>
-                        <div class="space-y-4 font-bold">
+                        <h3 class="text-lg font-bold mb-3 text-gray-700">Informasi Kontak</h3>
+                        <div class="space-y-3 font-bold text-sm md:text-base">
                             <div class="flex items-center gap-3">
-                                <i class="fa fa-whatsapp text-2xl text-green-500 w-6 text-center"></i>
+                                <i class="fa fa-whatsapp text-xl text-green-500 w-5 text-center"></i>
                                 <span>0821 8766 2626</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="fa fa-whatsapp text-2xl text-green-500 w-6 text-center"></i>
+                                <i class="fa fa-whatsapp text-xl text-green-500 w-5 text-center"></i>
                                 <span>0859 7515 3455</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <i class="fa fa-map-marker text-2xl text-red-500 w-6 text-center"></i>
+                                <i class="fa fa-map-marker text-xl text-red-500 w-5 text-center"></i>
                                 <span>Makassar, Sulawesi Selatan</span>
                             </div>
                         </div>
                         
-                        <h3 class="text-xl font-bold mt-8 mb-4 text-gray-700">Jam Operasional</h3>
-                        <div class="space-y-2 text-gray-600 font-bold">
+                        <h3 class="text-lg font-bold mt-6 mb-3 text-gray-700">Jam Operasional</h3>
+                        <div class="space-y-2 text-gray-600 font-bold text-sm md:text-base">
                             <p>Senin - Jumat: 08.00 - 17.00 WITA</p>
                             <p>Sabtu: 08.00 - 12.00 WITA</p>
                             <p>Minggu & Hari Libur: Tutup</p>
@@ -335,21 +366,21 @@
                     </div>
                     
                     <div>
-                        <h3 class="text-xl font-bold mb-4 text-gray-700">Kirim Pesan</h3>
-                        <form class="space-y-4 font-bold">
+                        <h3 class="text-lg font-bold mb-3 text-gray-700">Kirim Pesan</h3>
+                        <form class="space-y-3 font-bold text-sm md:text-base">
                             <div>
                                 <label class="block text-gray-600 mb-1">Nama Lengkap</label>
-                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                             </div>
                             <div>
                                 <label class="block text-gray-600 mb-1">Nomor WhatsApp</label>
-                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                             </div>
                             <div>
                                 <label class="block text-gray-600 mb-1">Pesan / Keterangan Tugas</label>
-                                <textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                                <textarea rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                             </div>
-                            <button type="submit" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg transition-all duration-300 font-bold w-full">Kirim Pesan</button>
+                            <button type="submit" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg transition-all duration-300 font-bold w-full">Kirim Pesan</button>
                         </form>
                     </div>
                 </div>
@@ -357,9 +388,9 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-gray-400 py-4 px-4 text-center mt-6 font-bold">
-        <p>Copyright &copy; 2024 AW Solutions. All rights reserved.</p>
+    <!-- Footer - Tahun sudah diubah menjadi 2026 -->
+    <footer class="bg-dark text-gray-400 py-3 px-3 text-center mt-5 font-bold text-sm">
+        <p>Copyright &copy; 2026 AW Solutions. All rights reserved.</p>
     </footer>
 
     <!-- Skrip JavaScript untuk Navigasi Halaman -->
@@ -390,4 +421,4 @@
 
 </body>
 </html>
-    
+                            
