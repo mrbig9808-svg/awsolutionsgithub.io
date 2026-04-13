@@ -101,7 +101,7 @@
     </header>
     <main class="container mx-auto">
         
-    <!-- HALAMAN BERANDA - DENGAN TAMBAHAN KATA KUNCI -->
+    <!-- HALAMAN BERANDA - SUSUNAN BARU -->
 <section id="beranda" class="page-content active">
     <div class="relative bg-secondary text-white">
         <div class="absolute inset-0 z-0">
@@ -112,31 +112,39 @@
             >
         </div>
         <div class="relative z-10 p-4 md:p-6 text-shadow min-h-[85vh] h-full flex flex-col justify-center items-center text-center pt-16 md:pt-20">
-            <!-- Logo -->
+            <!-- Logo: Ukuran diperkecil -->
             <div class="flex flex-col items-center mb-4">
-                <img src="AW SOLUTIONS Logo.jpg" alt="Logo AW Solutions - Jasa Tugas Diklat" class="w-12 h-12 rounded-full object-cover mb-2">
+                <img src="AW SOLUTIONS Logo.jpg" alt="Logo AW Solutions - Jasa Tugas Diklat" class="w-10 h-10 rounded-full object-cover mb-2">
                 <div class="flex items-center gap-2">
-                    <span class="text-primary text-xl font-black">AW</span>
-                    <span class="text-white text-lg font-bold">Solutions</span>
+                    <span class="text-primary text-lg font-black">AW</span>
+                    <span class="text-white text-base font-bold">Solutions</span>
                 </div>
             </div>
             
-            <h1 class="text-[clamp(1.8rem,8vw,3rem)] font-black mb-3 text-white leading-tight">
-                Jasa Tugas Diklat<br>PKN, PKA, PKP
+            <!-- Judul Utama -->
+            <h1 class="text-[clamp(1.8rem,8vw,3rem)] font-black mb-4 text-white leading-tight">
+                Jasa Tugas Diklat
             </h1>
-            
-            <!-- Bagian ini sudah ditambahkan kata kuncinya -->
-            <p class="text-[clamp(1.1rem,4vw,1.5rem)] mb-4 max-w-4xl text-white font-bold leading-relaxed">
-                Jasa Tugas PKN (Pelatihan Kepemimpinan Nasional) Tingkat II dan Tingkat I, PKA (Pelatihan Kepemimpinan Administrator), PKP (Pelatihan Kepemimpinan Pengawas)
-            </p>
 
-            <p class="text-[clamp(1.3rem,5vw,1.8rem)] mb-2 max-w-3xl text-white font-bold leading-relaxed">
+            <!-- Daftar Layanan: Menggunakan Tanda Pisah, Rata Tengah -->
+            <div class="mb-6 max-w-4xl text-white font-bold leading-relaxed text-center">
+                <p class="mb-2">- PKN (Pelatihan Kepemimpinan Nasional) Tingkat II dan Tingkat I</p>
+                <p class="mb-2">- PKA (Pelatihan Kepemimpinan Administrator)</p>
+                <p class="mb-2">- PKP (Pelatihan Kepemimpinan Pengawas)</p>
+            </div>
+
+            <!-- Garis Pemisah -->
+            <hr class="w-3/4 border-gray-400 mb-4">
+
+            <!-- Keterangan Layanan -->
+            <p class="text-[clamp(1.3rem,5vw,1.8rem)] mb-2 max-w-3xl text-white font-bold leading-relaxed text-center">
                 Pengetikan, Desain & Cetak
             </p>
-            <p class="text-[clamp(0.9rem,3vw,1.2rem)] mb-6 max-w-2xl text-white font-normal leading-relaxed lowercase">
+            <p class="text-[clamp(0.9rem,3vw,1.2rem)] mb-6 max-w-2xl text-white font-normal leading-relaxed lowercase text-center">
                 solusi terpercaya dokumen berkualitas tinggi
             </p>
             
+            <!-- Tombol -->
             <div class="flex flex-col gap-3 justify-center w-full max-w-xs">
                 <a href="#" onclick="changePage('layanan')" class="bg-primary hover:bg-primary/90 text-white font-bold py-1.5 px-6 rounded-full transition-all duration-300 shadow-lg text-lg">
                     Layanan Kami
