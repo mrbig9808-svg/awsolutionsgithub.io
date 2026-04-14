@@ -33,6 +33,7 @@
                         secondary: '#263238',
                         dark: '#212121',
                         light: '#F5F5F5',
+                        gold: '#f3d278',
                     },
                     fontFamily: {
                         sans: ['Arial', 'Helvetica', 'sans-serif'],
@@ -81,15 +82,13 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-    <!-- Header / Navigasi: Sesuai tangkapan layar -->
+    <!-- Header / Navigasi -->
     <header class="bg-secondary text-white py-1 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex justify-center items-center">
-            <!-- Menu: Sesuai tangkapan layar (Beranda, Profil, Portofolio) -->
             <nav class="flex flex-wrap justify-center gap-10 text-lg font-bold py-1">
                 <a href="#" class="menu-link active py-1 px-2" onclick="changePage('beranda')">Beranda</a>
                 <a href="#" class="menu-link py-1 px-2" onclick="changePage('profil')">Profil</a>
                 <a href="#" class="menu-link py-1 px-2" onclick="changePage('portofolio')">Portofolio</a>
-                <!-- Menu Layanan dan Kontak disembunyikan dari navigasi utama sesuai tangkapan layar -->
                 <a href="#" class="menu-link py-1 px-2 hidden" onclick="changePage('layanan')">Layanan</a>
                 <a href="#" class="menu-link py-1 px-2 hidden" onclick="changePage('kontak')">Kontak</a>
             </nav>
@@ -97,42 +96,45 @@
     </header>
 
     <main class="container mx-auto">
-        
-     <!-- HALAMAN BERANDA - RAPI, PAS, DAN PERSIS SEPERTI DESAIN -->
+        <!-- ==================================================
+        HALAMAN BERANDA - DIPERBAIKI SESUAI DESAIN BARU
+        =================================================== -->
 <section id="beranda" class="page-content active">
-    <div class="relative w-full min-h-screen overflow-hidden" style="font-family: 'Arial', 'Helvetica', sans-serif;">
-        <!-- Gambar Latar Belakang -->
+    <div class="relative w-full min-h-screen overflow-hidden" style="font-family: 'Arial', 'Helvetica', 'sans-serif;">
+        
+        <!-- Latar Belakang -->
         <div class="absolute inset-0 z-0">
             <img 
                 src="Latar Mengetik 01.jpg" 
-                alt="Background Layanan Jasa Tugas Diklat PKN, PKA, PKP" 
-                class="w-full h-screen object-cover object-top"
+                alt="Background Layanan Diklat" 
+                class="w-full h-screen object-cover object-center"
                 loading="lazy"
             >
-            <!-- Lapisan Gradasi -->
+            <!-- Lapisan Gradasi Biru (Terang ke Gelap) -->
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#051a44]/95 z-10"></div>
         </div>
 
         <div class="relative z-20 w-full h-screen flex flex-col justify-between p-4 pt-6 pb-8">
             
-            <!-- Menu Navigasi Atas -->
-            <div class="flex justify-around text-xl md:text-2xl font-bold text-[#c9a861]">
-                <a href="#" class="menu-link active border-b-2 border-[#c9a861] pb-2 px-1" onclick="changePage('beranda')">Beranda</a>
+            <!-- Menu Navigasi -->
+            <div class="flex justify-around text-xl font-bold text-gold">
+                <a href="#" class="menu-link active border-b-2 border-primary pb-2 px-1" onclick="changePage('beranda')">Beranda</a>
                 <a href="#" class="menu-link pb-2 px-1" onclick="changePage('profil')">Profil</a>
                 <a href="#" class="menu-link pb-2 px-1" onclick="changePage('portofolio')">Portofolio</a>
             </div>
 
-            <!-- Bagian Konten Tengah -->
-            <div class="flex flex-col items-center text-center mt-4 mb-auto">
-                <!-- Logo -->
-                <div class="w-20 h-20 relative flex items-center justify-center mb-3">
+            <!-- Konten Tengah -->
+            <div class="flex flex-col items-center text-center my-auto">
+                
+                <!-- Logo Heksagon -->
+                <div class="w-20 h-20 relative flex items-center justify-center mt-4 mb-2">
                     <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <path d="M50 2 L98 25 L98 75 L50 98 L2 75 L2 25 Z" fill="#0a2463" stroke="#f3d278" stroke-width="3"></path>
                     </svg>
-                    <span class="absolute text-[#f3d278] text-3xl font-black">AW</span>
+                    <span class="absolute text-gold text-3xl font-black">AW</span>
                 </div>
-                <h2 class="text-[#f3d278] text-lg font-bold mb-1">Solutions</h2>
-                <h1 class="text-[clamp(1.8rem,8vw,2.8rem)] font-black text-[#f3d278] my-2 tracking-wide leading-tight">
+                <h2 class="text-gold text-lg font-bold mb-1">Solutions</h2>
+                <h1 class="text-[clamp(1.8rem,8vw,2.8rem)] font-black text-gold my-2 tracking-wide leading-tight">
                     Jasa Tugas Diklat
                 </h1>
 
@@ -140,9 +142,9 @@
                 <div class="text-left w-full max-w-xs mt-4 space-y-4">
                     <!-- PKN -->
                     <div class="flex items-start gap-3">
-                        <span class="text-[#f3d278] font-bold text-xl mt-1">•</span>
+                        <span class="text-gold font-bold text-xl mt-1">•</span>
                         <div>
-                            <h3 class="text-[#f3d278] font-bold text-xl">PKN</h3>
+                            <h3 class="text-gold font-bold text-xl">PKN</h3>
                             <div class="flex items-center gap-3 mt-1">
                                 <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -158,9 +160,9 @@
 
                     <!-- PKA -->
                     <div class="flex items-start gap-3">
-                        <span class="text-[#f3d278] font-bold text-xl mt-1">•</span>
+                        <span class="text-gold font-bold text-xl mt-1">•</span>
                         <div>
-                            <h3 class="text-[#f3d278] font-bold text-xl">PKA</h3>
+                            <h3 class="text-gold font-bold text-xl">PKA</h3>
                             <div class="flex items-center gap-3 mt-1">
                                 <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -176,9 +178,9 @@
 
                     <!-- PKP -->
                     <div class="flex items-start gap-3">
-                        <span class="text-[#f3d278] font-bold text-xl mt-1">•</span>
+                        <span class="text-gold font-bold text-xl mt-1">•</span>
                         <div>
-                            <h3 class="text-[#f3d278] font-bold text-xl">PKP</h3>
+                            <h3 class="text-gold font-bold text-xl">PKP</h3>
                             <div class="flex items-center gap-3 mt-1">
                                 <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -194,9 +196,9 @@
 
             <!-- Bagian Bawah -->
             <div class="text-center">
-                <hr class="border-[#f3d278]/40 w-3/4 mx-auto mb-4">
-                <h2 class="text-xl md:text-2xl font-bold text-[#f3d278] tracking-wide">Pengetikan, Desain & Cetak</h2>
-                <p class="text-[#f3d278]/80 text-sm font-normal tracking-wide mt-1 mb-6">solusi terpercaya dokumen berkualitas tinggi</p>
+                <hr class="border-gold/40 w-3/4 mx-auto mb-4">
+                <h2 class="text-xl font-bold text-gold tracking-wide">Pengetikan, Desain & Cetak</h2>
+                <p class="text-gold/80 text-sm font-normal tracking-wide mt-1 mb-6">solusi terpercaya dokumen berkualitas tinggi</p>
 
                 <!-- Tombol -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -209,15 +211,15 @@
                 </div>
 
                 <!-- Hak Cipta -->
-                <div class="text-center text-[#f3d278]/90 text-xs font-normal tracking-wide">
+                <div class="text-center text-gold/90 text-xs font-normal tracking-wide">
                     <p>Copyright © 2026 AW Solutions - Penyedia Jasa<br>Diklat PKN, PKA, PKP. All rights reserved.</p>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
-            
-    <!-- HALAMAN PROFIL -->
+         <!-- Halaman Profil -->
         <section id="profil" class="page-content py-6 px-3">
             <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-md">
                 <h2 class="text-xl font-black mb-3 text-gray-800 border-b pb-2">Profil Kami</h2>
@@ -232,14 +234,15 @@
                 </p>
             </div>
         </section>
-        
-        <!-- HALAMAN LAYANAN -->
+
+        <!-- Halaman Layanan -->
         <section id="layanan" class="page-content py-6 px-3">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-xl font-black mb-5 text-gray-800 text-center">Layanan Unggulan <br><span class="text-lg text-gray-600">Khusus Jasa Tugas Diklat PKN, PKA, PKP</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Layanan PKN -->
-                    <div id="layanan-pkn" class="bg-light p-4 rounded-lg hover:shadow-lg transition-shadow duration-300 border">
+                    <div id="layanan-pkn" class="bg-light p-4 rounded-lg hover:shadow-lg
+                        transition-shadow duration-300 border">
                         <i class="fa fa-book text-2xl text-gray-700 mb-2 block text-center"></i>
                         <h3 class="font-bold text-gray-800 text-center mb-3 text-lg">Tugas Diklat PKN</h3>
                         <ul class="text-base text-gray-600 space-y-2 text-left font-bold pl-2">
@@ -401,7 +404,7 @@
             </div>
         </section>
 
-        <!-- HALAMAN PORTOFOLIO -->
+        <!-- Halaman Portofolio -->
         <section id="portofolio" class="page-content py-6 px-3">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-xl font-black mb-5 text-gray-800 text-center">Hasil Karya Kami</h2>
@@ -441,7 +444,7 @@
             </div>
         </section>
 
-        <!-- HALAMAN KONTAK -->
+        <!-- Halaman Kontak -->
         <section id="kontak" class="page-content py-6 px-3">
             <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-md">
                 <h2 class="text-xl font-black mb-5 text-gray-800 text-center">Hubungi Kami</h2>
@@ -481,7 +484,8 @@
                             </div>
                             <div>
                                 <label class="block text-gray-600 mb-1">Nomor WhatsApp</label>
-                                <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Nomor yang bisa dihubungi">
+                                <input type="text"
+                       class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Nomor yang bisa dihubungi">
                             </div>
                             <div>
                                 <label class="block text-gray-600 mb-1">Pesan / Keterangan Tugas</label>
@@ -495,7 +499,7 @@
         </section>
     </main>
 
-    <!-- Footer: Posisi diatur agar tetap di bagian paling bawah -->
+    <!-- Footer -->
     <footer class="bg-dark text-gray-400 py-3 px-3 text-center font-bold text-sm w-full">
         <p>Copyright &copy; 2026 AW Solutions - Penyedia Jasa Tugas Diklat PKN, PKA, PKP. All rights reserved.</p>
     </footer>
