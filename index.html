@@ -67,14 +67,15 @@
           .copyright-container {padding: 10px 0;}
           .copyright-container p {font-size: 0.7rem !important; white-space: nowrap; text-align: center !important;}
           .copyright-container br {display: none;}
-          .daftar-pendidikan {margin-top: 1.5rem !important; margin-bottom: 0 !important;} 
+          /* Tambahan jarak bawah untuk blok konten di lanskap */
+          .konten-utama {margin-bottom: 1rem !important;}
           .garis-pemisah {margin-top: 0.3rem !important; margin-bottom: 0.5rem !important;}
           .bagian-judul-bawah {margin-top: 0 !important; margin-bottom: 0.2rem !important;}
           .bagian-deskripsi-bawah {margin-top: 0.1rem !important; margin-bottom: 0.75rem !important;}
           .tombol-bawah {margin-bottom: 1rem !important;}
       }
       
-      /* --- PENGATURAN KHUSUS POTRAIT (HANYA GARIS YANG DINAIKKAN) --- */
+      /* --- PENGATURAN KHUSUS POTRAIT (BLOK LOGO SAMPAI PKP DITURUNKAN) --- */
       @media (orientation: portrait) {
           .w-16 {width: 3.2rem !important; height: 3.2rem !important;}
           .mt-4 {margin-top: 0.75rem !important;}
@@ -88,19 +89,19 @@
           .copyright-container p {font-size: 0.75rem !important; line-height: 1.5; text-align: center !important;}
           .copyright-container br {display: inline;}
 
-          /* Posisi daftar PKN/PKA/PKP dikembalikan ke semula */
+          /* INI YANG DIUBAH: Tambahkan jarak bawah (margin-bottom) agar blok ini turun sedikit */
+          .konten-utama {
+              margin-bottom: 2rem !important; /* Angka ini yang mengatur seberapa jauh turunnya. Sesuaikan jika perlu */
+          }
+          
           .daftar-pendidikan {margin-top: 1rem !important; margin-bottom: 0 !important;} 
-          /* HANYA garis dinaikkan sedikit (sesuaikan angka negatifnya jika masih kurang/lebih) */
-          .garis-pemisah {margin-top: -1rem !important; margin-bottom: 1rem !important;}
-
-          /* Bagian bawah tetap */
+          .garis-pemisah {margin-top: 0rem !important; margin-bottom: 1rem !important;}
           .bagian-judul-bawah {margin-top: 0 !important; margin-bottom: 0.3rem !important;}
           .bagian-deskripsi-bawah {margin-top: 0.1rem !important; margin-bottom: 1rem !important;}
           .tombol-bawah {margin-bottom: 1.25rem !important;}
       }
     </style>
-
-</head>
+    </head>
 <body class="bg-gray-100">
     <main class="w-full">
         <div class="screen-ratio mx-auto">
@@ -122,8 +123,8 @@
                         <a href="#" class="menu-link" onclick="changePage('kontak', event)">Kontak</a>
                     </div>
 
-                    <!-- Konten Utama Beranda -->
-                    <div class="flex flex-col items-center text-center mt-4 mb-auto px-3 overflow-y-auto">
+                    <!-- Konten Utama Beranda - DIBERI CLASS "konten-utama" UNTUK DIATUR POSISINYA -->
+                    <div class="konten-utama flex flex-col items-center text-center mt-4 mb-auto px-3 overflow-y-auto">
                         <!-- Ukuran logo sudah diperkecil -->
                         <div class="w-16 h-16 relative flex items-center justify-center mb-2">
                             <svg width="100%" height="100%" viewBox="0 0 100 100">
@@ -197,9 +198,8 @@
                         </div>
                     </div>
 
-                    <!-- Bagian Bawah Beranda: GARIS SUDAH DINAIKKAN KHUSUS DI POTRAIT -->
+                    <!-- Bagian Bawah Beranda -->
                     <div class="text-center mb-3 px-3">
-                        <!-- POSISI GARIS SUDAH DIATUR AGAR NAIK DI POTRAIT TAPI TETAP DI TEMPAT DI LANDSCAPE -->
                         <hr class="border-gold/40 w-3/4 mx-auto garis-pemisah">
                         
                         <!-- 2. Bagian Pengetikan & Solusi -->
