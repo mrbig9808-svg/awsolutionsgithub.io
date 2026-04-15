@@ -51,7 +51,7 @@
       /* Kotak hak cipta: Lebar penuh tanpa batas */
       .copyright-container {background: rgba(10, 36, 99, 0.6); padding: 12px 0; width: 100%; margin: 1rem 0 0 0;}
       
-      /* --- PENGATURAN KHUSUS LANDSCAPE (DIPERBAIKI AGAR TIDAK TURUN TERLALU JAUH) --- */
+      /* --- PENGATURAN KHUSUS LANDSCAPE (TETAP SAMA, TIDAK BERUBAH) --- */
       @media (orientation: landscape) {
           .menu-link {font-size: 14px;}
           .text-[clamp(1.6rem,7vw,2.2rem)] {font-size: clamp(1.4rem, 5vw, 1.8rem) !important;}
@@ -67,7 +67,6 @@
           .copyright-container {padding: 10px 0;}
           .copyright-container p {font-size: 0.7rem !important; white-space: nowrap; text-align: center !important;}
           .copyright-container br {display: none;}
-          /* Jarak diatur agar tidak terlalu renggang */
           .daftar-pendidikan {margin-top: 1.5rem !important; margin-bottom: 0 !important;} 
           .garis-pemisah {margin-top: 0.3rem !important; margin-bottom: 0.5rem !important;}
           .bagian-judul-bawah {margin-top: 0 !important; margin-bottom: 0.2rem !important;}
@@ -75,7 +74,7 @@
           .tombol-bawah {margin-bottom: 1rem !important;}
       }
       
-      /* --- PENGATURAN KHUSUS POTRAIT (GARIS SUDAH NAIK SESUAI ARAHAN) --- */
+      /* --- PENGATURAN KHUSUS POTRAIT (GARIS DINAIKKAN LEBIH TINGGI SESUAI PERMINTAAN) --- */
       @media (orientation: portrait) {
           .w-16 {width: 3.2rem !important; height: 3.2rem !important;}
           .mt-4 {margin-top: 0.75rem !important;}
@@ -89,9 +88,10 @@
           .copyright-container p {font-size: 0.75rem !important; line-height: 1.5; text-align: center !important;}
           .copyright-container br {display: inline;}
 
-          /* 1. PKN-PKA-PKP & Garis: Dinaikkan mendekati teks */
+          /* 1. PKN-PKA-PKP & Garis: Dinaikkan lebih tinggi */
           .daftar-pendidikan {margin-top: 1rem !important; margin-bottom: 0 !important;} 
-          .garis-pemisah {margin-top: 0.1rem !important; margin-bottom: 0.5rem !important;}
+          /* Nilai margin-top diperkecil agar posisi garis naik */
+          .garis-pemisah {margin-top: 0rem !important; margin-bottom: 0.5rem !important;}
 
           /* 2. Bagian Pengetikan & Solusi: Tetap pas */
           .bagian-judul-bawah {margin-top: 0 !important; margin-bottom: 0.3rem !important;}
@@ -105,125 +105,125 @@
         <div class="screen-ratio mx-auto">
         
         <!-- HALAMAN BERANDA -->
-<section id="beranda" class="page-content active">
-    <div class="relative min-h-screen h-auto overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="Latar Mengetik 01.jpg" alt="Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#051a44]/60 to-[#051a44]/95 z-10"></div>
-        </div>
-        <div class="relative z-20 min-h-screen h-auto flex flex-col justify-between">
-            <!-- Susunan menu sudah ditukar sesuai permintaan -->
-            <div class="menu-container">
-                <a href="#" class="menu-link active" onclick="changePage('beranda', event)">Beranda</a>
-                <a href="#" class="menu-link" onclick="changePage('profil', event)">Profil</a>
-                <a href="#" class="menu-link" onclick="changePage('layanan', event)">Layanan</a>
-                <a href="#" class="menu-link" onclick="changePage('portofolio', event)">Portofolio</a>
-                <a href="#" class="menu-link" onclick="changePage('kontak', event)">Kontak</a>
-            </div>
-
-            <!-- Konten Utama Beranda -->
-            <div class="flex flex-col items-center text-center mt-4 mb-auto px-3 overflow-y-auto">
-                <!-- Ukuran logo sudah diperkecil -->
-                <div class="w-16 h-16 relative flex items-center justify-center mb-2">
-                    <svg width="100%" height="100%" viewBox="0 0 100 100">
-                        <path d="M50 2 L98 25 L98 75 L50 98 L2 75 L2 25 Z" fill="#0a2463" stroke="#f3d278" stroke-width="3"></path>
-                    </svg>
-                    <!-- Jenis huruf "AW" di logo sudah diganti -->
-                    <span class="absolute text-white text-xl font-logo">AW</span>
+        <section id="beranda" class="page-content active">
+            <div class="relative min-h-screen h-auto overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img src="Latar Mengetik 01.jpg" alt="Background" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#051a44]/60 to-[#051a44]/95 z-10"></div>
                 </div>
-                <h2 class="text-white text-lg font-bold mb-1">AW Solutions</h2>
-                <!-- Jenis huruf judul sudah diganti -->
-                <h1 class="font-judul font-black text-gold my-1 tracking-wide text-[clamp(1.6rem,7vw,2.2rem)]">
-                    Jasa Tugas Diklat
-                </h1>
+                <div class="relative z-20 min-h-screen h-auto flex flex-col justify-between">
+                    <!-- Susunan menu sudah ditukar sesuai permintaan -->
+                    <div class="menu-container">
+                        <a href="#" class="menu-link active" onclick="changePage('beranda', event)">Beranda</a>
+                        <a href="#" class="menu-link" onclick="changePage('profil', event)">Profil</a>
+                        <a href="#" class="menu-link" onclick="changePage('layanan', event)">Layanan</a>
+                        <a href="#" class="menu-link" onclick="changePage('portofolio', event)">Portofolio</a>
+                        <a href="#" class="menu-link" onclick="changePage('kontak', event)">Kontak</a>
+                    </div>
 
-                <!-- DAFTAR PKN - PKA - PKP -->
-                <div class="text-left w-full max-w-xs daftar-pendidikan flex flex-col gap-3">
-                    <!-- PKN -->
-                    <div class="flex items-start gap-3">
-                        <span class="text-gold font-bold text-base mt-1">•</span>
-                        <div>
-                            <h3 class="text-gold font-bold text-base mb-0.5">PKN</h3>
-                            <div class="flex items-center gap-2 mt-0.5">
-                                <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
-                                    <path d="M12 12l8 -4.5" />
-                                    <path d="M12 12v9" />
-                                    <path d="M12 12l-8 -4.5" />
-                                </svg>
+                    <!-- Konten Utama Beranda -->
+                    <div class="flex flex-col items-center text-center mt-4 mb-auto px-3 overflow-y-auto">
+                        <!-- Ukuran logo sudah diperkecil -->
+                        <div class="w-16 h-16 relative flex items-center justify-center mb-2">
+                            <svg width="100%" height="100%" viewBox="0 0 100 100">
+                                <path d="M50 2 L98 25 L98 75 L50 98 L2 75 L2 25 Z" fill="#0a2463" stroke="#f3d278" stroke-width="3"></path>
+                            </svg>
+                            <!-- Jenis huruf "AW" di logo sudah diganti -->
+                            <span class="absolute text-white text-xl font-logo">AW</span>
+                        </div>
+                        <h2 class="text-white text-lg font-bold mb-1">AW Solutions</h2>
+                        <!-- Jenis huruf judul sudah diganti -->
+                        <h1 class="font-judul font-black text-gold my-1 tracking-wide text-[clamp(1.6rem,7vw,2.2rem)]">
+                            Jasa Tugas Diklat
+                        </h1>
+
+                        <!-- DAFTAR PKN - PKA - PKP -->
+                        <div class="text-left w-full max-w-xs daftar-pendidikan flex flex-col gap-3">
+                            <!-- PKN -->
+                            <div class="flex items-start gap-3">
+                                <span class="text-gold font-bold text-base mt-1">•</span>
                                 <div>
-                                    <p class="text-white text-sm font-semibold leading-tight">Pelatihan Kepemimpinan Nasional</p>
-                                    <p class="text-white text-xs font-normal mt-0">Tk. II dan Tk. I</p>
+                                    <h3 class="text-gold font-bold text-base mb-0.5">PKN</h3>
+                                    <div class="flex items-center gap-2 mt-0.5">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
+                                            <path d="M12 12l8 -4.5" />
+                                            <path d="M12 12v9" />
+                                            <path d="M12 12l-8 -4.5" />
+                                        </svg>
+                                        <div>
+                                            <p class="text-white text-sm font-semibold leading-tight">Pelatihan Kepemimpinan Nasional</p>
+                                            <p class="text-white text-xs font-normal mt-0">Tk. II dan Tk. I</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PKA -->
+                            <div class="flex items-start gap-3">
+                                <span class="text-gold font-bold text-base mt-1">•</span>
+                                <div>
+                                    <h3 class="text-gold font-bold text-base mb-0.5">PKA</h3>
+                                    <div class="flex items-center gap-2 mt-0.5">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 2l8 4v12l-8 4l-8-4V6l8-4z" />
+                                            <path d="M12 12l8 -4" />
+                                            <path d="M9 12h6" />
+                                            <path d="M12 16V8" />
+                                        </svg>
+                                        <p class="text-white text-sm font-semibold leading-tight mt-0">Pelatihan Kepemimpinan Administrator</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PKP -->
+                            <div class="flex items-start gap-3">
+                                <span class="text-gold font-bold text-base mt-1">•</span>
+                                <div>
+                                    <h3 class="text-gold font-bold text-base mb-0.5">PKP</h3>
+                                    <div class="flex items-center gap-2 mt-0.5">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <circle cx="12" cy="12" r="3" />
+                                            <path d="M12 1v4m0 14v-4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83" />
+                                        </svg>
+                                        <p class="text-white text-sm font-semibold leading-tight mt-0">Pelatihan Kepemimpinan Pengawas</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- PKA -->
-                    <div class="flex items-start gap-3">
-                        <span class="text-gold font-bold text-base mt-1">•</span>
-                        <div>
-                            <h3 class="text-gold font-bold text-base mb-0.5">PKA</h3>
-                            <div class="flex items-center gap-2 mt-0.5">
-                                <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <path d="M12 2l8 4v12l-8 4l-8-4V6l8-4z" />
-                                    <path d="M12 12l8 -4" />
-                                    <path d="M9 12h6" />
-                                    <path d="M12 16V8" />
-                                </svg>
-                                <p class="text-white text-sm font-semibold leading-tight mt-0">Pelatihan Kepemimpinan Administrator</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Bagian Bawah Beranda: GARIS SUDAH DINAIKKAN KHUSUS DI POTRAIT -->
+                    <div class="text-center mb-3 px-3">
+                        <!-- POSISI GARIS SUDAH DIATUR AGAR NAIK DI POTRAIT TAPI TETAP DI TEMPAT DI LANDSCAPE -->
+                        <hr class="border-gold/40 w-3/4 mx-auto garis-pemisah">
+                        
+                        <!-- 2. Bagian Pengetikan & Solusi -->
+                        <h2 class="font-bold text-gold text-lg bagian-judul-bawah">Pengetikan, Desain & Cetak</h2>
+                        <p class="text-gold/80 text-xs bagian-deskripsi-bawah">solusi terpercaya dokumen berkualitas tinggi</p>
 
-                    <!-- PKP -->
-                    <div class="flex items-start gap-3">
-                        <span class="text-gold font-bold text-base mt-1">•</span>
-                        <div>
-                            <h3 class="text-gold font-bold text-base mb-0.5">PKP</h3>
-                            <div class="flex items-center gap-2 mt-0.5">
-                                <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f3d278" fill="none">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <circle cx="12" cy="12" r="3" />
-                                    <path d="M12 1v4m0 14v-4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83" />
-                                </svg>
-                                <p class="text-white text-sm font-semibold leading-tight mt-0">Pelatihan Kepemimpinan Pengawas</p>
-                            </div>
+                        <div class="flex justify-center gap-3 tombol-bawah max-w-md mx-auto">
+                            <a href="#" onclick="changePage('layanan', event)" class="btn-custom border-white text-white py-2 px-5 font-bold bg-transparent hover:bg-white/10 text-sm">
+                                Layanan Kami
+                            </a>
+                            <a href="#" onclick="changePage('kontak', event)" class="btn-custom border-white text-white py-2 px-5 font-bold bg-transparent hover:bg-white/10 text-sm">
+                                Hubungi Kami
+                            </a>
+                        </div>
+                        
+                        <!-- 3. Hak Cipta Rata Tengah Sesuai Keinginan -->
+                        <div class="copyright-container">
+                            <p class="text-gold/80">Copyright © 2026 AW Solutions - Penyedia Jasa Tugas Diklat PKN, PKA, PKP. <br> All rights reserved.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Bagian Bawah Beranda: GARIS SUDAH DIATUR DI KEDUA MODE -->
-            <div class="text-center mb-3 px-3">
-                <!-- POSISI GARIS SUDAH DIATUR AGAR PAS DI POTRAIT DAN LANDSCAPE -->
-                <hr class="border-gold/40 w-3/4 mx-auto garis-pemisah">
-                
-                <!-- 2. Bagian Pengetikan & Solusi -->
-                <h2 class="font-bold text-gold text-lg bagian-judul-bawah">Pengetikan, Desain & Cetak</h2>
-                <p class="text-gold/80 text-xs bagian-deskripsi-bawah">solusi terpercaya dokumen berkualitas tinggi</p>
-
-                <div class="flex justify-center gap-3 tombol-bawah max-w-md mx-auto">
-                    <a href="#" onclick="changePage('layanan', event)" class="btn-custom border-white text-white py-2 px-5 font-bold bg-transparent hover:bg-white/10 text-sm">
-                        Layanan Kami
-                    </a>
-                    <a href="#" onclick="changePage('kontak', event)" class="btn-custom border-white text-white py-2 px-5 font-bold bg-transparent hover:bg-white/10 text-sm">
-                        Hubungi Kami
-                    </a>
-                </div>
-                
-                <!-- 3. Hak Cipta Rata Tengah Sesuai Keinginan -->
-                <div class="copyright-container">
-                    <p class="text-gold/80">Copyright © 2026 AW Solutions - Penyedia Jasa Tugas Diklat PKN, PKA, PKP. <br> All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                                
-     <!-- Halaman Profil -->
+            <!-- Halaman Profil -->
     <section id="profil" class="page-content">
         <div class="relative min-h-screen h-auto">
             <div class="menu-container">
@@ -459,4 +459,3 @@
 
 </body>
 </html>
- 
