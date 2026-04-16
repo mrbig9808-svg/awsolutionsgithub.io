@@ -81,6 +81,32 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+            /* Gaya untuk daftar dengan ikon centang hijau */
+            .check-list {
+                list-style: none;
+                padding-left: 0;
+            }
+            .check-list li {
+                position: relative;
+                padding-left: 25px;
+                margin-bottom: 8px;
+            }
+            .check-list li::before {
+                content: '\f00c';
+                font-family: 'Font Awesome 4.7.0';
+                position: absolute;
+                left: 0;
+                color: #28a745; /* Warna hijau */
+                font-weight: bold;
+            }
+            /* Penyesuaian posisi ikon klik di atas */
+            .click-icon-top {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 0.875rem;
+                opacity: 0.8;
+            }
         }
     </style>
 </head>
@@ -107,7 +133,7 @@
                 <!-- Kolom Kiri: Tombol Layanan -->
                 <div class="p-3 bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')] flex flex-col justify-center gap-2 py-2">
                     
-                    <!-- Kotak PKN (Dengan Tanda Klik) -->
+                    <!-- Kotak PKN (Dengan Tanda Klik di atas) -->
                     <div id="pknBtn" class="box-3d text-white p-3 cursor-pointer transition duration-300 hover:scale-[1.01] relative" onclick="openModal('pknModal')">
                         <div class="flex items-center gap-2 mb-1">
                             <i class="fa fa-th-large text-gold text-lg"></i>
@@ -115,40 +141,40 @@
                         </div>
                         <p class="text-gray-100 text-sm pl-6 leading-tight">(Pelatihan Kepemimpinan Nasional)</p>
                         <p class="text-gray-100 text-sm pl-6 leading-tight mt-0.5">Tingkat II & Tingkat I</p>
-                        <!-- Tanda Klik -->
-                        <span class="absolute bottom-2 right-3 text-xs text-gold/80"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                        <!-- Tanda Klik di pojok kanan atas -->
+                        <span class="click-icon-top text-gold"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
                     </div>
 
-                    <!-- Kotak PKA (Dengan Tanda Klik) -->
+                    <!-- Kotak PKA (Dengan Tanda Klik di atas) -->
                     <div id="pkaBtn" class="bg-primary text-white p-3 rounded-lg shadow-lg cursor-pointer transition duration-300 hover:scale-[1.01] relative" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); background: linear-gradient(145deg, #1a3b7a, #0a2463); border-radius: 8px;" onclick="openModal('pkaModal')">
                         <div class="flex items-center gap-2 mb-1">
                             <i class="fa fa-plus-square-o text-gold text-lg"></i>
                             <h3 class="font-bold text-lg text-gold">PKA</h3>
                         </div>
                         <p class="text-gray-100 text-sm pl-6 leading-tight">(Pelatihan Kepemimpinan Administrator)</p>
-                        <!-- Tanda Klik -->
-                        <span class="absolute bottom-2 right-3 text-xs text-gold/80"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                        <!-- Tanda Klik di pojok kanan atas -->
+                        <span class="click-icon-top text-gold"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
                     </div>
 
-                    <!-- Kotak PKP (Dengan Tanda Klik) -->
+                    <!-- Kotak PKP (Dengan Tanda Klik di atas) -->
                     <div id="pkpBtn" class="bg-primary text-white p-3 rounded-lg shadow-lg cursor-pointer transition duration-300 hover:scale-[1.01] relative" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); background: linear-gradient(145deg, #1a3b7a, #0a2463); border-radius: 8px;" onclick="openModal('pkpModal')">
                         <div class="flex items-center gap-2 mb-1">
                             <i class="fa fa-sun-o text-gold text-lg"></i>
                             <h3 class="font-bold text-lg text-gold">PKP</h3>
                         </div>
                         <p class="text-gray-100 text-sm pl-6 leading-tight">(Pelatihan Kepemimpinan Pengawas)</p>
-                        <!-- Tanda Klik -->
-                        <span class="absolute bottom-2 right-3 text-xs text-gold/80"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                        <!-- Tanda Klik di pojok kanan atas -->
+                        <span class="click-icon-top text-gold"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
                     </div>
 
-                    <!-- Kotak Desain & Cetak (Dengan Tanda Klik) -->
+                    <!-- Kotak Desain & Cetak (Dengan Tanda Klik di atas) -->
                     <div id="cetakBtn" class="box-gold-3d text-primary p-3 cursor-pointer transition duration-300 hover:scale-[1.01] relative" onclick="openModal('cetakModal')">
                         <div class="flex items-center gap-2">
                             <i class="fa fa-file-text-o text-primary text-lg"></i>
                             <h3 class="font-bold text-lg text-primary">Design / Cetak</h3>
                         </div>
-                        <!-- Tanda Klik -->
-                        <span class="absolute bottom-2 right-3 text-xs text-primary/60"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                        <!-- Tanda Klik di pojok kanan atas -->
+                        <span class="click-icon-top text-primary/60"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
                     </div>
 
                 </div>
@@ -173,8 +199,8 @@
     <div id="pknModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('pknModal')">&times;</span>
-            <h2 class="text-xl font-bold mb-3 text-primary">Tugas Diklat PKN TK. II</h2>
-            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+            <h2 class="text-xl font-bold mb-3 text-primary">Tugas Diklat PKN</h2>
+            <ul class="check-list text-gray-700">
                 <li>Essay Agenda I, Agenda II, Agenda III</li>
                 <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
                 <li>Tugas Individu Observasi Lapangan (OL)</li>
@@ -193,7 +219,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('pkaModal')">&times;</span>
             <h2 class="text-xl font-bold mb-3 text-primary">Tugas Diklat PKA</h2>
-            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+            <ul class="check-list text-gray-700">
                 <li>Essay Agenda I, Agenda II, Agenda III</li>
                 <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
                 <li>Tugas Individu Studi Lapangan (Stula)</li>
@@ -212,7 +238,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('pkpModal')">&times;</span>
             <h2 class="text-xl font-bold mb-3 text-primary">Tugas Diklat PKP</h2>
-            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+            <ul class="check-list text-gray-700">
                 <li>Essay Agenda I, Agenda II, Agenda III</li>
                 <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
                 <li>Tugas Individu Studi Lapangan (Stula)</li>
@@ -231,7 +257,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('cetakModal')">&times;</span>
             <h2 class="text-xl font-bold mb-3 text-primary">Layanan Desain & Cetak</h2>
-            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+            <ul class="check-list text-gray-700">
                 <li>Majalah untuk kebutuhan PKN, PKA, dan PKP</li>
                 <li>Infografis untuk kebutuhan PKN, PKA, dan PKP</li>
                 <li>Baliho/Backdrop untuk kebutuhan PKN, PKA, dan PKP</li>
