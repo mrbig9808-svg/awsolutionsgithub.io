@@ -7,23 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- STYLE -->
     <style>
         body {
             margin: 0; 
             padding: 0; 
-            /* Warna biru sesuai website */
+            /* WARNA BIRU TUA SOLID, TIDAK HITAM */
             background-color: #0a2463; 
             font-family: Arial, sans-serif;
         }
 
-        /* Background dengan gambar halus */
+        /* BACKGROUND GAMBAR DIATUR AGAR JELAS & KENTARA */
         .background-image {
-            background-image: url('gambar-background.jpg'); /* Ganti dengan nama file foto background Bapak */
+            background-image: url('digital-printing.jpg');
             background-size: cover;
             background-position: center;
-            background-blend-mode: overlay;
-            background-color: rgba(10, 36, 99, 0.9); /* Warna biru lebih kuat, gambar jadi samar */
+            background-repeat: no-repeat;
+            /* OPACITY DIATUR AGAR GAMBAR KENTARA TAPI BIRUNYA TETAP JELAS */
+            background-blend-mode: soft-light;
         }
 
         .modal {
@@ -36,8 +36,7 @@
             width: 100%; 
             height: 100%; 
             overflow: auto; 
-            background-color: rgb(0,0,0); 
-            background-color: rgba(0,0,0,0.9); 
+            background-color: rgba(0,0,0,0.8); 
         }
 
         .modal-content {
@@ -64,7 +63,6 @@
             text-decoration: none;
         }
 
-        /* Style kotak produk */
         .item-box {
             width: 100%; 
             aspect-ratio: 1/1; 
@@ -90,8 +88,6 @@
         }
     </style>
 </head>
-
-<!-- Tambahkan class background-image di sini -->
 <body class="background-image">
 
     <div class="min-h-screen flex flex-col">
@@ -104,8 +100,7 @@
             </p>
         </div>
 
-        <!-- ISI KOTAK-KOTAK -->
-        <!-- Diberi padding kiri kanan biar tidak mentok -->
+        <!-- ISI KOTAK-KOTAK (DIBERI JARAK KIRI KANAN AGAR RAPI) -->
         <div class="flex-grow px-6 py-4">
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 850px; margin: 0 auto;">
 
@@ -168,8 +163,8 @@
                     </div>
                 </div>
 
-                <div onclick="bukaFile('Catak Majalah 02.mp4', 'video')" class="item-box">
-                    <video src="Catak Majalah 02.mp4" controls style="width: 100%; height: 100%; object-fit: cover;"></video>
+                <div onclick="bukaFile('Cetak Majalah 02.mp4', 'video')" class="item-box">
+                    <video src="Cetak Majalah 02.mp4" controls style="width: 100%; height: 100%; object-fit: cover;"></video>
                     <div class="label-box">
                         Lihat Detail <i class="fas fa-hand-point-right" style="margin-left: 8px;"></i>
                     </div>
@@ -208,13 +203,12 @@
 
     </div>
 
-    <!-- TEMPAT GAMBAR/VIDEO BESAR MUNCUL -->
+    <!-- MODAL -->
     <div id="myModal" class="modal">
         <span class="close" onclick="tutupFile()">&times;</span>
         <div id="kontenModal" class="modal-content"></div>
     </div>
 
-    <!-- SCRIPT -->
     <script>
         var modal = document.getElementById("myModal");
         var kontenModal = document.getElementById("kontenModal");
