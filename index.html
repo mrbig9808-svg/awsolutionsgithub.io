@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - AW Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src https://cdn.tailwindcss.com></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,13 +44,13 @@
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 8px; /* Jarak diperkecil */
-            font-size: 1rem; /* Ukuran pas biar muat */
+            margin: 0 8px;
+            font-size: 1rem; /* UKURAN PAS BIAR MUAT */
             font-weight: 500;
             padding-bottom: 5px;
             border-bottom: 3px solid transparent;
             transition: 0.3s;
-            white-space: nowrap; /* Agar tidak pecah baris */
+            white-space: nowrap;
         }
 
         .navbar a.active {
@@ -82,19 +82,18 @@
             z-index: 1;
         }
 
-        /* KONTEN DIATUR AGAR NAIK KE ATAS */
+        /* KONTEN UTAMA */
         .content-wrapper {
             position: relative;
             z-index: 2;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* DIUBAH KE FLEX START AGAR NAIK KE ATAS */
+            justify-content: flex-start; /* NAIK KE ATAS */
             align-items: center;
             text-align: center;
-            padding: 10px 20px 20px 20px; /* PADDING ATAS DIKECILKAN */
+            padding: 20px;
             width: 100%;
-            padding-top: 20px; /* Jarak dari menu */
         }
 
         /* LOGO KECIL */
@@ -105,19 +104,28 @@
             margin-bottom: 15px;
         }
 
+        /* BAGIAN BAWAH YANG DITURUNKAN */
+        .bottom-section {
+            margin-top: auto; /* INI PENTING: NAIKKAN KE ATAS, TINGGALKAN RUANG TENGAH */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
         /* STYLE HAK CIPTA */
         .copyright {
             color: white;
             font-size: 0.8rem;
-            margin-top: auto; /* Agar tetap di bawah tapi rapi */
-            padding-bottom: 10px;
+            margin-top: 20px;
             opacity: 0.8;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR MENU SUDAH LENGKAP TIDAK TERPOTONG -->
+    <!-- NAVBAR MENU -->
     <div class="navbar">
         <a href="#" class="active">Beranda</a>
         <a href="#">Profil</a>
@@ -130,41 +138,41 @@
     <div class="hero-section">
         <div class="content-wrapper">
             
-            <!-- LOGO AW SOLUTIONS -->
-            <div class="logo-small">AW Solutions</div>
+            <!-- LOGO DAN JUDUL SAMA ISI PKN PKA PKP -->
+            <div class="top-content">
+                <div class="logo-small">AW Solutions</div>
 
-            <!-- JUDUL -->
-            <h1 style="color: white; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 700; margin-bottom: 25px; white-space: nowrap;">
-                Jasa Tugas Diklat
-            </h1>
+                <h1 style="color: white; font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 700; margin-bottom: 25px; white-space: nowrap;">
+                    Jasa Tugas Diklat
+                </h1>
 
-            <!-- TULISAN DENGAN ICON -->
-            <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.2rem); max-width: 90%; line-height: 1.8; margin-bottom: 30px;">
-                <i class="fas fa-th-large" style="color: var(--warna-emas); margin-right: 8px;"></i>
-                PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
-                <br>
-                <i class="fas fa-plus-square" style="color: var(--warna-emas); margin-right: 8px;"></i>
-                PKA Pelatihan Kepemimpinan Administrator
-                <br>
-                <i class="fas fa-certificate" style="color: var(--warna-emas); margin-right: 8px;"></i>
-                PKP Pelatihan Kepemimpinan Pengawas
-            </p>
+                <p style="color: white; font-size: clamp(0.9rem, 2.5vw, 1.2rem); max-width: 90%; line-height: 1.8; margin-bottom: 0;">
+                    <i class="fas fa-th-large" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
+                    <br>
+                    <i class="fas fa-plus-square" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKA Pelatihan Kepemimpinan Administrator
+                    <br>
+                    <i class="fas fa-certificate" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKP Pelatihan Kepemimpinan Pengawas
+                </p>
+            </div>
 
-            <!-- KALIMAT PENUTUP -->
-            <p style="color: white; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5;">
-                Solusi Pengetikan Desain dan Cetak untuk Kebutuhan Tugas Diklat Anda
-            </p>
+            <!-- BAGIAN INI DITURUNKAN PALING BAWAH -->
+            <div class="bottom-section">
+                <p style="color: white; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5;">
+                    Solusi Pengetikan Desain dan Cetak untuk Kebutuhan Tugas Diklat Anda
+                </p>
 
-            <!-- TOMBOL -->
-            <a href="layanan.html" style="text-decoration: none;">
-                <button style="background-color: white; color: var(--warna-biru); padding: 10px 25px; font-size: 1.2rem; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
-                    Mulai Sekarang
-                </button>
-            </a>
+                <a href="layanan.html" style="text-decoration: none;">
+                    <button style="background-color: white; color: var(--warna-biru); padding: 10px 25px; font-size: 1.2rem; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
+                        Mulai Sekarang
+                    </button>
+                </a>
 
-            <!-- HAK CIPTA -->
-            <div class="copyright">
-                &copy; 2026 AW Solutions - All Rights Reserved
+                <div class="copyright">
+                    &copy; 2026 AW Solutions - All Rights Reserved
+                </div>
             </div>
 
         </div>
