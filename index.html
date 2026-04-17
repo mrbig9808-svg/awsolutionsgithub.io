@@ -60,7 +60,6 @@
                 position: absolute; bottom: 0; left: 0; width: 100%; background: #FFD700;
                 color: #002B5B; text-align: center; padding: 6px 0; font-weight: bold; font-size: 14px;
             }
-            /* KOTAK PORTOFOLIO DIPERBESAR */
             .portofolio-item {
                 width: 100%;
                 aspect-ratio: 3/4;
@@ -72,7 +71,6 @@
                 cursor: pointer;
                 margin-bottom: 1rem;
             }
-            /* TULISAN LIHAT DETAIL DINAJKAN */
             .portofolio-label {
                 position: absolute;
                 bottom: 15px;
@@ -102,9 +100,6 @@
         .page-content.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* ============================================== */
-        /* STYLE MODAL SUDAH DIPERBAIKI */
-        /* ============================================== */
         .modal {
             display: none;
             position: fixed;
@@ -145,7 +140,6 @@
             z-index: 10000;
             line-height: 1;
         }
-        /* ============================================== */
 
         input, textarea {
             width: auto; min-width: 250px; max-width: 90%; padding: 8px 12px;
@@ -154,7 +148,6 @@
         }
         input::placeholder, textarea::placeholder { color: #999; text-align: left; }
 
-        /* GARIS KUNING PEMBATAS DI BAWAH MENU */
         .navbar {
             background-color: #002B5B;
             padding: 12px 5px;
@@ -173,7 +166,6 @@
         }
         .navbar a.active { border-bottom: 3px solid white; }
 
-        /* STYLE HALAMAN BERANDA */
         .hero-section {
             background-image: url('Latar Mengetik 01.jpg');
             background-size: cover;
@@ -192,7 +184,7 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
@@ -201,67 +193,59 @@
 
         .logo-small {
             color: var(--secondary);
-            font-size: 0.9rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .judul-utama {
             color: var(--primary);
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-size: clamp(2.5rem, 8vw, 4rem);
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             white-space: nowrap;
         }
 
         .item-layanan {
             color: white;
-            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-            line-height: 1.5;
-            margin-bottom: 8px;
-            max-width: 600px;
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            line-height: 1.8;
+            margin-bottom: 12px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            text-align: left;
         }
 
-        .bottom-section {
-            margin-top: 80px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 0px;
-        }
-
-        @media screen and (orientation: landscape) {
-            .bottom-section {
-                margin-top: 130px !important;
-            }
+        .deskripsi-layanan {
+            color: white;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin: 30px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .tombol-mulai {
             background-color: white;
             color: var(--primary);
-            padding: 8px 22px;
-            font-size: 1rem;
+            padding: 12px 40px;
+            font-size: 1.3rem;
             font-weight: bold;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
             white-space: nowrap;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .copyright {
             color: white;
-            font-size: 0.8rem;
-            margin-top: 30px;
-            margin-bottom: 40px;
-            opacity: 0.8;
+            font-size: 1rem;
+            margin-top: 40px;
+            opacity: 0.9;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
-        /* STYLE HALAMAN PORTOFOLIO */
         .portofolio-section {
             background-color: #002B5B;
             min-height: calc(100vh - 65px);
@@ -289,71 +273,69 @@
             margin: 0 auto;
         }
 
-        /* STYLE HALAMAN KONTAK - SEMUA RATA KIRI & KOTAK MEMANJANG */
         .kontak-section {
-            background-color: #002B5B;
+            background-color: #ffffff;
             min-height: calc(100vh - 65px);
-            padding: 30px 20px;
-            color: white;
+            padding: 40px 20px;
+            color: #000;
             text-align: left;
         }
         .kontak-title {
-            color: #FFD700;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            color: #002B5B;
+            font-size: clamp(2rem, 6vw, 3rem);
             font-weight: bold;
             margin-bottom: 30px;
             text-align: left;
         }
-        .kontak-info {
-            max-width: 100%;
-            margin-bottom: 30px;
+        .kontak-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .kontak-info-title {
+            color: #002B5B;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 30px 0 15px;
+        }
+        .kontak-info-text {
+            font-size: 1.2rem;
             line-height: 1.8;
-            font-size: 1rem;
+            margin-bottom: 10px;
         }
-        .kontak-info i {
-            color: #FFD700;
-            width: 25px;
-            text-align: center;
-            margin-right: 10px;
-        }
-        .kontak-form {
-            width: 100%;
-            max-width: 100%;
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-            color: #000;
-            box-sizing: border-box;
-        }
-        .kontak-form label {
-            font-weight: bold;
-            margin-bottom: 8px;
+        .kontak-form-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 20px 0 8px;
             display: block;
-            text-align: left;
         }
-        .kontak-form input, .kontak-form textarea {
+        .kontak-form-input {
             width: 100%;
             padding: 12px;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
+            border-radius: 6px;
             box-sizing: border-box;
-            text-align: left;
         }
-        .kontak-form textarea {
-            min-height: 150px;
-            resize: vertical;
+        .kontak-form-textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            min-height: 120px;
+            box-sizing: border-box;
         }
-        .kontak-form button {
+        .kontak-form-button {
             background-color: #002B5B;
             color: white;
             padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
+            font-size: 1.2rem;
             font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            margin-top: 20px;
             cursor: pointer;
-            font-size: 1rem;
         }
     </style>
 </head>
@@ -384,33 +366,21 @@
                     </h1>
 
                     <div class="item-layanan">
-                        <i class="fas fa-th-large text-secondary"></i>
+                        <i class="fas fa-th-large text-secondary mr-3"></i>
                         PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
                     </div>
                     <div class="item-layanan">
-                        <i class="fas fa-plus-square text-secondary"></i>
+                        <i class="fas fa-plus-square text-secondary mr-3"></i>
                         PKA Pelatihan Kepemimpinan Administrator
                     </div>
                     <div class="item-layanan">
-                        <i class="fas fa-certificate text-secondary"></i>
-                        PKP Pelatihan Kepemimpinan Pengawas
-                    </div>
-                    <div class="item-layanan">
-                        <i class="fas fa-file-alt text-secondary"></i>
-                        Penyusunan Makalah, Laporan, dan Tugas Akhir Diklat
-                    </div>
-                    <div class="item-layanan">
-                        <i class="fas fa-palette text-secondary"></i>
-                        Desain dan Tata Letak Dokumen Sesuai Pedoman
-                    </div>
-                    <div class="item-layanan">
-                        <i class="fas fa-print text-secondary"></i>
-                        Jasa Cetak dan Jilid Dokumen Berkualitas
+                        <i class="fas fa-certificate text-secondary mr-3"></i>
+                                                PKP Pelatihan Kepemimpinan Pengawas
                     </div>
                 </div>
 
                 <div class="bottom-section">
-                    <p style="color: white; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                    <p class="deskripsi-layanan">
                         Solusi Pengetikan Desain dan Cetak untuk Kebutuhan Tugas Diklat Anda
                     </p>
 
@@ -432,23 +402,23 @@
     <!-- ============================================== -->
     <!-- HALAMAN PROFIL -->
     <!-- ============================================== -->
-    <section id="profil" class="page-content py-8 px-4">
+    <section id="profil" class="page-content py-8 px-4 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold text-center text-primary mb-6">Profil Kami</h2>
+            <h2 class="text-[clamp(2rem,6vw,3rem)] font-bold text-primary mb-6">Profil Kami</h2>
             
             <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
                 <h3 class="text-xl font-semibold text-secondary mb-3">Tentang Kami</h3>
-                <p class="text-gray-700 mb-4 leading-relaxed">
+                <p class="text-gray-700 mb-4 leading-relaxed text-lg">
                     AW Solutions hadir sebagai mitra terpercaya bagi para peserta diklat yang membutuhkan bantuan dalam penyelesaian tugas-tugas diklat. Kami memahami bahwa setiap tugas diklat memiliki standar dan pedoman tersendiri, oleh karena itu kami berkomitmen untuk memberikan hasil yang sesuai dengan ketentuan dan berkualitas tinggi.
                 </p>
 
                 <h3 class="text-xl font-semibold text-secondary mb-3">Visi</h3>
-                <p class="text-gray-700 mb-4 leading-relaxed">
+                <p class="text-gray-700 mb-4 leading-relaxed text-lg">
                     Menjadi penyedia jasa pendukung tugas diklat yang terpercaya, profesional, dan menjadi pilihan utama bagi peserta diklat di seluruh Indonesia.
                 </p>
 
                 <h3 class="text-xl font-semibold text-secondary mb-3">Misi</h3>
-                <ul class="check-list mb-4 text-gray-700">
+                <ul class="check-list mb-4 text-gray-700 text-lg">
                     <li>Memberikan layanan yang cepat, tepat, dan sesuai dengan kebutuhan klien</li>
                     <li>Menjaga kualitas hasil kerja dengan mengikuti standar dan pedoman yang berlaku</li>
                     <li>Memberikan solusi yang efisien dan efektif dalam penyelesaian tugas diklat</li>
@@ -456,7 +426,7 @@
                 </ul>
 
                 <h3 class="text-xl font-semibold text-secondary mb-3">Keunggulan Kami</h3>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed text-lg">
                     Kami didukung oleh tim yang berpengalaman dan memahami betul berbagai jenis tugas diklat. Kami selalu berusaha memberikan hasil terbaik dengan memperhatikan setiap detail, sehingga tugas yang Anda serahkan kepada kami dapat terselesaikan dengan baik dan tepat waktu.
                 </p>
             </div>
@@ -465,17 +435,17 @@
         <!-- ============================================== -->
     <!-- HALAMAN LAYANAN -->
     <!-- ============================================== -->
-    <section id="layanan" class="page-content py-8 px-4">
+    <section id="layanan" class="page-content py-8 px-4 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold text-center text-primary mb-8">Layanan Kami</h2>
+            <h2 class="text-[clamp(2rem,6vw,3rem)] font-bold text-primary text-center mb-8">Layanan Kami</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-file-alt text-secondary text-2xl mr-3"></i>
                         <h3 class="text-xl font-semibold text-primary">Penyusunan Tugas Diklat</h3>
                     </div>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <p class="text-gray-700 mb-4 leading-relaxed text-lg">
                         Kami membantu menyusun berbagai jenis tugas diklat seperti makalah, laporan, studi kasus, sampai tugas akhir diklat. Semua disusun sesuai dengan pedoman dan ketentuan yang berlaku.
                     </p>
                     <button class="btn-click-bottom w-full" onclick="openModal('modal-layanan-1')">
@@ -483,12 +453,12 @@
                     </button>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-palette text-secondary text-2xl mr-3"></i>
                         <h3 class="text-xl font-semibold text-primary">Desain & Tata Letak Dokumen</h3>
                     </div>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <p class="text-gray-700 mb-4 leading-relaxed text-lg">
                         Kami menyusun desain dan tata letak dokumen yang rapi, profesional, dan sesuai dengan standar yang diminta. Mulai dari pengaturan halaman, penomoran, sampai pembuatan daftar isi dan lampiran.
                     </p>
                     <button class="btn-click-bottom w-full" onclick="openModal('modal-layanan-2')">
@@ -496,12 +466,12 @@
                     </button>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-print text-secondary text-2xl mr-3"></i>
                         <h3 class="text-xl font-semibold text-primary">Cetak & Jilid Dokumen</h3>
                     </div>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <p class="text-gray-700 mb-4 leading-relaxed text-lg">
                         Kami menyediakan layanan cetak dokumen berkualitas tinggi dengan berbagai pilihan kertas, serta jasa jilid rapi dan tahan lama. Bisa disesuaikan dengan kebutuhan Anda.
                     </p>
                     <button class="btn-click-bottom w-full" onclick="openModal('modal-layanan-3')">
@@ -509,12 +479,12 @@
                     </button>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-edit text-secondary text-2xl mr-3"></i>
                         <h3 class="text-xl font-semibold text-primary">Penyuntingan & Revisi Dokumen</h3>
                     </div>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <p class="text-gray-700 mb-4 leading-relaxed text-lg">
                         Kami juga menerima jasa penyuntingan dan revisi dokumen yang sudah ada. Mulai dari perbaikan tata bahasa, penyesuaian struktur, sampai perbaikan format sesuai ketentuan.
                     </p>
                     <button class="btn-click-bottom w-full" onclick="openModal('modal-layanan-4')">
@@ -587,34 +557,40 @@
     <!-- ============================================== -->
     <section id="kontak" class="page-content kontak-section">
         <h2 class="kontak-title">Hubungi Kami</h2>
-        
-        <div class="kontak-info">
-            <p class="mb-3"><i class="fas fa-map-marker-alt"></i> Alamat: Makassar, Sulawesi Selatan</p>
-            <p class="mb-3"><i class="fas fa-phone"></i> Telepon/WhatsApp 1: 0812-3456-7890</p>
-            <p class="mb-3"><i class="fas fa-phone"></i> Telepon/WhatsApp 2: 0859-7515-3455</p>
-            <p class="mb-3"><i class="fas fa-envelope"></i> Email: info@awsolutions.id</p>
-            <p class="mb-3"><i class="fas fa-clock"></i> Jam Operasional: Senin - Jumat (08.00 - 17.00 WITA), Sabtu (08.00 - 12.00 WITA)</p>
+        <p class="kontak-subtitle">
+            Silakan hubungi kami melalui kontak yang tertera di bawah ini atau isi formulir pesan untuk kebutuhan tugas diklat Anda. Kami siap membantu menyelesaikan tugas Anda dengan baik dan tepat waktu.
+        </p>
+
+        <h3 class="kontak-info-title">Informasi Kontak</h3>
+        <div class="kontak-info-text">
+            <p><i class="fas fa-map-marker-alt text-primary mr-3"></i> Alamat: Makassar, Sulawesi Selatan</p>
+            <p><i class="fas fa-phone text-primary mr-3"></i> Telepon/WhatsApp 1: 0812-3456-7890</p>
+            <p><i class="fas fa-phone text-primary mr-3"></i> Telepon/WhatsApp 2: 0859-7515-3455</p>
+            <p><i class="fas fa-envelope text-primary mr-3"></i> Email: info@awsolutions.id</p>
+            <p><i class="fas fa-clock text-primary mr-3"></i> Jam Operasional: Senin - Jumat (08.00 - 17.00 WITA), Sabtu (08.00 - 12.00 WITA)</p>
         </div>
 
+        <h3 class="kontak-info-title">Kirim Pesan</h3>
         <form class="kontak-form" onsubmit="return kirimPesan()">
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+            <label class="kontak-form-label" for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" class="kontak-form-input" placeholder="Masukkan nama lengkap Anda" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda" required>
+            <label class="kontak-form-label" for="email">Alamat Email</label>
+            <input type="email" id="email" name="email" class="kontak-form-input" placeholder="Masukkan alamat email Anda" required>
 
-            <label for="telepon">Nomor Telepon/WhatsApp</label>
-            <input type="tel" id="telepon" name="telepon" placeholder="Masukkan nomor telepon yang bisa dihubungi" required>
+            <label class="kontak-form-label" for="telepon">Nomor Telepon/WhatsApp</label>
+            <input type="tel" id="telepon" name="telepon" class="kontak-form-input" placeholder="Masukkan nomor yang bisa dihubungi" required>
 
-            <label for="pesan">Pesan</label>
-            <textarea id="pesan" name="pesan" placeholder="Tulis pesan atau kebutuhan Anda di sini..." required></textarea>
+            <label class="kontak-form-label" for="pesan">Isi Pesan</label>
+            <textarea id="pesan" name="pesan" class="kontak-form-textarea" placeholder="Tulis kebutuhan atau pesan Anda di sini..." required></textarea>
 
-            <button type="submit">
-                <i class="fas fa-paper-plane"></i> Kirim Pesan
+            <button type="submit" class="kontak-form-button">
+                <i class="fas fa-paper-plane mr-2"></i> Kirim Pesan
             </button>
         </form>
     </section>
-        <!-- ============================================== -->
+
+    <!-- ============================================== -->
     <!-- MODAL DETAIL LAYANAN -->
     <!-- ============================================== -->
     <div id="modal-layanan-1" class="modal">
@@ -807,7 +783,6 @@
         // Fungsi untuk membuka modal
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
-            // Gulir ke atas modal
             window.scrollTo(0, 0);
         }
 
@@ -829,7 +804,6 @@
         // Fungsi untuk mengirim pesan kontak
         function kirimPesan() {
             alert('Pesan Anda berhasil terkirim! Kami akan segera menghubungi Anda melalui nomor telepon atau email yang Anda berikan.');
-            // Reset form setelah dikirim
             document.querySelector('.kontak-form').reset();
             return false;
         }
@@ -838,4 +812,4 @@
 </body>
 </html>
                 
-    
+                    
