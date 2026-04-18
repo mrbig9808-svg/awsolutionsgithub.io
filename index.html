@@ -426,20 +426,40 @@
         }
         .portofolio-grid {
             display: grid;
-            grid-template-columns: 1fr; /* Default 1 kolom untuk HP posisi tegak */
-            gap: 25px;
-            max-width: 1200px;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom per baris */
+            gap: 10px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 0 10px;
-         }
+        }
 
-         /* Ini langsung di bawahnya, masih 1 bagian yang sama */
-         @media (min-width: 768px) {
-        .portofolio-grid {
-         grid-template-columns: repeat(5, 1fr); /* 5 kolom untuk landscape/PC */
-             }
-         }
+        /* Ukuran kotak disesuaikan agar muat dalam 1 layar HP */
+        .item-box {
+            min-height: 120px;
+            border: 3px solid #FFD700;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+            cursor: pointer;
+        }
 
+        .label-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #FFD700;
+            color: #002B5B;
+            text-align: center;
+            padding: 6px 0;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        /* Responsif untuk HP agar semua muat dalam 1 layar */
+        @media (max-width: 767px)
+    
         /* PROFIL STYLE */
         .profil-section {
             background-color: #f8f9fa;
@@ -707,85 +727,102 @@
     <section id="portofolio" class="page-content">
         <div class="portofolio-section">
             <div class="max-w-6xl mx-auto">
-                <h1 class="portofolio-title">Hasil Produk Kami</h1>
-                <p class="portofolio-subtitle">Berikut adalah beberapa contoh hasil karya cetak dan desain yang telah kami kerjakan untuk memenuhi kebutuhan tugas diklat Anda.</p>
+                <h1 class="portofolio-title">Hasil Produk</h1>
+                <p class="portofolio-subtitle">Hasil produk cetakan kami untuk menunjang kebutuhan pameran.</p>
 
+                <!-- GRID PORTOFOLIO 3 KOLOM PER BARIS -->
                 <div class="portofolio-grid">
-                    <!-- Hasil Cetakan 1 -->
+                    <!-- Kotak 1 -->
                     <div onclick="openModal('produk1Modal')" class="item-box">
-                        <img src="Hasil Cetakan 1.jpg" alt="Hasil Cetakan 1" class="w-full h-full object-cover">
+                        <img src="Majalah 01.jpg" alt="Hasil Cetakan 1" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Hasil Cetakan 2 -->
+                    <!-- Kotak 2 -->
                     <div onclick="openModal('produk2Modal')" class="item-box">
-                        <img src="Hasil Cetakan 2.jpg" alt="Hasil Cetakan 2" class="w-full h-full object-cover">
+                        <img src="Majalah 02.jpg" alt="Hasil Cetakan 2" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Hasil Cetakan 3 -->
+                    <!-- Kotak 3 -->
                     <div onclick="openModal('produk3Modal')" class="item-box">
-                        <img src="Hasil Cetakan 3.jpg" alt="Hasil Cetakan 3" class="w-full h-full object-cover">
+                        <img src="Majalah 03.jpg" alt="Hasil Cetakan 3" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Hasil Cetakan 4 -->
+                    <!-- Kotak 4 -->
                     <div onclick="openModal('produk4Modal')" class="item-box">
-                        <img src="Hasil Cetakan 4.jpg" alt="Hasil Cetakan 4" class="w-full h-full object-cover">
+                        <img src="Majalah 04.jpg" alt="Hasil Cetakan 4" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Hasil Cetakan 5 -->
+                    <!-- Kotak 5 -->
                     <div onclick="openModal('produk5Modal')" class="item-box">
-                        <img src="Hasil Cetakan 5.jpg" alt="Hasil Cetakan 5" class="w-full h-full object-cover">
+                        <img src="Banner 01.jpg" alt="Hasil Cetakan 5" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Hasil Cetakan 6 -->
+                    <!-- Kotak 6 -->
                     <div onclick="openModal('produk6Modal')" class="item-box">
-                        <img src="Hasil Cetakan 6.jpg" alt="Hasil Cetakan 6" class="w-full h-full object-cover">
+                        <img src="Banner 02.jpg" alt="Hasil Cetakan 6" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Backdrop 1 -->
-                    <div onclick="openModal('backdrop1Modal')" class="item-box">
+                    <!-- Kotak 7 -->
+                    <div onclick="openModal('produk7Modal')" class="item-box">
                         <img src="Backdrop 01.jpg" alt="Backdrop 1" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Backdrop 2 -->
-                    <div onclick="openModal('backdrop2Modal')" class="item-box">
+                    <!-- Kotak 8 -->
+                    <div onclick="openModal('produk8Modal')" class="item-box">
                         <img src="Backdrop 02.jpg" alt="Backdrop 2" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Backdrop 3 -->
-                    <div onclick="openModal('backdrop3Modal')" class="item-box">
+                    <!-- Kotak 9 -->
+                    <div onclick="openModal('produk9Modal')" class="item-box">
                         <img src="Backdrop 03.jpg" alt="Backdrop 3" class="w-full h-full object-cover">
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
                     </div>
 
-                    <!-- Video Proses Cetak -->
-                    <div onclick="openModal('videoModal')" class="item-box">
+                    <!-- Kotak 10 -->
+                    <div onclick="openModal('video1Modal')" class="item-box">
                         <video src="Cetak Majalah 01.mp4" class="w-full h-full object-cover" muted></video>
+                        <div class="label-box">
+                            Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Kotak 11 - Video Tambahan 1 -->
+                    <div onclick="openModal('video2Modal')" class="item-box">
+                        <video src="Cetak Majalah 02.mp4" class="w-full h-full object-cover" muted></video>
+                        <div class="label-box">
+                            Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Kotak 12 - Video Tambahan 2 (Paling Terakhir) -->
+                    <div onclick="openModal('video3Modal')" class="item-box">
+                        <video src="Model Stand Pameran.mp4" class="w-full h-full object-cover" muted></video>
                         <div class="label-box">
                             Lihat Detail <i class="fas fa-hand-point-right ml-2"></i>
                         </div>
@@ -793,21 +830,21 @@
                 </div>
             </div>
         </div>
-        <!-- Hak Cipta dengan Space Tambahan -->
-        <div class="w-full text-center py-6 bg-primary text-white mt-8">
-            <p class="text-sm md:text-base">&copy; 2026 AW Solutions - Semua Hak Dilindungi</p>
+        <!-- HAK CIPTA TETAP SAMA SEPERTI SEKARANG -->
+        <div class="w-full text-center py-4 bg-primary text-white">
+            <p>&copy; 2026 AW Solutions - Semua Hak Dilindungi</p>
         </div>
     </section>
 
     <!-- ============================================== -->
-    <!-- MODAL DETAIL PRODUK PORTOFOLIO -->
+    <!-- MODAL DETAIL PRODUK -->
     <!-- ============================================== -->
     <div id="produk1Modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('produk1Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Hasil Cetakan 1</h2>
-            <img src="Hasil Cetakan 1.jpg" alt="Detail Hasil Cetakan 1" class="w-full h-auto rounded-lg mb-4 shadow-md">
-            <p class="text-lg">Contoh hasil cetakan dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
+            <img src="Majalah 01.jpg" alt="Detail Hasil Cetakan 1" class="w-full h-auto rounded-lg mb-4 shadow-md">
+            <p class="text-lg">Contoh hasil cetakan majalah tugas diklat dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
         </div>
     </div>
 
@@ -815,8 +852,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('produk2Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Hasil Cetakan 2</h2>
-            <img src="Hasil Cetakan 2.jpg" alt="Detail Hasil Cetakan 2" class="w-full h-auto rounded-lg mb-4 shadow-md">
-            <p class="text-lg">Contoh hasil cetakan dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
+            <img src="Majalah 02.jpg" alt="Detail Hasil Cetakan 2" class="w-full h-auto rounded-lg mb-4 shadow-md">
+            <p class="text-lg">Contoh hasil cetakan majalah tugas diklat dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
         </div>
     </div>
 
@@ -824,8 +861,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('produk3Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Hasil Cetakan 3</h2>
-            <img src="Hasil Cetakan 3.jpg" alt="Detail Hasil Cetakan 3" class="w-full h-auto rounded-lg mb-4 shadow-md">
-            <p class="text-lg">Contoh hasil cetakan dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
+            <img src="Majalah 03.jpg" alt="Detail Hasil Cetakan 3" class="w-full h-auto rounded-lg mb-4 shadow-md">
+            <p class="text-lg">Contoh hasil cetakan majalah tugas diklat dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
         </div>
     </div>
 
@@ -833,8 +870,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('produk4Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Hasil Cetakan 4</h2>
-            <img src="Hasil Cetakan 4.jpg" alt="Detail Hasil Cetakan 4" class="w-full h-auto rounded-lg mb-4 shadow-md">
-            <p class="text-lg">Contoh hasil cetakan dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
+            <img src="Majalah 04.jpg" alt="Detail Hasil Cetakan 4" class="w-full h-auto rounded-lg mb-4 shadow-md">
+            <p class="text-lg">Contoh hasil cetakan majalah tugas diklat dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
         </div>
     </div>
 
@@ -842,8 +879,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('produk5Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Hasil Cetakan 5</h2>
-            <img src="Hasil Cetakan 5.jpg" alt="Detail Hasil Cetakan 5" class="w-full h-auto rounded-lg mb-4 shadow-md">
-            <p class="text-lg">Contoh hasil cetakan dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
+            <img src="Banner 01.jpg" alt="Detail Hasil Cetakan 5" class="w-full h-auto rounded-lg mb-4 shadow-md">
+            <p class="text-lg">Contoh hasil cetakan banner untuk kebutuhan pameran proyek perubahan. Desainnya informatif, menarik, dan menggunakan bahan berkualitas agar hasil cetakan tahan lama.</p>
         </div>
     </div>
 
@@ -851,44 +888,62 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('produk6Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Hasil Cetakan 6</h2>
-            <img src="Hasil Cetakan 6.jpg" alt="Detail Hasil Cetakan 6" class="w-full h-auto rounded-lg mb-4 shadow-md">
-            <p class="text-lg">Contoh hasil cetakan dengan desain yang menarik dan rapi. Menggunakan kertas berkualitas dan tinta yang tajam sehingga hasil cetakan terlihat profesional.</p>
+            <img src="Banner 02.jpg" alt="Detail Hasil Cetakan 6" class="w-full h-auto rounded-lg mb-4 shadow-md">
+            <p class="text-lg">Contoh hasil cetakan banner dengan desain yang rapi dan profesional, cocok digunakan sebagai media pendukung dalam kegiatan pameran diklat.</p>
         </div>
     </div>
 
-    <div id="backdrop1Modal" class="modal">
+    <div id="produk7Modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('backdrop1Modal')">&times;</span>
+            <span class="close" onclick="closeModal('produk7Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Backdrop 1</h2>
             <img src="Backdrop 01.jpg" alt="Detail Backdrop 1" class="w-full h-auto rounded-lg mb-4 shadow-md">
             <p class="text-lg">Contoh hasil cetak backdrop untuk kebutuhan pameran proyek perubahan. Desainnya informatif, menarik, dan menggunakan bahan berkualitas agar hasil cetakan tahan lama.</p>
         </div>
     </div>
 
-    <div id="backdrop2Modal" class="modal">
+    <div id="produk8Modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('backdrop2Modal')">&times;</span>
+            <span class="close" onclick="closeModal('produk8Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Backdrop 2</h2>
             <img src="Backdrop 02.jpg" alt="Detail Backdrop 2" class="w-full h-auto rounded-lg mb-4 shadow-md">
             <p class="text-lg">Contoh hasil cetak backdrop dengan desain yang rapi dan profesional, cocok digunakan sebagai media pendukung dalam kegiatan pameran diklat.</p>
         </div>
     </div>
 
-    <div id="backdrop3Modal" class="modal">
+    <div id="produk9Modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('backdrop3Modal')">&times;</span>
+            <span class="close" onclick="closeModal('produk9Modal')">&times;</span>
             <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Detail Backdrop 3</h2>
             <img src="Backdrop 03.jpg" alt="Detail Backdrop 3" class="w-full h-auto rounded-lg mb-4 shadow-md">
             <p class="text-lg">Contoh hasil cetak backdrop yang disusun dengan konten yang jelas dan terstruktur, memudahkan penyampaian informasi dalam acara pameran.</p>
         </div>
     </div>
 
-    <div id="videoModal" class="modal">
+    <div id="video1Modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('videoModal')">&times;</span>
-            <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Video Proses Cetak Majalah</h2>
+            <span class="close" onclick="closeModal('video1Modal')">&times;</span>
+            <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Video Proses Cetak Majalah 1</h2>
             <video src="Cetak Majalah 01.mp4" controls class="w-full h-auto rounded-lg mb-4 shadow-md"></video>
             <p class="text-lg">Video dokumentasi proses cetak majalah tugas diklat kami. Menunjukkan proses pengerjaan yang teliti dan menggunakan peralatan cetak modern untuk menghasilkan produk terbaik.</p>
+        </div>
+    </div>
+
+    <div id="video2Modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('video2Modal')">&times;</span>
+            <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Video Proses Cetak Majalah 2</h2>
+            <video src="Cetak Majalah 02.mp4" controls class="w-full h-auto rounded-lg mb-4 shadow-md"></video>
+            <p class="text-lg">Video dokumentasi proses cetak majalah tugas diklat kami. Menunjukkan proses pengerjaan yang teliti dan menggunakan peralatan cetak modern untuk menghasilkan produk terbaik.</p>
+        </div>
+    </div>
+
+    <div id="video3Modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('video3Modal')">&times;</span>
+            <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-secondary pb-2">Video Model Stand Pameran</h2>
+            <video src="Model Stand Pameran.mp4" controls class="w-full h-auto rounded-lg mb-4 shadow-md"></video>
+            <p class="text-lg">Video dokumentasi model stand pameran yang kami buat untuk menunjang kebutuhan pameran proyek perubahan. Desainnya menarik dan fungsional untuk menampilkan informasi secara jelas.</p>
         </div>
     </div>
  </section>
