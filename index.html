@@ -13,7 +13,7 @@
                 extend: {
                     colors: {
                         primary: '#002B5B',     // Biru Tua
-                        secondary: '#FFD700',   // Emas
+                        secondary: '#FFD700',   // Emas / Kuning
                         dark: '#212121',
                         light: '#F8F9FA',
                     },
@@ -28,6 +28,12 @@
         @layer utilities {
             .text-shadow-sm {
                 text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            }
+            .text-shadow-medium {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            .text-shadow-strong {
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
             }
             .box-3d {
                 box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -173,7 +179,7 @@
             color: #999;
             text-align: left;
         }
-        /* NAVBAR STYLE */
+        /* NAVBAR STYLE SESUAI PERMINTAAN */
         .navbar {
             background-color: #002B5B;
             padding: 12px 5px;
@@ -181,22 +187,128 @@
             z-index: 3;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             flex-wrap: nowrap;
+            box-sizing: border-box;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 8px;
-            font-size: 0.95rem;
+            margin: 0 5px;
+            font-size: 1rem;
             font-weight: 500;
             padding-bottom: 5px;
             border-bottom: 3px solid transparent;
             transition: 0.3s;
             white-space: nowrap;
+            text-align: center;
         }
         .navbar a.active {
-            border-bottom: 3px solid white;
+            color: #FFD700;
+            border-bottom: 3px solid #FFD700;
+        }
+        /* STYLE TAMBAHAN UNTUK BERANDA */
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: calc(100vh - 55px);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Lapisan gelap sedikit agar tulisan makin jelas */
+            z-index: 1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+        }
+        /* TULISAN AW SOLUTIONS - WARNA KUNING */
+        .logo-small {
+            color: #FFD700;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        /* TULISAN JASA TUGAS DIKLAT - WARNA BIRU DENGAN SHADOW KUAT */
+        .judul-utama {
+            color: #002B5B;
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.8), 
+                         2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow ganda agar sangat kentara */
+        }
+        /* TULISAN ITEM LAYANAN - DENGAN SHADOW */
+        .item-layanan {
+            color: #ffffff;
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            line-height: 1.8;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow untuk teks agar mudah dibaca */
+        }
+        .item-layanan i {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+            flex-shrink: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        /* TULISAN DESKRIPSI - DENGAN SHADOW */
+        .deskripsi {
+            color: #ffffff;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin: 30px auto;
+            line-height: 1.6;
+            max-width: 500px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        /* TOMBOL MULAI SEKARANG */
+        .tombol-mulai {
+            background-color: white;
+            color: #000000;
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        /* COPYRIGHT - DENGAN SHADOW */
+        .copyright {
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            opacity: 0.95;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
@@ -212,51 +324,36 @@
         <a href="#portofolio" onclick="showPage('portofolio')">Portofolio</a>
         <a href="#kontak" onclick="showPage('kontak')">Kontak</a>
     </div>
-
     <!-- ============================================== -->
     <!-- HALAMAN BERANDA -->
     <!-- ============================================== -->
     <section id="beranda" class="page-content active">
         <div class="hero-section">
+            <div class="hero-overlay"></div>
             <div class="content-wrapper">
-                
-                <div class="top-content">
-                    <div class="logo-small text-secondary">AW Solutions</div>
+                <div class="logo-small">AW Solutions</div>
+                <h1 class="judul-utama">Jasa Tugas Diklat</h1>
 
-                    <h1 class="judul-utama text-primary">
-                        Jasa Tugas Diklat
-                    </h1>
-
-                    <div class="item-layanan">
-                        <i class="fas fa-th-large text-secondary"></i>
-                        PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
-                    </div>
-                    <div class="item-layanan">
-                        <i class="fas fa-plus-square text-secondary"></i>
-                        PKA Pelatihan Kepemimpinan Administrator
-                    </div>
-                    <div class="item-layanan">
-                        <i class="fas fa-certificate text-secondary"></i>
-                        PKP Pelatihan Kepemimpinan Pengawas
-                    </div>
+                <div class="item-layanan">
+                    <i class="fas fa-th-large"></i>
+                    <span>PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I</span>
+                </div>
+                <div class="item-layanan">
+                    <i class="fas fa-plus-square"></i>
+                    <span>PKA Pelatihan Kepemimpinan Administrator</span>
+                </div>
+                <div class="item-layanan">
+                    <i class="fas fa-sun-o"></i>
+                    <span>PKP Pelatihan Kepemimpinan Pengawas</span>
                 </div>
 
-                <div class="bottom-section">
-                    <p style="color: white; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                        Solusi Pengetikan Desain dan Cetak untuk Kebutuhan Tugas Diklat Anda
-                    </p>
+                <p class="deskripsi">Solusi Pengetikan Desain dan Cetak untuk Kebutuhan Tugas Diklat Anda</p>
 
-                    <a href="javascript:void(0)" onclick="showPage('layanan')" style="text-decoration: none;">
-                        <button class="tombol-mulai">
-                            Mulai Sekarang
-                        </button>
-                    </a>
+                <a href="javascript:void(0)" onclick="showPage('layanan')" style="text-decoration: none;">
+                    <button class="tombol-mulai">Mulai Sekarang</button>
+                </a>
 
-                    <div class="copyright">
-                        &copy; 2026 AW Solutions - All Rights Reserved
-                    </div>
-                </div>
-
+                <div class="copyright">&copy; 2026 AW Solutions - All Rights Reserved</div>
             </div>
         </div>
     </section>
