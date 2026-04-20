@@ -1,158 +1,222 @@
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - AW Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        biruTua: '#0A2463',
-                        kuning: '#F3D278',
-                    },
-                    fontFamily: {
-                        sans: ['Arial', 'sans-serif'],
-                    },
-                }
+    <title>Portofolio - Desain Interior</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcfbf6; /* Latar belakang off-white */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif; /* Font serif tebal untuk judul */
+            font-size: 80px;
+            color: #0c3b7a; /* Warna biru tua */
+            margin: 0;
+            letter-spacing: -2px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sedikit tekstur */
+        }
+
+        .header .underline {
+            width: 150px;
+            height: 3px;
+            background-color: #ffcc00; /* Warna kuning */
+            margin: 10px auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 250px; /* Tinggi seragam untuk gambar */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Pastikan gambar memenuhi wadah */
+            display: block;
+        }
+
+        .details-bar {
+            background-color: #ffcc00; /* Warna kuning latar belakang tombol */
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .details-button {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Responsivitas untuk layar kecil */
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .header h1 {
+                font-size: 50px;
             }
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            /* Gaya judul Portofolio */
-            .judul-portofolio {
-                @apply text-[clamp(2rem,6vw,3.5rem)] font-bold text-biruTua text-center;
-            }
-            /* Garis bawah judul */
-            .garis-bawah-judul {
-                @apply w-24 h-1 bg-kuning mx-auto mt-2 mb-8;
-            }
-            /* Bingkai foto persegi */
-            .bingkai-foto {
-                @apply w-full aspect-square border-[4px] border-kuning rounded-sm overflow-hidden flex flex-col;
-            }
-            /* Bagian bawah untuk tulisan dan ikon */
-            .bagian-detail {
-                @apply bg-kuning text-biruTua font-medium text-sm py-2 px-3 w-full flex justify-between items-center;
-            }
-            /* Kontainer agar pas di layar HP */
-            .kontainer-utama {
-                @apply max-w-md mx-auto px-4 py-6;
-            }
-        }
+    }
     </style>
 </head>
-<body class="bg-white font-sans">
-    <div class="kontainer-utama">
-        <!-- Judul Halaman -->
-        <h1 class="judul-portofolio">Portofolio</h1>
-        <div class="garis-bawah-judul"></div>
+<body>
 
-        <!-- Grid 12 Foto: 3 Baris × 4 Kolom -->
-        <div class="grid grid-cols-4 gap-3">
-            <!-- Baris 1 -->
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1067/300/300" alt="Hasil Kerja 1" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+<div class="container">
+    <div class="header">
+        <h1>Portofolio</h1>
+        <div class="underline"></div>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/furniture_1.jpg" alt="Kursi oranye bertekstur dengan tanaman di samping jendela">
             </div>
-
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1059/300/300" alt="Hasil Kerja 2" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
             </div>
+        </div>
 
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1060/300/300" alt="Hasil Kerja 3" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/sculpture_1.jpg" alt="Teko keramik bergaya dengan hiasan geometris hitam dan emas di atas nampan kayu">
             </div>
-
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1071/300/300" alt="Hasil Kerja 4" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
             </div>
+        </div>
 
-            <!-- Baris 2 -->
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1065/300/300" alt="Hasil Kerja 5" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/sculpture_2.jpg" alt="Vas keramik hitam memegang ranting daun di atas permukaan marmer">
             </div>
-
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1058/300/300" alt="Hasil Kerja 6" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
             </div>
+        </div>
 
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1062/300/300" alt="Hasil Kerja 7" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/shelving_1.jpg" alt="Rak kayu mengambang dengan vas keramik bulat dan tanaman vas kecil">
             </div>
-
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1066/300/300" alt="Hasil Kerja 8" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
             </div>
+        </div>
 
-            <!-- Baris 3 -->
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1063/300/300" alt="Hasil Kerja 9" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/furniture_2.jpg" alt="Kursi oranye bertekstur dengan kaki kayu di samping tanaman pot kecil">
             </div>
-
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1064/300/300" alt="Hasil Kerja 10" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
             </div>
+        </div>
 
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1068/300/300" alt="Hasil Kerja 11" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/shelving_2.jpg" alt="Rak mengambang kayu dengan vas bulat di samping wadah rotan silinder">
             </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
+            </div>
+        </div>
 
-            <div class="bingkai-foto">
-                <img src="https://picsum.photos/id/1069/300/300" alt="Hasil Kerja 12" class="w-full h-full object-cover">
-                <div class="bagian-detail">
-                    <span>Lihat Detail</span>
-                    <i class="fa-solid fa-eye text-base"></i>
-                </div>
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/shelving_3.jpg" alt="Vas tembikar bulat dan vas kecil dengan tanaman di rak mengambang">
+            </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/furniture_3.jpg" alt="Kursi berlapis oranye dengan detail rotan dan alas bundar di karpet">
+            </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/shelving_4.jpg" alt="Rak penyimpanan terbuka kayu di bawah lampu pendant hitam">
+            </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/furniture_4.jpg" alt="Kursi oranye berlapis dengan kaki logam tipis di samping rak kawat">
+            </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/furniture_5.jpg" alt="Sofa modern berlapis abu-abu gelap dengan bingkai kayu">
+            </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="images/furniture_6.jpg" alt="Sofa berlapis abu-abu terang dengan meja kopi kayu berbentuk oval">
+            </div>
+            <div class="details-bar">
+                <a href="#" class="details-button">Lihat Detail</a>
             </div>
         </div>
     </div>
+</div>
+
 </body>
-</htm
+</html>
