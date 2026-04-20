@@ -3,220 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Desain Interior</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Portofolio Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fcfbf6; /* Latar belakang off-white */
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
+            background-color: #f9f9f7; /* Background putih tulang sedikit tekstur */
+            font-family: 'Poppins', sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
         }
 
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            text-align: center;
-        }
-
+        /* Judul Portofolio */
         .header {
+            text-align: center;
             margin-bottom: 40px;
+            width: 100%;
         }
 
         .header h1 {
-            font-family: 'Playfair Display', serif; /* Font serif tebal untuk judul */
-            font-size: 80px;
-            color: #0c3b7a; /* Warna biru tua */
+            font-family: 'Ultra', serif; /* Font tebal bergaya slab-serif */
+            font-size: 8rem;
+            color: #1a4a8d; /* Biru tua sesuai desain */
             margin: 0;
+            text-transform: capitalize;
             letter-spacing: -2px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sedikit tekstur */
+            /* Efek tekstur sedikit kasar pada teks */
+            -webkit-text-stroke: 1px #1a4a8d;
         }
 
-        .header .underline {
-            width: 150px;
-            height: 3px;
-            background-color: #ffcc00; /* Warna kuning */
+        .header .divider {
+            width: 100px;
+            height: 6px;
+            background-color: #d4a017; /* Garis emas/kuning tua */
             margin: 10px auto;
         }
 
+        /* Grid Container */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 kolom */
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr); /* 4 kolom horisontal */
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
         }
 
+        /* Item Bingkai */
         .portfolio-item {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
+            background-color: #fcd116; /* Warna kuning latar belakang bingkai */
+            padding: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Area Foto */
+        .photo-placeholder {
+            width: 100%;
+            aspect-ratio: 4 / 5; /* Proporsi vertikal sesuai desain */
+            background-color: #eee;
+            background-image: url('https://via.placeholder.com/400x500'); /* Ganti dengan URL gambar Anda */
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Label Lihat Detail */
+        .detail-bar {
             display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            border-radius: 4px;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 5px 5px 5px;
+            color: #0d2a54; /* Warna teks biru gelap */
         }
 
-        .image-container {
-            width: 100%;
-            height: 250px; /* Tinggi seragam untuk gambar */
-            overflow: hidden;
+        .detail-bar i {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            /* Icon mata dengan lingkaran luar sesuai gambar */
+            border: 2px solid #0d2a54;
+            border-radius: 50%;
+            padding: 4px;
+            font-size: 0.8rem;
         }
 
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Pastikan gambar memenuhi wadah */
-            display: block;
+        .detail-bar span {
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
-        .details-bar {
-            background-color: #ffcc00; /* Warna kuning latar belakang tombol */
-            padding: 15px 0;
-            text-align: center;
-            border-top: 1px solid #ddd;
+        /* Responsif untuk layar kecil */
+        @media (max-width: 992px) {
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .header h1 { font-size: 5rem; }
         }
 
-        .details-button {
-            text-decoration: none;
-            color: #000000;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 10px 20px;
-            cursor: pointer;
+        @media (max-width: 600px) {
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 3.5rem; }
         }
-
-        /* Responsivitas untuk layar kecil */
-        @media (max-width: 768px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .header h1 {
-                font-size: 50px;
-            }
-        }
-    }
     </style>
 </head>
 <body>
 
-<div class="container">
     <div class="header">
         <h1>Portofolio</h1>
-        <div class="underline"></div>
+        <div class="divider"></div>
     </div>
 
     <div class="portfolio-grid">
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/furniture_1.jpg" alt="Kursi oranye bertekstur dengan tanaman di samping jendela">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/sculpture_1.jpg" alt="Teko keramik bergaya dengan hiasan geometris hitam dan emas di atas nampan kayu">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/sculpture_2.jpg" alt="Vas keramik hitam memegang ranting daun di atas permukaan marmer">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/shelving_1.jpg" alt="Rak kayu mengambang dengan vas keramik bulat dan tanaman vas kecil">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/furniture_2.jpg" alt="Kursi oranye bertekstur dengan kaki kayu di samping tanaman pot kecil">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/shelving_2.jpg" alt="Rak mengambang kayu dengan vas bulat di samping wadah rotan silinder">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/shelving_3.jpg" alt="Vas tembikar bulat dan vas kecil dengan tanaman di rak mengambang">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/furniture_3.jpg" alt="Kursi berlapis oranye dengan detail rotan dan alas bundar di karpet">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/shelving_4.jpg" alt="Rak penyimpanan terbuka kayu di bawah lampu pendant hitam">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/furniture_4.jpg" alt="Kursi oranye berlapis dengan kaki logam tipis di samping rak kawat">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/furniture_5.jpg" alt="Sofa modern berlapis abu-abu gelap dengan bingkai kayu">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
-
-        <div class="portfolio-item">
-            <div class="image-container">
-                <img src="images/furniture_6.jpg" alt="Sofa berlapis abu-abu terang dengan meja kopi kayu berbentuk oval">
-            </div>
-            <div class="details-bar">
-                <a href="#" class="details-button">Lihat Detail</a>
-            </div>
-        </div>
+        <script>
+            // Script sederhana untuk mengulang item agar kode tidak terlalu panjang
+            for (let i = 0; i < 12; i++) {
+                document.write(`
+                    <div class="portfolio-item">
+                        <div class="photo-placeholder"></div>
+                        <div class="detail-bar">
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
+                `);
+            }
+        </script>
     </div>
-</div>
 
 </body>
 </html>
