@@ -132,7 +132,7 @@
                 position: fixed;
                 top: 0;
                 right: 0;
-                height: 100vh
+                height: 100vh;
                 width: 280px;
                 background-color: #0a2463;
                 z-index: 1001;
@@ -143,6 +143,9 @@
                 overflow-y: auto;
             }
             .sidebar-menu.active {
+                transform: translateX(0);
+            }
+            .sidebar-menu a {
                 display: block;
                 color: white;
                 padding: 12px 20px;
