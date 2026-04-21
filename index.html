@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Furnitur</title>
+    <title>Portofolio Produk</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -23,7 +23,6 @@
             flex: 1;
         }
 
-        /* Judul Portofolio Atas */
         .title {
             text-align: center;
             color: #0d47a1;
@@ -33,15 +32,13 @@
             margin-bottom: 30px;
         }
 
-        /* Grid 3 Kolom */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px; /* Spasi putih antar kotak dirapatkan */
-            margin-bottom: 30px;
+            gap: 15px;
+            margin-bottom: 40px;
         }
 
-        /* Kotak Portofolio */
         .portfolio-item {
             border: 2px solid #ffcc00;
             border-radius: 4px;
@@ -53,16 +50,25 @@
             box-sizing: border-box;
         }
 
-        /* Area Foto (Tanpa tulisan furnitur di atasnya) */
         .photo-placeholder {
             width: 100%;
             aspect-ratio: 1 / 1;
             background-color: #ddd;
             margin-bottom: 10px;
             border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .photo-placeholder img,
+        .photo-placeholder video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* Tombol Lihat Detail */
         .detail-button {
             background-color: #ffcc00;
             color: #000;
@@ -76,6 +82,8 @@
             width: 100%;
             padding: 10px 5px;
             box-sizing: border-box;
+            cursor: pointer;
+            border: none;
         }
 
         .eye-icon {
@@ -84,19 +92,75 @@
             margin-right: 5px;
         }
 
-        /* Footer Biru Full Lebar */
         footer {
             background-color: #0d47a1;
             color: #ffcc00;
             text-align: center;
-            padding: 20px;
+            padding: 12px 0;
             width: 100%;
             box-sizing: border-box;
         }
 
         footer p {
             margin: 0;
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        /* STYLE POPUP */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .modal-content img,
+        .modal-content video {
+            max-width: 100%;
+            max-height: 70vh;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .caption {
+            color: #0d47a1;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 35px;
+            height: 35px;
+            background-color: #ffcc00;
+            color: #0d47a1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #0d47a1;
         }
     </style>
 </head>
@@ -106,25 +170,180 @@
         <h1 class="title">Portofolio</h1>
 
         <div class="portfolio-grid">
-            <script>
-                for (let i = 1; i <= 12; i++) {
-                    document.write(`
-                        <div class="portfolio-item">
-                            <div class="photo-placeholder"></div>
-                            <a href="#" class="detail-button">
-                                <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
-                                Lihat Detail
-                            </a>
-                        </div>
-                    `);
-                }
-            </script>
+
+            <!-- Item 1 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_1" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_1', 'Nama Produk 1')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_2" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_2', 'Nama Produk 2')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_3" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_3', 'Nama Produk 3')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_4" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_4', 'Nama Produk 4')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_5" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_5', 'Nama Produk 5')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_6" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_6', 'Nama Produk 6')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_7" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_7', 'Nama Produk 7')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_8" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_8', 'Nama Produk 8')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_9" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_9', 'Nama Produk 9')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 10 (Video) -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <video src="LINK_VIDEO_1" alt="Video Produk"></video>
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_VIDEO_1', 'Video Produk 1')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 11 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_10" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_10', 'Nama Produk 10')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
+            <!-- Item 12 -->
+            <div class="portfolio-item">
+                <div class="photo-placeholder">
+                    <img src="LINK_FOTO_11" alt="Produk">
+                </div>
+                <button class="detail-button" onclick="openModal('LINK_FOTO_11', 'Nama Produk 11')">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/visible.png" class="eye-icon">
+                    Lihat Detail
+                </button>
+            </div>
+
         </div>
     </div>
 
     <footer>
-        <p>Hak Cipta © 2024 Portofolio Furnitur. Semua Hak Dilindungi.</p>
+        <p>Hak Cipta © 2024 AW Solutions. Semua Hak Dilindungi.</p>
     </footer>
+
+    <!-- MODAL POPUP -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalMedia"></div>
+            <div id="modalCaption" class="caption"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(src, caption) {
+            document.getElementById("myModal").style.display = "flex";
+            document.getElementById("modalCaption").innerHTML = caption;
+            
+            // Cek apakah itu video atau gambar
+            if(src.includes('.mp4') || src.includes('.webm')) {
+                document.getElementById("modalMedia").innerHTML = '<video controls src="'+src+'"></video>';
+            } else {
+                document.getElementById("modalMedia").innerHTML = '<img src="'+src+'" alt="Detail">';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+            document.getElementById("modalMedia").innerHTML = '';
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
