@@ -76,6 +76,8 @@
                 border-radius: 10px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
                 position: relative;
+                max-height: 80vh;
+                overflow-y: auto;
             }
             .close {
                 position: absolute;
@@ -183,7 +185,7 @@
             /* STYLE JUDUL MODAL - UKURAN DIPERKECIL */
             .modal-title {
                 color: #0a2463;
-                font-size: 1.4rem; /* UKURAN DIKECILKAN DARI 1.8rem */
+                font-size: 1.4rem;
                 font-weight: bold;
                 margin-bottom: 15px;
                 position: relative;
@@ -290,8 +292,9 @@
             color: var(--warna-biru);
             font-size: clamp(1.8rem, 5vw, 2.2rem);
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             white-space: nowrap;
+            margin-top: 10px;
         }
 
         .item-layanan {
@@ -306,17 +309,17 @@
         }
 
         .bottom-section {
-            margin-top: 80px;
+            margin-top: 90px;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 40px;
+            padding-bottom: 50px;
         }
 
         @media screen and (orientation: landscape) {
             .bottom-section {
-                margin-top: 130px !important;
+                margin-top: 150px !important;
             }
         }
 
@@ -333,10 +336,9 @@
         }
 
         .copyright {
-            color: white;
-            font-size: 0.9rem;
-            margin-top: 30px;
-            opacity: 0.8;
+            color: #f3d278;
+            margin-top: 50px;
+            line-height: 1.8;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
@@ -345,6 +347,7 @@
             padding-top: 65px;
             min-height: 100vh;
             overflow-y: auto;
+            background-color: #ffffff;
         }
 
         .page-content.active {
@@ -456,8 +459,9 @@
             margin-right: 5px;
         }
 
-        /* FOOTER 
-0a2463;
+        /* FOOTER BIRU TUA */
+        .footer-biru {
+            background-color: #0a2463;
             color: #f3d278;
             text-align: center;
             padding: 12px 0;
@@ -489,7 +493,8 @@
             padding-top: 80px;
         }
 
-        .modal-content-porto {
+        .modal
+-content-porto {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 5px;
@@ -568,10 +573,11 @@
         <a href="#kontak" class="nav-link" data-target="kontak" onclick="gantiHalaman('kontak'); toggleMenu();">Kontak</a>
     </div>
 
-    <!-- HALAMAN BERANDA -->
+    <!-- HALAMAN BERANDA - SUDAH DIATUR SUPAYA PAS DI LAYAR -->
     <div id="beranda" class="page-content active hero-section">
         <div class="content-wrapper">
             <h1 class="judul-utama">Jasa Tugas Diklat</h1>
+            
             <div class="item-layanan">
                 <i class="fas fa-th-large" style="color: var(--warna-emas); margin-right: 8px;"></i>
                 PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
@@ -584,14 +590,16 @@
                 <i class="fas fa-certificate" style="color: var(--warna-emas); margin-right: 8px;"></i>
                 PKP Pelatihan Kepemimpinan Pengawas
             </div>
+            
             <div class="bottom-section">
                 <p style="color: white; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
                     Solusi Pengetikan, Desain dan Cetak Dokumen untuk Kebutuhan Tugas Diklat Anda
                 </p>
+                
                 <button class="tombol-mulai" onclick="gantiHalaman('layanan')">Lihat Layanan</button>
                 
-                <!-- HAK CIPTA BERANDA SUDAH DIUBAH -->
-                <div class="copyright" style="color: #f3d278; margin-top: 30px; line-height: 1.6;">
+                <!-- HAK CIPTA - DITURUNKAN LAGI SEDIKIT -->
+                <div class="copyright">
                     <p>Hak Cipta © 2026 AW Solutions</p>
                     <p>Semua Hak Dilindungi</p>
                 </div>
@@ -710,7 +718,7 @@
                     <div id="cetakBtn" class="box-gold-3d text-primary p-3 cursor-pointer transition duration-300 hover:scale-[1.01] relative" onclick="openModal('cetakModal')">
                         <div class="flex items-center gap-2">
                             <i class="fa fa-file-text-o text-primary text-lg"></i>
-                            <h3 class="font-bold text-lg text-primary">Design / Cetak</h3>
+                            <h3 class="font-bold text-lg text-primary">Desain & Cetak</h3>
                         </div>
                         <span class="click-icon-top text-primary/60"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
                     </div>
@@ -728,18 +736,23 @@
         </div>
     </div>
 
-    <!-- MODAL POPUP - JUDUL UKURAN SUDAH DIKECILKAN -->
+    <!-- ============================================= -->
+    <!-- MODAL POPUP LAYANAN - VERSI ASLI LENGKAP     -->
+    <!-- ============================================= -->
     <div id="pknModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('pknModal')">&times;</span>
             <h2 class="modal-title">Tugas Diklat PKN</h2>
             <ul class="check-list text-gray-700">
-                <li>Essay Agenda I, II, III</li>
-                <li>Tugas Individu & Observasi Lapangan</li>
-                <li>Rancangan & Laporan Proyek Perubahan</li>
-                <li>Desain Infografis & Majalah</li>
-                <li>Bahan Tayang & Video Presentasi</li>
-                <li>Desain Baliho/Spanduk Pameran</li>
+                <li>Essay Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Observasi Lapangan (OL)</li>
+                <li>Rancangan Proyek Perubahan</li>
+                <li>Laporan Implementasi Proyek Perubahan</li>
+                <li>Desain Infografis dan Majalah Proyek Perubahan</li>
+                <li>Bahan Tayang Seminar Proyek Perubahan</li>
+                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
+                <li>Video Presentasi</li>
             </ul>
         </div>
     </div>
@@ -748,12 +761,15 @@
             <span class="close" onclick="closeModal('pkaModal')">&times;</span>
             <h2 class="modal-title">Tugas Diklat PKA</h2>
             <ul class="check-list text-gray-700">
-                <li>Essay Agenda I, II, III</li>
-                <li>Tugas Individu & Studi Lapangan</li>
-                <li>Rancangan & Laporan Aksi Perubahan</li>
-                <li>Desain Infografis & Majalah</li>
-                <li>Bahan Tayang Seminar</li>
-                <li>Desain Baliho/Spanduk Pameran</li>
+                <li>Essay Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Studi Lapangan (Stula)</li>
+                <li>Rancangan Aksi Perubahan</li>
+                <li>Laporan Implementasi Aksi Perubahan</li>
+                <li>Desain Infografis dan Majalah Aksi Perubahan</li>
+                <li>Bahan Tayang Seminar Aksi Perubahan</li>
+                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
+                <li>Video Presentasi</li>
             </ul>
         </div>
     </div>
@@ -762,12 +778,15 @@
             <span class="close" onclick="closeModal('pkpModal')">&times;</span>
             <h2 class="modal-title">Tugas Diklat PKP</h2>
             <ul class="check-list text-gray-700">
-                <li>Essay Agenda I, II, III</li>
-                <li>Tugas Individu & Studi Lapangan</li>
-                <li>Rancangan & Laporan Aksi Perubahan</li>
-                <li>Desain Infografis & Majalah</li>
-                <li>Bahan Tayang Seminar</li>
-                <li>Desain Baliho/Spanduk Pameran</li>
+                <li>Essay Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Studi Lapangan (Stula)</li>
+                <li>Rancangan Aksi Perubahan</li>
+                <li>Laporan Implementasi Aksi Perubahan</li>
+                <li>Desain Infografis dan Majalah Aksi Perubahan</li>
+                <li>Bahan Tayang Seminar Aksi Perubahan</li>
+                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
+                <li>Video Presentasi</li>
             </ul>
         </div>
     </div>
@@ -776,44 +795,69 @@
             <span class="close" onclick="closeModal('cetakModal')">&times;</span>
             <h2 class="modal-title">Layanan Desain & Cetak</h2>
             <ul class="check-list text-gray-700">
-                <li>Majalah untuk PKN, PKA, PKP</li>
-                <li>Infografis & Backdrop</li>
-                <li>Spanduk & X-Banner</li>
-                <li>Kebutuhan pencetakan lainnya</li>
+                <li>Majalah untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>Infografis untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>Baliho/Backdrop untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>Spanduk untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>X-Banner dan kebutuhan pencetakan lainnya</li>
             </ul>
         </div>
     </div>
-    
-    <!-- MODAL BIDANG USAHA BARU -->
+
+    <!-- ============================================= -->
+    <!-- MODAL BIDANG USAHA - VERSI PANJANG LENGKAP   -->
+    <!-- ============================================= -->
     <div id="usahaModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('usahaModal')">&times;</span>
             <h2 class="modal-title">Penjelasan Bidang Usaha</h2>
+            
+            <p class="font-semibold text-gray-800 mt-3 mb-2">Lingkup Kegiatan Kami:</p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                AW Solutions bergerak khusus di bidang jasa pendukung administrasi dan penyusunan tugas-tugas diklat kepemimpinan bagi Aparatur Sipil Negara. Kami hadir untuk membantu meringankan beban administrasi para peserta diklat agar dapat lebih fokus pada pemahaman materi dan pengembangan kompetensi diri.
+            </p>
+
             <ul class="check-list text-gray-700">
-                <li><strong>PKN:</strong> Pelatihan Kepemimpinan Nasional</li>
-                <li><strong>PKA:</strong> Pelatihan Kepemimpinan Administrator</li>
-                <li><strong>PKP:</strong> Pelatihan Kepemimpinan Pengawas</li>
-                <li><strong>Desain & Cetak:</strong> Materi visual & pameran</li>
+                <li><strong>PKN (Pelatihan Kepemimpinan Nasional):</strong> Layanan pendukung penyusunan tugas untuk jenjang kepemimpinan nasional tingkat I dan tingkat II.</li>
+                <li><strong>PKA (Pelatihan Kepemimpinan Administrator):</strong> Layanan pendukung penyusunan tugas untuk jenjang administrator yang mempersiap
+                                            pemimpin tingkat menengah.</li>
+                <li><strong>PKP (Pelatihan Kepemimpinan Pengawas):</strong> Layanan pendukung penyusunan tugas untuk jenjang pengawas yang bertugas mengawasi pelaksanaan tugas operasional.</li>
+                <li><strong>Jasa Desain dan Percetakan:</strong> Melayani pembuatan berbagai kebutuhan visual seperti desain layout majalah, infografis, pembuatan baliho, spanduk, backdrop, x-banner, serta pencetakan dokumen dengan kualitas terbaik dan hasil yang memuaskan.</li>
             </ul>
-            <p class="text-sm text-gray-600 mt-3 text-justify">
-                Jasa lengkap penyusunan tugas diklat dari penulisan hingga pencetakan.
+
+            <p class="text-gray-700 text-justify leading-relaxed mt-4">
+                Dengan pengalaman dan ketelitian, kami menjamin setiap hasil pekerjaan disusun secara sistematis, rapi, dan sesuai dengan standar yang berlaku, mulai dari tahap penulisan hingga tahap finishing atau pencetakan siap pakai.
             </p>
         </div>
     </div>
 
-    <!-- MODAL VISI MISI BARU -->
+    <!-- ============================================= -->
+    <!-- MODAL VISI MISI - VERSI PANJANG LENGKAP      -->
+    <!-- ============================================= -->
     <div id="visiModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('visiModal')">&times;</span>
             <h2 class="modal-title">Visi & Misi Kami</h2>
-            <p class="font-semibold text-gray-800 mb-1">Visi:</p>
-            <p class="text-gray-700 mb-2">Penyedia jasa terpercaya & berkualitas.</p>
             
-            <p class="font-semibold text-gray-800 mb-1">Misi:</p>
-            <p class="text-gray-700 mb-3">Solusi lengkap, standar tinggi, layanan profesional.</p>
-            
-            <p class="text-sm text-gray-600 text-justify">
-                Komitmen hasil kerja rapi, cepat & profesional.
+            <p class="font-semibold text-gray-800 mb-2">Visi:</p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                "Menjadi penyedia jasa pendukung tugas diklat yang terpercaya, berkualitas, dan tepat waktu dalam pelayanan kepada seluruh klien di seluruh wilayah Indonesia."
+            </p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                Visi ini mencerminkan komitmen kami untuk terus tumbuh menjadi mitra terbaik yang selalu diandalkan oleh setiap peserta diklat yang membutuhkan bantuan profesional. Kami bertekad memberikan standar layanan tinggi yang tidak hanya sekadar menyelesaikan pekerjaan, tetapi juga memberikan nilai tambah berupa kemudahan dan kepuasan bagi pengguna jasa.
+            </p>
+
+            <p class="font-semibold text-gray-800 mb-2">Misi:</p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-2">
+                Untuk mewujudkan visi tersebut, AW Solutions menjalankan misi sebagai berikut:
+            </p>
+            <ul class="check-list text-gray-700 mb-4">
+                <li>Memberikan solusi yang lengkap dan komprehensif mulai dari proses pengetikan, penyusunan materi, hingga desain visual dan pencetakan.</li>
+                <li>Menjaga standar kualitas kerja yang tinggi dalam setiap detail pekerjaan agar hasilnya maksimal dan memuaskan.</li>
+                <li>Memberikan pelayanan yang profesional, ramah, transparan, dan selalu mengutamakan ketepatan waktu penyelesaian.</li>
+            </ul>
+            <p class="text-gray-700 text-justify leading-relaxed">
+                Kami berkomitmen untuk terus berinovasi dan meningkatkan pelayanan demi mendukung kesuksesan tugas-tugas diklat Bapak/Ibu sekalian.
             </p>
         </div>
     </div>
@@ -824,7 +868,7 @@
             <span class="close" onclick="closeModal('profilModal')">&times;</span>
             <h2 class="modal-title">Desain dan Kualitas Terjamin</h2>
             <ul class="check-list text-gray-700">
-                    <li>Desain layout menarik & profesional</li>
+                <li>Desain layout menarik & profesional</li>
                 <li>Kualitas cetak tajam & jelas</li>
                 <li>Bahan kertas pilihan terbaik</li>
                 <li>Pengerjaan rapih & teliti</li>
@@ -1059,7 +1103,8 @@
         }
 
         function bukaFile(namaFile, tipe, keterangan) {
-            const modal = document.getElementById('modalPorto');
+            const modal = document.getElementById
+('modalPorto');
             const gambar = document.getElementById('gambarPorto');
             const video = document.getElementById('videoPorto');
             const sumberVideo = document.getElementById('sumberVideo');
@@ -1101,5 +1146,4 @@
         }
     </script>
 </body>
-    </html>
-    
+</html>
