@@ -81,17 +81,17 @@
             }
             .close {
                 position: absolute;
-                top: -15px;
-                right: -15px;
-                width: 38px;
-                height: 38px;
+                top: 10px;
+                right: 10px;
+                width: 34px;
+                height: 34px;
                 background-color: #f3d278;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: #0a2463;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: bold;
                 cursor: pointer;
                 transition: 0.3s;
@@ -332,10 +332,14 @@
             white-space: nowrap;
         }
 
+        /* ============================================= */
+        /* HAK CIPTA UKURAN PROPORSIONAL                */
+        /* ============================================= */
         .copyright {
             color: #f3d278;
             margin-top: 30px;
-            line-height: 1.8;
+            line-height: 1.5;
+            font-size: 0.85rem; /* UKURAN PAS, KECIL TAPI JELAS */
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
@@ -452,8 +456,7 @@
 
         .eye-icon {
             width: 18px;
-            height: 1
-8px;
+            height: 18px;
             margin-right: 5px;
         }
 
@@ -471,8 +474,9 @@
 
         .footer-biru p {
             margin: 0;
-            font-size: 13px;
-            line-height: 1.5;
+            font-size: 0.85rem; /* SAMA DENGAN HAK CIPTA BERANDA */
+            line-height:
+ 1.5;
         }
 
         /* ============================================= */
@@ -530,15 +534,15 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 40px;
-            height: 40px;
+            width: 34px;
+            height: 34px;
             background-color: #f3d278;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #0a2463;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
@@ -571,31 +575,35 @@
         <a href="#kontak" class="nav-link" data-target="kontak" onclick="gantiHalaman('kontak'); toggleMenu();">Kontak</a>
     </div>
 
-    <!-- HALAMAN BERANDA - SUDAH DIATUR FULL SCREEN -->
+    <!-- HALAMAN BERANDA - POSISI DIATUR RAPI & JARAK PAS -->
     <div id="beranda" class="page-content active hero-section">
         <div class="content-wrapper">
-            <h1 class="judul-utama">Jasa Tugas Diklat</h1>
-            
-            <div class="item-layanan">
-                <i class="fas fa-th-large" style="color: var(--warna-emas); margin-right: 8px;"></i>
-                PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
-            </div>
-            <div class="item-layanan">
-                <i class="fas fa-plus-square" style="color: var(--warna-emas); margin-right: 8px;"></i>
-                PKA Pelatihan Kepemimpinan Administrator
-            </div>
-            <div class="item-layanan">
-                <i class="fas fa-certificate" style="color: var(--warna-emas); margin-right: 8px;"></i>
-                PKP Pelatihan Kepemimpinan Pengawas
+            <div class="text-center">
+                <h1 class="judul-utama">Jasa Tugas Diklat</h1>
+                
+                <div class="item-layanan">
+                    <i class="fas fa-th-large" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
+                </div>
+                <div class="item-layanan">
+                    <i class="fas fa-plus-square" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKA Pelatihan Kepemimpinan Administrator
+                </div>
+                <div class="item-layanan">
+                    <i class="fas fa-certificate" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKP Pelatihan Kepemimpinan Pengawas
+                </div>
+
+                <!-- JARAK DIBUAT RENGGANG SEPERTI AWAL -->
+                <p style="color: white; font-size: 0.9rem; margin: 30px auto; line-height: 1.5; max-width: 600px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                    Solusi Pengetikan, Desain dan Cetak Dokumen untuk Kebutuhan Tugas Diklat Anda
+                </p>
             </div>
             
             <div class="bottom-section">
-                <p style="color: white; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                    Solusi Pengetikan, Desain dan Cetak Dokumen untuk Kebutuhan Tugas Diklat Anda
-                </p>
-                
                 <button class="tombol-mulai" onclick="gantiHalaman('layanan')">Lihat Layanan</button>
                 
+                <!-- HAK CIPTA UKURAN PROPORSIONAL -->
                 <div class="copyright">
                     <p>Hak Cipta © 2026 AW Solutions</p>
                     <p>Semua Hak Dilindungi</p>
@@ -732,9 +740,8 @@
             </div>
         </div>
     </div>
-
-    <!-- ============================================= -->
-    <!-- MODAL POPUP LAYANAN - VERSI ASLI LENGKAP     -->
+        <!-- ============================================= -->
+    <!-- MODAL POPUP LAYANAN - TOMBOL X MASUK KE DALAM -->
     <!-- ============================================= -->
     <div id="pknModal" class="modal">
         <div class="modal-content">
@@ -817,13 +824,12 @@
             <ul class="check-list text-gray-700">
                 <li><strong>PKN (Pelatihan Kepemimpinan Nasional):</strong> Layanan pendukung penyusunan tugas untuk jenjang kepemimpinan nasional tingkat I dan tingkat II.</li>
                 <li><strong>PKA (Pelatihan Kepemimpinan Administrator):</strong> Layanan pendukung penyusunan tugas untuk jenjang administrator yang mempersiapkan pemimpin tingkat menengah.</li>
-                <li><strong>PKP (Pelatihan Kep
-                        emimpinan Pengawas):</strong> Layanan pendukung penyusunan tugas untuk jenjang pengawas yang bertugas mengawasi pelaksanaan tugas operasional.</li>
+                <li><strong>PKP (Pelatihan Kepemimpinan Pengawas):</strong> Layanan pendukung penyusunan tugas untuk jenjang pengawas yang bertugas mengawasi pelaksanaan tugas operasional.</li>
                 <li><strong>Jasa Desain dan Percetakan:</strong> Melayani pembuatan berbagai kebutuhan visual seperti desain layout majalah, infografis, pembuatan baliho, spanduk, backdrop, x-banner, serta pencetakan dokumen dengan kualitas terbaik dan hasil yang memuaskan.</li>
             </ul>
 
             <p class="text-gray-700 text-justify leading-relaxed mt-4">
-                Dengan pengalaman dan ketelitian, kami menjamin setiap hasil pekerjaan disusun secara sistematis, rapi, dan sesuai dengan standar yang berlaku, mulai dari tahap penulisan hingga tahap finishing atau pencetakan siap pakai.
+                Dengan pengalaman dan ketelitian, kami menjamin setiap hasil pekerjaan disusun secara sistematis, rapi, dan sesuai dengan standar yang berlaku, mulai dari tahap pengetikan hingga tahap finishing atau pencetakan siap pakai.
             </p>
         </div>
     </div>
@@ -841,7 +847,7 @@
                 "Menjadi penyedia jasa pendukung tugas diklat yang terpercaya, berkualitas, dan tepat waktu dalam pelayanan kepada seluruh klien di seluruh wilayah Indonesia."
             </p>
             <p class="text-gray-700 text-justify leading-relaxed mb-4">
-                Visi ini mencerminkan komitmen kami untuk terus tumbuh menjadi mitra terbaik yang selalu diandalkan oleh setiap peserta diklat yang membutuhkan bantuan profesional. Kami bertekad memberikan standar pelayanan tinggi yang tidak hanya sekadar menyelesaikan pekerjaan, tetapi juga memberikan nilai tambah berupa kemudahan dan kepuasan bagi pengguna jasa.
+                Visi ini mencerminkan komitmen kami untuk terus tumbuh menjadi mitra terbaik yang selalu diandalkan oleh setiap peserta diklat yang membutuhkan bantuan profesional. Kami bertekd memberikan standar pelayanan tinggi yang tidak hanya sekadar menyelesaikan pekerjaan, tetapi juga memberikan nilai tambah berupa kemudahan dan kepuasan bagi pengguna jasa.
             </p>
 
             <p class="font-semibold text-gray-800 mb-2">Misi:</p>
@@ -873,8 +879,7 @@
             </ul>
         </div>
     </div>
-
-    <!-- HALAMAN PORTOFOLIO -->
+        <!-- HALAMAN PORTOFOLIO -->
     <div id="portofolio" class="page-content background-image">
         <div class="portfolio-container">
             <h1 class="title-porto">Hasil Produk</h1>
@@ -1102,8 +1107,7 @@
         function bukaFile(namaFile, tipe, keterangan) {
             const modal = document.getElementById('modalPorto');
             const gambar = document.getElementById('gambarPorto');
-            const video
-                     = document.getElementById('videoPorto');
+            const video = document.getElementById('videoPorto');
             const sumberVideo = document.getElementById('sumberVideo');
             const keteranganElem = document.getElementById('keteranganPorto');
 
@@ -1144,3 +1148,5 @@
     </script>
 </body>
 </html>
+                    
+    
