@@ -3,17 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- JUDUL PANJANG LENGKAP UNTUK GOOGLE DAN WHATSAPP -->
-    <title>AW Solutions - Jasa Tugas Diklat Pelatihan Kepemimpinan Nasional (Tingkat II dan Tingkat I), Pelatihan Kepemimpinan Administrator, Pelatihan Kepemimpinan Pengawas</title>
-    <meta name="description" content="Jasa Pengetikan, Desain dan Cetak Dokumen Tugas Diklat: Pelatihan Kepemimpinan Nasional (Tingkat II dan Tingkat I), Pelatihan Kepemimpinan Administrator, Pelatihan Kepemimpinan Pengawas. Berkualitas, Rapi, Tepat Waktu.">
-    
-    <meta property="og:title" content="AW Solutions - Jasa Tugas Diklat Pelatihan Kepemimpinan Nasional Tingkat II & I, Administrator, Pengawas">
-    <meta property="og:description" content="Spesialis Jasa Tugas Diklat: Pelatihan Kepemimpinan Nasional (Tingkat II dan I), Pelatihan Kepemimpinan Administrator, Pelatihan Kepemimpinan Pengawas.">
-    <meta property="og:image" content="https://www.transparenttextures.com/patterns/paper-fibers.png">
-    <meta property="og:url" content="">
-    <meta name="twitter:card" content="summary_large_image">
-
+    <title>AW Solutions - Jasa Tugas Diklat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
@@ -29,7 +19,7 @@
                     colors: {
                         primary: '#0a2463',
                         gold: '#f3d278',
-                        dark: '#222222',
+                        dark: '#212121',
                         light: '#F8F9FA',
                     },
                     fontFamily: {
@@ -66,15 +56,15 @@
                 }
             }
             .modal {
-                display: none; 
-                position: fixed; 
-                z-index: 1000; 
+                display: none;
+                position: fixed;
+                z-index: 1000;
                 left: 0;
                 top: 0;
-                width: 100%; 
-                height: 100%; 
-                overflow: auto; 
-                background-color: rgba(0,0,0,0.6); 
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.6);
             }
             .modal-content {
                 background-color: #fefefe;
@@ -84,7 +74,7 @@
                 width: 85%;
                 max-width: 500px;
                 border-radius: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
                 position: relative;
                 max-height: 80vh;
                 overflow-y: auto;
@@ -138,22 +128,19 @@
                 font-size: 0.875rem;
                 opacity: 0.8;
             }
-
-            /* ============================================= */
-            /* MENU SIDEBAR - BACKGROUND BIRU */
-            /* ============================================= */
             .sidebar-menu {
                 position: fixed;
                 top: 0;
                 left: 0;
                 width: 100vw;
                 height: 100vh;
-                background-color: #0a2463; /* BACKGROUND BIRU */
-                z-index: 99999;
+                background-color: #0a2463;
+                z-index: 99999; /* ANGKA SANGAT BESAR SUPAYA DI PALING ATAS */
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in-out;
-                padding: 80px 20px 20px 20px;
+                padding: 80px 20px 20px 20px; /* JARAK DARI ATAS AGAR TIDAK TERTUTUP */
                 border: none;
+                margin: 0;
                 overflow-y: auto;
             }
             .sidebar-menu.active {
@@ -161,22 +148,22 @@
             }
             .sidebar-menu a {
                 display: block;
-                color: #f3d278; /* TULISAN KUNING */
-                padding: 15px 20px;
+                color: white;
+                padding: 12px 20px;
                 text-decoration: none;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 border-bottom: 1px solid rgba(255,255,255,0.1);
-                font-weight: bold;
                 transition: 0.3s;
             }
-            .sidebar-menu a:hover,
+            .sidebar-menu a:hover {
+                background-color: rgba(243, 210, 120, 0.2);
+                color: #f3d278;
+            }
             .sidebar-menu a.active {
                 background-color: #f3d278;
                 color: #0a2463;
-                padding-left: 30px;
+                font-weight: bold;
             }
-            /* ============================================= */
-
             .overlay {
                 position: fixed;
                 top: 0;
@@ -195,6 +182,8 @@
                 justify-content: space-between;
                 align-items: center;
             }
+
+            /* STYLE JUDUL MODAL - UKURAN DIPERKECIL */
             .modal-title {
                 color: #0a2463;
                 font-size: 1.4rem;
@@ -221,17 +210,20 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         html, body {
-            font-family: 'Arial', 'sans-serif';
+            font-family: 'Arial', sans-serif;
             overflow-x: hidden;
             width: 100%;
             min-height: 100%;
             overflow-y: auto;
         }
+
         :root {
             --warna-biru: #0a2463;
             --warna-emas: #FFD700;
         }
+
         .header {
             background-color: var(--warna-biru);
             padding: 12px 20px;
@@ -245,21 +237,25 @@
             align-items: center;
             border-bottom: 3px solid var(--warna-emas);
         }
+
         .logo-header {
             color: var(--warna-emas);
             font-size: 1.2rem;
             font-weight: bold;
             text-decoration: none;
         }
+
         .menu-toggle {
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
             transition: 0.3s;
         }
+
         .menu-toggle:hover {
             color: var(--warna-emas);
         }
+
         .hero-section {
             background-image: url('Latar Mengetik 01.jpg');
             background-size: cover;
@@ -273,6 +269,7 @@
             padding-top: 65px;
             padding-bottom: 20px;
         }
+
         .content-wrapper {
             position: relative;
             z-index: 2;
@@ -285,12 +282,14 @@
             padding: 20px;
             width: 100%;
         }
+
         .logo-small {
             color: var(--warna-emas);
             font-size: 1rem;
             font-weight: bold;
             margin-bottom: 15px;
         }
+
         .judul-utama {
             color: var(--warna-biru);
             font-size: clamp(1.8rem, 5vw, 2.2rem);
@@ -299,6 +298,7 @@
             white-space: nowrap;
             margin-top: 10px;
         }
+
         .item-layanan {
             color: white;
             font-size: 1rem;
@@ -309,6 +309,7 @@
             margin-right: auto;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
+
         .bottom-section {
             margin-top: auto;
             width: 100%;
@@ -317,6 +318,7 @@
             align-items: center;
             padding-bottom: 20px;
         }
+
         .tombol-mulai {
             background-color: white;
             color: var(--warna-biru);
@@ -328,13 +330,18 @@
             cursor: pointer;
             white-space: nowrap;
         }
+
+        /* ============================================= */
+        /* HAK CIPTA UKURAN PROPORSIONAL                */
+        /* ============================================= */
         .copyright {
             color: #f3d278;
             margin-top: 30px;
             line-height: 1.5;
-            font-size: 0.85rem;
+            font-size: 0.85rem; /* UKURAN PAS, KECIL TAPI JELAS */
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
+
         .page-content {
             display: none;
             padding-top: 65px;
@@ -342,18 +349,25 @@
             overflow-y: auto;
             background-color: #ffffff;
         }
+
         .page-content.active {
             display: block;
         }
+
+        /* ============================================= */
+        /* STYLE PORTOFOLIO                              */
+        /* ============================================= */
         .background-image {
             background-color: #ffffff;
         }
+
         .portfolio-container {
             max-width: 580px;
             margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
         }
+
         .title-porto {
             text-align: center;
             color: #0a2463;
@@ -366,6 +380,7 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         .title-porto::after {
             content: '';
             position: absolute;
@@ -375,6 +390,7 @@
             height: 3px;
             background-color: #f3d278;
         }
+
         .sub-title-porto {
             text-align: center;
             color: #0a2463;
@@ -383,6 +399,7 @@
             margin-top: 15px;
             margin-bottom: 25px;
         }
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -390,6 +407,7 @@
             margin-bottom: 50px;
             justify-content: center;
         }
+
         .portfolio-item {
             border: 2px solid #ffcc00;
             border-radius: 4px;
@@ -400,8 +418,8 @@
             align-items: center;
             box-sizing: border-box;
             margin: auto;
-            cursor: pointer;
         }
+
         .photo-area {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -410,154 +428,14 @@
             border-radius: 2px;
             overflow: hidden;
         }
-        .photo-area img,
-        .photo-area video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        .content-wrapper {
-            position: relative;
-            z-index: 2;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
-        .logo-small {
-            color: var(--warna-emas);
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .judul-utama {
-            color: var(--warna-biru);
-            font-size: clamp(1.8rem, 5vw, 2.2rem);
-            font-weight: 700;
-            margin-bottom: 25px;
-            white-space: nowrap;
-            margin-top: 10px;
-        }
-        .item-layanan {
-            color: white;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 8px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-        }
-        .bottom-section {
-            margin-top: auto;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 20px;
-        }
-        .tombol-mulai {
-            background-color: white;
-            color: var(--warna-biru);
-            padding: 8px 22px;
-            font-size: 1rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-        .copyright {
-            color: #f3d278;
-            margin-top: 30px;
-            line-height: 1.5;
-            font-size: 0.85rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-        }
-        .page-content {
-            display: none;
-            padding-top: 65px;
-            min-height: 100vh;
-            overflow-y: auto;
-            background-color: #ffffff;
-        }
-        .page-content.active {
-            display: block;
-        }
-        .background-image {
-            background-color: #ffffff;
-        }
-        .portfolio-container {
-            max-width: 580px;
-            margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .title-porto {
-            text-align: center;
-            color: #0a2463;
-            font-size: clamp(1.8rem,5vw,2.2rem);
-            font-weight: 900;
-            margin-top: 0;
-            margin-bottom: 10px;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .title-porto::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 10%;
-            width: 80%;
-            height: 3px;
-            background-color: #f3d278;
-        }
-        .sub-title-porto {
-            text-align: center;
-            color: #0a2463;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 25px;
-        }
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-bottom: 50px;
-            justify-content: center;
-        }
-        .portfolio-item {
-            border: 2px solid #ffcc00;
-            border-radius: 4px;
-            background-color: #fff;
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-sizing: border-box;
-            margin: auto;
-            cursor: pointer;
-        }
-        .photo-area {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background-color: #ddd;
-            margin-bottom: 8px;
-            border-radius: 2px;
-            overflow: hidden;
-        }
+        
         .photo-area img,
         .photo-area video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .detail-button {
             background-color: #ffcc00;
             color: #000;
@@ -567,397 +445,705 @@
             border-radius: 4px;
             display: flex;
             align-items: center;
-            gap: 5px;
-            padding: 5px 10px;
-            border: none;
-            cursor: pointer;
-        }
-        .eye-icon {
-            font-size: 14px;
-        }
-        .modal-porto {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
+            justify-content: center;
             width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.6);
+            padding: 10px 5px;
+            box-sizing: border-box;
+            cursor: pointer;
+            border: none;
         }
+
+        .eye-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+        }
+
+        /* FOOTER BIRU TUA */
         .footer-biru {
             background-color: #0a2463;
             color: #f3d278;
             text-align: center;
-            padding: 15px;
+            padding: 12px 0;
             width: 100%;
-            border-top: 3px solid #f3d278;
             box-sizing: border-box;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .footer-biru p {
+            margin: 0;
+            font-size: 0.85rem; /* SAMA DENGAN HAK CIPTA BERANDA */
+            line-height:
+ 1.5;
+        }
+
+        /* ============================================= */
+        /* STYLE POPUP PORTOFOLIO - SUDAH DIATUR TENGAH */
+        /* ============================================= */
+        .modal-porto {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8); 
+            justify-content: center;
+            align-items: center; /* BUAT JADI TENGAH */
+            padding-top: 0;
+        }
+
+        .modal-content-porto {
+            background-color: #ffffff !important; /* KEMBALI PUTIH */
+            padding: 25px;
+            border-radius: 10px;
+            position: relative;
+            max-width: 90%;
+            text-align: center;
+            margin: auto; /* PASTIKAN DI TENGAH */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .modal-content-porto img,
+        .modal-content-porto video {
+            max-width: 100%;
+            max-height: 70vh;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .detail-text {
+            color: #0a2463 !important; /* WARNA BIRU JELAS */
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 100%;
+        }
+
+        .close-porto {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 34px;
+            height: 34px;
+            background-color: #f3d278;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a2463;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .close-porto:hover,
+        .close-porto:focus {
+            background-color: #e2c268;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER DAN MENU -->
     <div class="header">
-        <a href="#" class="logo-header">AW Solutions</a>
-        <div class="menu-toggle">
-            <i class="fa fa-bars"></i>
-        </div>
+        <a href="#beranda" class="logo-header">AW Solutions</a>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
     </div>
 
-    <div class="sidebar-menu">
-        <a href="#" onclick="gantiHalaman('beranda')" class="nav-link" data-target="beranda">Beranda</a>
-        <a href="#" onclick="gantiHalaman('profil')" class="nav-link" data-target="profil">Profil</a>
-        <a href="#" onclick="gantiHalaman('layanan')" class="nav-link" data-target="layanan">Layanan</a>
-        <a href="#" onclick="gantiHalaman('portofolio')" class="nav-link" data-target="portofolio">Portofolio</a>
-        <a href="#" onclick="gantiHalaman('kontak')" class="nav-link" data-target="kontak">Kontak</a>
-    </div>
-
+    <!-- OVERLAY DAN SIDEBAR MENU -->
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="sidebar-menu" id="sidebarMenu">
+        <a href="#beranda" class="nav-link active" data-target="beranda" onclick="gantiHalaman('beranda'); toggleMenu();">Beranda</a>
+        <a href="#profil" class="nav-link" data-target="profil" onclick="gantiHalaman('profil'); toggleMenu();">Profil</a>
+        <a href="#layanan" class="nav-link" data-target="layanan" onclick="gantiHalaman('layanan'); toggleMenu();">Layanan</a>
+        <a href="#portofolio" class="nav-link" data-target="portofolio" onclick="gantiHalaman('portofolio'); toggleMenu();">Portofolio</a>
+        <a href="#kontak" class="nav-link" data-target="kontak" onclick="gantiHalaman('kontak'); toggleMenu();">Kontak</a>
+    </div>
 
-    <!-- HALAMAN BERANDA -->
-    <div id="beranda" class="page-content active">
-        <div class="hero-section">
-            <div class="content-wrapper">
-                <div></div>
-                <div>
-                    <h1 class="judul-utama">JASA TUGAS DIKLAT</h1>
-                    <div class="item-layanan">
-                        <i class="fa fa-graduation-cap"></i> PELATIHAN KEPEMIMPINAN NASIONAL (TINGKAT II DAN TINGKAT I)
-                    </div>
-                    <div class="item-layanan">
-                        <i class="fa fa-user-tie"></i> PELATIHAN KEPEMIMPINAN ADMINISTRATOR
-                    </div>
-                    <div class="item-layanan">
-                        <i class="fa fa-users"></i> PELATIHAN KEPEMIMPINAN PENGAWAS
-                    </div>
+    <!-- HALAMAN BERANDA - POSISI DIATUR RAPI & JARAK PAS -->
+    <div id="beranda" class="page-content active hero-section">
+        <div class="content-wrapper">
+            <div class="text-center">
+                <h1 class="judul-utama">Jasa Tugas Diklat</h1>
+                
+                <div class="item-layanan">
+                    <i class="fas fa-th-large" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKN Pelatihan Kepemimpinan Nasional, TK. II dan TK. I
                 </div>
-                <div class="bottom-section">
-                    <button class="tombol-mulai" onclick="gantiHalaman('layanan')">LIHAT LAYANAN KAMI</button>
-                    <div class="copyright">
-                        <p>Hak Cipta © 2026 AW Solutions</p>
-                        <p>Semua Hak Dilindungi</p>
-                    </div>
+                <div class="item-layanan">
+                    <i class="fas fa-plus-square" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKA Pelatihan Kepemimpinan Administrator
+                </div>
+                <div class="item-layanan">
+                    <i class="fas fa-certificate" style="color: var(--warna-emas); margin-right: 8px;"></i>
+                    PKP Pelatihan Kepemimpinan Pengawas
+                </div>
+
+                <!-- JARAK DIBUAT RENGGANG SEPERTI AWAL -->
+                <p style="color: white; font-size: 0.9rem; margin: 30px auto; line-height: 1.5; max-width: 600px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                    Solusi Pengetikan, Desain dan Cetak Dokumen untuk Kebutuhan Tugas Diklat Anda
+                </p>
+            </div>
+            
+            <div class="bottom-section">
+                <button class="tombol-mulai" onclick="gantiHalaman('layanan')">Lihat Layanan</button>
+                
+                <!-- HAK CIPTA UKURAN PROPORSIONAL -->
+                <div class="copyright">
+                    <p>Hak Cipta © 2026 AW Solutions</p>
+                    <p>Semua Hak Dilindungi</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- HALAMAN PROFIL -->
+        <!-- HALAMAN PROFIL -->
     <div id="profil" class="page-content">
-        <div class="min-h-screen bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
-            <div class="max-w-4xl mx-auto p-4 pt-24">
-                <h1 class="text-center text-primary font-black text-[clamp(1.8rem,5vw,2.5rem)] mb-8 relative inline-block left-1/2 -translate-x-1/2">Profil Kami</h1>
+        <div class="min-h-screen bg-white flex flex-col">
+            <div class="py-2 px-4 text-center bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
+                <h1 class="font-black text-[clamp(1.8rem,5vw,2.2rem)] text-primary tracking-wide leading-tight">Profil Kami</h1>
+                <h2 class="font-semibold text-[clamp(1rem,3vw,1.3rem)] text-gold relative inline-block pb-1 mt-0">
+                    AW Solutions
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2/5 h-[2px] bg-gold"></span>
+                </h2>
+            </div>
+            <div class="w-full h-[1px] bg-gray-200"></div>
+            <div class="flex-grow flex flex-col justify-center p-3 bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
                 
-                <div class="box-3d text-white p-6 rounded-xl mb-8">
-                    <h2 class="text-xl font-bold mb-4 text-gold">Bidang Usaha</h2>
-                    <p class="mb-4 leading-relaxed">
-                        AW Solutions bergerak khusus di bidang jasa pendukung administrasi dan penyusunan tugas-tugas diklat kepemimpinan.
+                <!-- BIDANG USAHA -->
+                <div class="box-3d text-white p-3 relative mb-3 cursor-pointer transition duration-300 hover:scale-[1.01]" onclick="openModal('usahaModal')">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="fa fa-briefcase text-gold text-lg"></i>
+                        <h3 class="font-bold text-lg text-gold">Bidang Usaha</h3>
+                    </div>
+                    <p class="text-gray-100 text-sm leading-relaxed">
+                        Khusus bergerak di bidang jasa pendukung penyusunan tugas diklat kepemimpinan:
                     </p>
-                    <ul class="check-list">
-                        <li><strong class="text-gold">PKN</strong> - Pelatihan Kepemimpinan Nasional</li>
-                        <li><strong class="text-gold">PKA</strong> - Pelatihan Kepemimpinan Administrator</li>
-                        <li><strong class="text-gold">PKP</strong> - Pelatihan Kepemimpinan Pengawas</li>
+                    <ul class="check-list text-gray-100 text-sm mt-2 pl-1">
+                        <li><strong>PKN</strong> - Pelatihan Kepemimpinan Nasional</li>
+                        <li><strong>PKA</strong> - Pelatihan Kepemimpinan Administrator</li>
+                        <li><strong>PKP</strong> - Pelatihan Kepemimpinan Pengawas</li>
                         <li><strong class="text-gold">Desain & Cetak</strong> - Kebutuhan materi presentasi</li>
                     </ul>
+                    <span class="click-icon-top text-gold"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
                 </div>
 
-                <div class="box-gold-3d text-primary p-6 rounded-xl mb-8">
-                    <h2 class="text-xl font-bold mb-4">Visi & Misi</h2>
-                    <p class="font-bold mb-2">Visi:</p>
-                    <p class="mb-4">Menjadi penyedia jasa terpercaya, berkualitas & tepat waktu.</p>
-                    <p class="font-bold mb-2">Misi:</p>
-                    <p>Solusi lengkap, standar tinggi, layanan profesional.</p>
+                <!-- VISI & MISI -->
+                <div class="box-gold-3d text-primary p-3 relative mb-4 cursor-pointer transition duration-300 hover:scale-[1.01]" onclick="openModal('visiModal')">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i class="fa fa-compass text-primary text-lg"></i>
+                        <h3 class="font-bold text-lg text-primary">Visi & Misi</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed font-semibold">Visi:</p>
+                    <p class="text-sm leading-relaxed mb-1">Menjadi penyedia jasa terpercaya, berkualitas & tepat waktu.</p>
+                    <p class="text-sm leading-relaxed font-semibold">Misi:</p>
+                    <p class="text-sm leading-relaxed">Solusi lengkap, standar tinggi, layanan profesional.</p>
+                    <span class="click-icon-top text-primary/60"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
                 </div>
+
+                <!-- DESAIN DAN KUALITAS -->
+                <button class="w-full bg-primary text-white p-3 rounded-lg shadow-lg cursor-pointer transition duration-300 hover:scale-[1.01] relative" onclick="openModal('profilModal')">
+                    <div class="posisi-kanan">
+                        <div class="flex items-center gap-3">
+                            <i class="fa fa-file-text-o text-gold text-xl"></i>
+                            <span class="text-sm font-medium">Desain dan Kualitas Terjamin</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gold">
+                            <i class="fa fa-hand-pointer-o"></i>
+                            <span class="text-sm font-bold">Klik</span>
+                        </div>
+                    </div>
+                </button>
 
             </div>
+            <div class="h-[120px] relative overflow-hidden bg-gray-200">
+                <img src="https://picsum.photos/id/180/800/400" alt="Laptop dan Dokumen" class="w-full h-full object-cover object-center">
+            </div>
+            
+            <!-- FOOTER HAK CIPTA -->
             <div class="footer-biru">
                 <p>Hak Cipta © 2026 AW Solutions</p>
                 <p>Semua Hak Dilindungi</p>
             </div>
         </div>
     </div>
-        <!-- HALAMAN LAYANAN -->
+
+    <!-- HALAMAN LAYANAN -->
     <div id="layanan" class="page-content">
-        <div class="min-h-screen bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
-            <div class="max-w-4xl mx-auto p-4 pt-24">
-                <h1 class="text-center text-primary font-black text-[clamp(1.8rem,5vw,2.5rem)] mb-8 relative inline-block left-1/2 -translate-x-1/2">Layanan Kami</h1>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                    
-                    <!-- ITEM PKN -->
-                    <div class="box-3d text-white p-6 rounded-xl">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-graduation-cap text-4xl text-gold"></i>
-                            <h3 class="text-xl font-bold mt-2 text-gold">PKN</h3>
-                            <p class="text-sm opacity-90">Pelatihan Kepemimpinan Nasional</p>
-                        </div>
-                        <p class="text-sm leading-relaxed text-center">
-                            Jasa pengetikan dan desain tugas diklat <strong>Pelatihan Kepemimpinan Nasional (Tingkat II dan Tingkat I)</strong>.
-                        </p>
-                    </div>
-
-                    <!-- ITEM PKA -->
-                    <div class="box-3d text-white p-6 rounded-xl">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-user-tie text-4xl text-gold"></i>
-                            <h3 class="text-xl font-bold mt-2 text-gold">PKA</h3>
-                            <p class="text-sm opacity-90">Pelatihan Kepemimpinan Administrator</p>
-                        </div>
-                        <p class="text-sm leading-relaxed text-center">
-                            Jasa pengetikan dan desain tugas diklat <strong>Pelatihan Kepemimpinan Administrator</strong>.
-                        </p>
-                    </div>
-
-                    <!-- ITEM PKP -->
-                    <div class="box-3d text-white p-6 rounded-xl">
-                        <div class="text-center mb-4">
-                            <i class="fa fa-users text-4xl text-gold"></i>
-                            <h3 class="text-xl font-bold mt-2 text-gold">PKP</h3>
-                            <p class="text-sm opacity-90">Pelatihan Kepemimpinan Pengawas</p>
-                        </div>
-                        <p class="text-sm leading-relaxed text-center">
-                            Jasa pengetikan dan desain tugas diklat <strong>Pelatihan Kepemimpinan Pengawas</strong>.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-md mb-8">
-                    <h3 class="text-xl font-bold mb-4 text-primary">Kelebihan Kami</h3>
-                    <ul class="check-list">
-                        <li>Pengerjaan Cepat dan Tepat Waktu</li>
-                        <li>Hasil Rapi, Menarik, dan Berkualitas</li>
-                        <li>Harga Bersahabat</li>
-                        <li>Siap Membantu Revisi</li>
-                    </ul>
-                </div>
-
+        <div class="min-h-screen bg-white flex flex-col">
+            <div class="py-2 px-4 text-center bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
+                <h1 class="font-black text-[clamp(1.8rem,5vw,2.2rem)] text-primary tracking-wide leading-tight">Layanan Unggulan</h1>
+                <h2 class="font-semibold text-[clamp(1rem,3vw,1.3rem)] text-gold relative inline-block pb-1 mt-0">
+                    Jasa Tugas Diklat
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2/5 h-[2px] bg-gold"></span>
+                </h2>
             </div>
+            <div class="w-full h-[1px] bg-gray-200"></div>
+            <div class="responsive-grid items-stretch flex-grow">
+                <div class="p-3 bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')] flex flex-col justify-center gap-2 py-2">
+                    <div id="pknBtn" class="box-3d text-white p-3 cursor-pointer transition duration-300 hover:scale-[1.01] relative" onclick="openModal('pknModal')">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa fa-th-large text-gold text-lg"></i>
+                            <h3 class="font-bold text-lg text-gold">PKN</h3>
+                        </div>
+                        <p class="text-gray-100 text-sm pl-6 leading-tight">(Pelatihan Kepemimpinan Nasional)</p>
+                        <p class="text-gray-100 text-sm pl-6 leading-tight mt-0.5">Tingkat II & Tingkat I</p>
+                        <span class="click-icon-top text-gold"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                    </div>
+                    <div id="pkaBtn" class="bg-primary text-white p-3 rounded-lg shadow-lg cursor-pointer transition duration-300 hover:scale-[1.01] relative" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(0, 0, 0, 0.1); background: linear-gradient(145deg, #1a3b7a, #0a2463); border-radius: 8px;" onclick="openModal('pkaModal')">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa fa-plus-square-o text-gold text-lg"></i>
+                            <h3 class="font-bold text-lg text-gold">PKA</h3>
+                        </div>
+                        <p class="text-gray-100 text-sm pl-6 leading-tight">(Pelatihan Kepemimpinan Administrator)</p>
+                        <span class="click-icon-top text-gold"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                    </div>
+                    <div id="pkpBtn" class="bg-primary text-white p-3 rounded-lg shadow-lg cursor-pointer transition duration-300 hover:scale-[1.01] relative" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(0, 0, 0, 0.1); background: linear-gradient(145deg, #1a3b7a, #0a2463); border-radius: 8px;" onclick="openModal('pkpModal')">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa fa-sun-o text-gold text-lg"></i>
+                            <h3 class="font-bold text-lg text-gold">PKP</h3>
+                        </div>
+                        <p class="text-gray-100 text-sm pl-6 leading-tight">(Pelatihan Kepemimpinan Pengawas)</p>
+                        <span class="click-icon-top text-gold"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                    </div>
+                    <div id="cetakBtn" class="box-gold-3d text-primary p-3 cursor-pointer transition duration-300 hover:scale-[1.01] relative" onclick="openModal('cetakModal')">
+                        <div class="flex items-center gap-2">
+                            <i class="fa fa-file-text-o text-primary text-lg"></i>
+                            <h3 class="font-bold text-lg text-primary">Desain & Cetak</h3>
+                        </div>
+                        <span class="click-icon-top text-primary/60"><i class="fa fa-hand-pointer-o mr-1"></i>Klik</span>
+                    </div>
+                </div>
+                <div class="h-[150px] md:h-auto relative overflow-hidden bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gedung Kantor" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+            
+            <!-- FOOTER HAK CIPTA -->
             <div class="footer-biru">
                 <p>Hak Cipta © 2026 AW Solutions</p>
                 <p>Semua Hak Dilindungi</p>
             </div>
+        </div>
+    </div>
+    <!-- ============================================= -->
+    <!-- MODAL POPUP LAYANAN - TOMBOL X MASUK KE DALAM -->
+    <!-- ============================================= -->
+    <div id="pknModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('pknModal')">&times;</span>
+            <h2 class="modal-title">Tugas Diklat PKN</h2>
+            <ul class="check-list text-gray-700">
+                <li>Essay Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Observasi Lapangan (OL)</li>
+                <li>Rancangan Proyek Perubahan</li>
+                <li>Laporan Implementasi Proyek Perubahan</li>
+                <li>Desain Infografis dan Majalah Proyek Perubahan</li>
+                <li>Bahan Tayang Seminar Proyek Perubahan</li>
+                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
+                <li>Video Presentasi</li>
+            </ul>
+        </div>
+    </div>
+    <div id="pkaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('pkaModal')">&times;</span>
+            <h2 class="modal-title">Tugas Diklat PKA</h2>
+            <ul class="check-list text-gray-700">
+                <li>Essay Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Studi Lapangan (Stula)</li>
+                <li>Rancangan Aksi Perubahan</li>
+                <li>Laporan Implementasi Aksi Perubahan</li>
+                <li>Desain Infografis dan Majalah Aksi Perubahan</li>
+                <li>Bahan Tayang Seminar Aksi Perubahan</li>
+                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
+                <li>Video Presentasi</li>
+            </ul>
+        </div>
+    </div>
+    <div id="pkpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('pkpModal')">&times;</span>
+            <h2 class="modal-title">Tugas Diklat PKP</h2>
+            <ul class="check-list text-gray-700">
+                <li>Essay Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                <li>Tugas Individu Studi Lapangan (Stula)</li>
+                <li>Rancangan Aksi Perubahan</li>
+                <li>Laporan Implementasi Aksi Perubahan</li>
+                <li>Desain Infografis dan Majalah Aksi Perubahan</li>
+                <li>Bahan Tayang Seminar Aksi Perubahan</li>
+                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
+                <li>Video Presentasi</li>
+            </ul>
+        </div>
+    </div>
+    <div id="cetakModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cetakModal')">&times;</span>
+            <h2 class="modal-title">Layanan Desain & Cetak</h2>
+            <ul class="check-list text-gray-700">
+                <li>Majalah untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>Infografis untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>Baliho/Backdrop untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>Spanduk untuk kebutuhan PKN, PKA, dan PKP</li>
+                <li>X-Banner dan kebutuhan pencetakan lainnya</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- MODAL BIDANG USAHA - VERSI PANJANG LENGKAP   -->
+    <!-- ============================================= -->
+    <div id="usahaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('usahaModal')">&times;</span>
+            <h2 class="modal-title">Penjelasan Bidang Usaha</h2>
+            
+            <p class="font-semibold text-gray-800 mt-3 mb-2">Lingkup Kegiatan Kami:</p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                AW Solutions bergerak khusus di bidang jasa pendukung administrasi dan penyusunan tugas-tugas diklat kepemimpinan bagi Aparatur Sipil Negara. Kami hadir untuk membantu meringankan beban administrasi para peserta diklat agar dapat lebih fokus pada pemahaman materi dan pengembangan kompetensi diri.
+            </p>
+
+            <ul class="check-list text-gray-700">
+                <li><strong>PKN (Pelatihan Kepemimpinan Nasional):</strong> Layanan pendukung penyusunan tugas untuk jenjang kepemimpinan nasional tingkat I dan tingkat II.</li>
+                <li><strong>PKA (Pelatihan Kepemimpinan Administrator):</strong> Layanan pendukung penyusunan tugas untuk jenjang administrator yang mempersiapkan pemimpin tingkat menengah.</li>
+                <li><strong>PKP (Pelatihan Kepemimpinan Pengawas):</strong> Layanan pendukung penyusunan tugas untuk jenjang pengawas yang bertugas mengawasi pelaksanaan tugas operasional.</li>
+                <li><strong>Jasa Desain dan Percetakan:</strong> Melayani pembuatan berbagai kebutuhan visual seperti desain layout majalah, infografis, pembuatan baliho, spanduk, backdrop, x-banner, serta pencetakan dokumen dengan kualitas terbaik dan hasil yang memuaskan.</li>
+            </ul>
+
+            <p class="text-gray-700 text-justify leading-relaxed mt-4">
+                Dengan pengalaman dan ketelitian, kami menjamin setiap hasil pekerjaan disusun secara sistematis, rapi, dan sesuai dengan standar yang berlaku, mulai dari tahap pengetikan hingga tahap finishing atau pencetakan siap pakai.
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- MODAL VISI MISI - VERSI PANJANG LENGKAP      -->
+    <!-- ============================================= -->
+    <div id="visiModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('visiModal')">&times;</span>
+            <h2 class="modal-title">Visi & Misi Kami</h2>
+            
+            <p class="font-semibold text-gray-800 mb-2">Visi:</p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                "Menjadi penyedia jasa pendukung tugas diklat yang terpercaya, berkualitas, dan tepat waktu dalam pelayanan kepada seluruh klien di seluruh wilayah Indonesia."
+            </p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-4">
+                Visi ini mencerminkan komitmen kami untuk terus tumbuh menjadi mitra terbaik yang selalu diandalkan oleh setiap peserta diklat yang membutuhkan bantuan profesional. Kami bertekd memberikan standar pelayanan tinggi yang tidak hanya sekadar menyelesaikan pekerjaan, tetapi juga memberikan nilai tambah berupa kemudahan dan kepuasan bagi pengguna jasa.
+            </p>
+
+            <p class="font-semibold text-gray-800 mb-2">Misi:</p>
+            <p class="text-gray-700 text-justify leading-relaxed mb-2">
+                Untuk mewujudkan visi tersebut, AW Solutions menjalankan misi sebagai berikut:
+            </p>
+            <ul class="check-list text-gray-700 mb-4">
+                <li>Memberikan solusi yang lengkap dan komprehensif mulai dari proses pengetikan, penyusunan materi, hingga desain visual dan pencetakan.</li>
+                <li>Menjaga standar kualitas kerja yang tinggi dalam setiap detail pekerjaan agar hasilnya maksimal dan memuaskan.</li>
+                <li>Memberikan pelayanan yang profesional, ramah, transparan, dan selalu mengutamakan ketepatan waktu penyelesaian.</li>
+            </ul>
+            <p class="text-gray-700 text-justify leading-relaxed">
+                Kami berkomitmen untuk terus berinovasi dan meningkatkan pelayanan demi mendukung kesuksesan tugas-tugas diklat Bapak/Ibu sekalian.
+            </p>
+        </div>
+    </div>
+
+    <!-- MODAL DESAIN & KUALITAS -->
+    <div id="profilModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('profilModal')">&times;</span>
+            <h2 class="modal-title">Desain dan Kualitas Terjamin</h2>
+            <ul class="check-list text-gray-700">
+                <li>Desain layout menarik & profesional</li>
+                <li>Kualitas cetak tajam & jelas</li>
+                <li>Bahan kertas pilihan terbaik</li>
+                <li>Pengerjaan rapi & teliti</li>
+                <li>Tepat waktu & siap pakai</li>
+            </ul>
         </div>
     </div>
         <!-- HALAMAN PORTOFOLIO -->
     <div id="portofolio" class="page-content background-image">
         <div class="portfolio-container">
-            <h1 class="title-porto">HASIL KERJA KAMI</h1>
-            <p class="sub-title-porto">Contoh Hasil Pengerjaan Tugas Diklat</p>
-            
+            <h1 class="title-porto">Hasil Produk</h1>
+            <p class="sub-title-porto">
+                Cetakan pendukung untuk bahan pameran
+            </p>
             <div class="portfolio-grid">
-                <div class="portfolio-item" onclick="window.open('gambar1.jpg','_blank')">
-                    <div class="photo-area"><img src="https://picsum.photos/300/300?random=1" alt="Hasil Kerja"></div>
-                    <button class="detail-button"><i class="fa fa-eye eye-icon"></i> Lihat Detail</button>
+
+                <!-- BARIS 1 -->
+                <div onclick="bukaFile('Majalah 01.jpg', 'gambar', 'Majalah hasil desain untuk kebutuhan tugas diklat PKN')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Majalah 01.jpg" alt="Majalah 01">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
                 </div>
-                <div class="portfolio-item" onclick="window.open('gambar2.jpg','_blank')">
-                    <div class="photo-area"><img src="https://picsum.photos/300/300?random=2" alt="Hasil Kerja"></div>
-                    <button class="detail-button"><i class="fa fa-eye eye-icon"></i> Lihat Detail</button>
+                <div onclick="bukaFile('Majalah 02.jpg', 'gambar', 'Majalah hasil desain untuk kebutuhan tugas diklat PKA')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Majalah 02.jpg" alt="Majalah 02">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
                 </div>
-                <div class="portfolio-item" onclick="window.open('gambar3.jpg','_blank')">
-                    <div class="photo-area"><img src="https://picsum.photos/300/300?random=3" alt="Hasil Kerja"></div>
-                    <button class="detail-button"><i class="fa fa-eye eye-icon"></i> Lihat Detail</button>
+                <div onclick="bukaFile('Majalah 03.jpg', 'gambar', 'Majalah hasil desain untuk kebutuhan tugas diklat PKP')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Majalah 03.jpg" alt="Majalah 03">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
                 </div>
-                <div class="portfolio-item" onclick="window.open('gambar4.jpg','_blank')">
-                    <div class="photo-area"><img src="https://picsum.photos/300/300?random=4" alt="Hasil Kerja"></div>
-                    <button class="detail-button"><i class="fa fa-eye eye-icon"></i> Lihat Detail</button>
+
+                <!-- BARIS 2 -->
+                <div onclick="bukaFile('Majalah 04~2.jpg', 'gambar', 'Majalah hasil desain dengan desain modern dan rapi')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Majalah 04~2.jpg" alt="Majalah 04">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
                 </div>
-                <div class="portfolio-item" onclick="window.open('gambar5.jpg','_blank')">
-                    <div class="photo-area"><img src="https://picsum.photos/300/300?random=5" alt="Hasil Kerja"></div>
-                    <button class="detail-button"><i class="fa fa-eye eye-icon"></i> Lihat Detail</button>
+                <div onclick="bukaFile('Banner 01.jpg', 'gambar', 'Banner hasil desain untuk kebutuhan pameran diklat')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Banner 01.jpg" alt="Banner 01">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
                 </div>
-                <div class="portfolio-item" onclick="window.open('gambar6.jpg','_blank')">
-                    <div class="photo-area"><img src="https://picsum.photos/300/300?random=6" alt="Hasil Kerja"></div>
-                    <button class="detail-button"><i class="fa fa-eye eye-icon"></i> Lihat Detail</button>
+                <div onclick="bukaFile('Banner 02.jpg', 'gambar', 'Banner hasil desain dengan ukuran standar pameran')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Banner 02.jpg" alt="Banner 02">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
                 </div>
+
+                <!-- BARIS 3 -->
+                <div onclick="bukaFile('Spanduk nama stand.jpg', 'gambar', 'Spanduk nama stand untuk kebutuhan pameran diklat')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Spanduk nama stand.jpg" alt="Spanduk">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
+                </div>
+                <div onclick="bukaFile('Cetak Majalah 01.mp4', 'video', 'Proses pencetakan majalah dengan kualitas terbaik')" class="portfolio-item">
+                    <div class="photo-area">
+                        <video src="Cetak Majalah 01.mp4" alt="Proses Cetak"></video>
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
+                </div>
+                <div onclick="bukaFile('Cetak Majalah 02.mp4', 'video', 'Proses pencetakan majalah dengan mesin modern')" class="portfolio-item">
+                    <div class="photo-area">
+                        <video src="Cetak Majalah 02.mp4" alt="Proses Cetak"></video>
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
+                </div>
+
+                <!-- BARIS 4 -->
+                <div onclick="bukaFile('Backdrop 01.jpg', 'gambar', 'Backdrop hasil desain untuk kebutuhan pameran diklat')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Backdrop 01.jpg" alt="Backdrop 01">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
+                </div>
+                <div onclick="bukaFile('Backdrop 02.jpg', 'gambar', 'Backdrop hasil desain dengan desain menarik dan informatif')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Backdrop 02.jpg" alt="Backdrop 02">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
+                </div>
+                <div onclick="bukaFile('Backdrop 03.jpg', 'gambar', 'Backdrop hasil desain dengan kualitas cetak yang tajam')" class="portfolio-item">
+                    <div class="photo-area">
+                        <img src="Backdrop 03.jpg" alt="Backdrop 03">
+                    </div>
+                    <button class="detail-button">
+                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
+                    </button>
+                </div>
+
             </div>
         </div>
-        
+
+        <!-- FOOTER HAK CIPTA -->
         <div class="footer-biru">
             <p>Hak Cipta © 2026 AW Solutions</p>
             <p>Semua Hak Dilindungi</p>
         </div>
     </div>
+
+    <!-- MODAL POPUP PORTOFOLIO -->
+    <div id="modalPorto" class="modal-porto">
+        <div class="modal-content-porto">
+            <span class="close-porto" onclick="tutupFile()">&times;</span>
+            <img id="gambarPorto" style="display: none;" alt="Detail Gambar">
+            <video id="videoPorto" controls style="display: none;" alt="Detail Video">
+                <source id="sumberVideo" src="" type="video/mp4">
+            </video>
+            <div id="keteranganPorto" class="detail-text"></div>
+        </div>
+    </div>
+
     <!-- HALAMAN KONTAK -->
     <div id="kontak" class="page-content">
-        <div class="min-h-screen bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
-            <div class="max-w-4xl mx-auto p-4 pt-24">
-                <h1 class="text-center text-primary font-black text-[clamp(1.8rem,5vw,2.5rem)] mb-8 relative inline-block left-1/2 -translate-x-1/2">Hubungi Kami</h1>
+        <div class="max-w-2xl mx-auto p-6 bg-white rounded-2xl shadow-sm mt-10 mb-10">
+            <h2 class="text-[clamp(1.8rem,5vw,2.5rem)] font-black text-center mb-6 text-primary">Hubungi Kami</h2>
+            <p class="text-[clamp(1rem,3vw,1.2rem)] text-gray-700 mb-8 text-center">
+                Silakan hubungi kami untuk pemesanan atau pertanyaan lebih lanjut:
+            </p>
 
-                <div class="box-3d text-white p-6 rounded-xl mb-8">
-                    <p class="text-center text-lg mb-6">Silakan hubungi kami untuk pemesanan atau pertanyaan lebih lanjut:</p>
-                    
-                    <div class="space-y-4 text-lg">
-                        <div class="flex items-center gap-3">
-                            <i class="fa fa-whatsapp text-2xl text-green-400"></i>
-                            <span>0821 8766 2626</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa fa-whatsapp text-2xl text-green-400"></i>
-                            <span>0859 7515 3455</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa fa-map-marker text-2xl text-gold"></i>
-                            <span>Makassar, Sulawesi Selatan</span>
-                        </div>
-                    </div>
-
-                    <div class="mt-8 pt-6 border-t border-white/30">
-                        <h3 class="text-gold text-xl font-bold mb-4">Jam Operasional</h3>
-                        <p class="mb-2">Senin - Jumat: 08.00 - 17.00 WITA</p>
-                        <p class="mb-2">Sabtu: 08.00 - 12.00 WITA</p>
-                        <p>Minggu & Hari Libur: Tutup</p>
-                    </div>
+            <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-3 text-[clamp(1rem,3vw,1.2rem)]">
+                    <i class="fa fa-whatsapp text-2xl" style="color: #25D366;"></i>
+                    <span class="font-bold">0821 8766 2626</span>
                 </div>
-
-                <!-- FORM PESAN -->
-                <div class="bg-white p-6 rounded-xl shadow-lg mb-6">
-                    <h2 class="text-center text-2xl font-bold text-primary mb-6">Kirim Pesan</h2>
-                    
-                    <form>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-lg font-bold mb-2">Nama Lengkap</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none" placeholder="Masukkan nama Anda">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-lg font-bold mb-2">Nomor WhatsApp</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none" placeholder="Masukkan nomor WhatsApp">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 text-lg font-bold mb-2">Pesan / Keterangan</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none" placeholder="Tulis pesan atau kebutuhan tugas diklat Anda"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-primary text-white text-xl font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition duration-300 flex items-center justify-center gap-2">
-                            <i class="fa fa-paper-plane"></i> Kirim Pesan
-                        </button>
-                    </form>
+                <div class="flex items-center gap-3 text-[clamp(1rem,3vw,1.2rem)]">
+                    <i class="fa fa-whatsapp text-2xl" style="color: #25D366;"></i>
+                    <span class="font-bold">0859 7515 3455</span>
                 </div>
-
-                <!-- TULISAN TERIMA KASIH -->
-                <div class="text-center text-gray-600 italic mb-6">
-                    <p>Terima kasih telah mengunjungi website kami</p>
+                <div class="flex items-center gap-3 text-[clamp(1rem,3vw,1.2rem)]">
+                    <i class="fa fa-map-marker text-2xl" style="color: #DB4437;"></i>
+                    <span class="font-bold">Makassar, Sulawesi Selatan</span>
                 </div>
-
             </div>
-            
-            <div class="footer-biru">
-                <p>Hak Cipta © 2026 AW Solutions</p>
-                <p>Semua Hak Dilindungi</p>
+
+            <div class="mt-8">
+                <h3 class="text-[clamp(1.3rem,4vw,1.6rem)] font-bold mb-4 text-gray-800">Jam Operasional</h3>
+                <div class="space-y-2 text-[clamp(1rem,3vw,1.2rem)] text-gray-700 font-bold">
+                    <p>Senin - Jumat: 08.00 - 17.00 WITA</p>
+                    <p>Sabtu: 08.00 - 12.00 WITA</p>
+                    <p>Minggu & Hari Libur: Tutup</p>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <h3 class="text-[clamp(1.3rem,4vw,1.6rem)] font-bold mb-4 text-gray-800">Kirim Pesan</h3>
+                <form class="space-y-5">
+                    <div>
+                        <label class="block text-[clamp(1.1rem,3vw,1.3rem)] font-bold mb-2 text-gray-700">Nama Lengkap</label>
+                        <input type="text" placeholder="Masukkan nama Anda" class="w-full p-3 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-[clamp(1.1rem,3vw,1.3rem)] font-bold mb-2 text-gray-700">Nomor WhatsApp</label>
+                        <input type="text" placeholder="Masukkan nomor WhatsApp" class="w-full p-3 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-[clamp(1.1rem,3vw,1.3rem)] font-bold mb-2 text-gray-700">Pesan / Keterangan</label>
+                        <textarea rows="4" placeholder="Tulis pesan atau kebutuhan tugas diklat Anda" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white text-[clamp(1.2rem,4vw,1.4rem)] font-bold py-4 rounded-xl transition duration-300 shadow-md">
+                        Kirim Pesan
+                    </button>
+                </form>
             </div>
         </div>
-    </div>
 
-    <!-- MODAL DETAIL PKN -->
-    <div id="pknModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('pknModal')">&times;</span>
-            <h2 class="modal-title">Tugas Diklat PKN</h2>
-            <ul class="check-list mt-4 text-lg">
-                <li>Essay Agenda I, Agenda II, Agenda III</li>
-                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                <li>Tugas Individu Observasi Lapangan (OL)</li>
-                <li>Rancangan Proyek Perubahan</li>
-                <li>Laporan Implementasi Proyek Perubahan</li>
-                <li>Desain Infografis dan Majalah Proyek Perubahan</li>
-                <li>Bahan Tayang Seminar Proyek Perubahan</li>
-                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
-                <li>Video Presentasi</li>
-            </ul>
+        <!-- FOOTER HAK CIPTA -->
+        <div class="footer-biru">
+            <p>Hak Cipta © 2026 AW Solutions</p>
+            <p>Semua Hak Dilindungi</p>
         </div>
     </div>
 
-    <!-- MODAL DETAIL PKA -->
-    <div id="pkaModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('pkaModal')">&times;</span>
-            <h2 class="modal-title">Tugas Diklat PKA</h2>
-            <ul class="check-list mt-4 text-lg">
-                <li>Essay Agenda I, Agenda II, Agenda III</li>
-                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                <li>Tugas Individu Observasi Lapangan (OL)</li>
-                <li>Rancangan Proyek Perubahan</li>
-                <li>Laporan Implementasi Proyek Perubahan</li>
-                <li>Desain Infografis dan Majalah Proyek Perubahan</li>
-                <li>Bahan Tayang Seminar Proyek Perubahan</li>
-                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
-                <li>Video Presentasi</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- MODAL DETAIL PKP -->
-    <div id="pkpModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('pkpModal')">&times;</span>
-            <h2 class="modal-title">Tugas Diklat PKP</h2>
-            <ul class="check-list mt-4 text-lg">
-                <li>Essay Agenda I, Agenda II, Agenda III</li>
-                <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
-                <li>Tugas Individu Observasi Lapangan (OL)</li>
-                <li>Rancangan Proyek Perubahan</li>
-                <li>Laporan Implementasi Proyek Perubahan</li>
-                <li>Desain Infografis dan Majalah Proyek Perubahan</li>
-                <li>Bahan Tayang Seminar Proyek Perubahan</li>
-                <li>Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
-                <li>Video Presentasi</li>
-            </ul>
-        </div>
-    </div>
-
+    <!-- JAVASCRIPT -->
     <script>
-        // FUNGSI MENU
         function toggleMenu() {
-            document.querySelector('.sidebar-menu').classList.toggle('active');
-            document.getElementById('overlay').classList.toggle('active');
+            const sidebar = document.getElementById('sidebarMenu');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
         }
 
-        document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
-
-        // FUNGSI GANTI HALAMAN
-        function gantiHalaman(id) {
-            // Sembunyikan semua halaman
+        function gantiHalaman(targetId) {
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.remove('active');
             });
-            
-            // Tampilkan halaman yang dipilih
-            document.getElementById(id).classList.add('active');
-            
-            // Tutup menu
-            document.querySelector('.sidebar-menu').classList.remove('active');
-            document.getElementById('overlay').classList.remove('active');
-
-            // Update tampilan menu aktif
+            document.getElementById(targetId).classList.add('active');
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
-                if(link.getAttribute('data-target') === id) {
-                    link.classList.add('active');
-                }
             });
+            document.querySelector(`.nav-link[data-target="${targetId}"]`).classList.add('active');
+            window.scrollTo(0, 0);
         }
 
-        // FUNGSI MODAL
-        function openModal(id) {
-            document.getElementById(id).style.display = "block";
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
         }
 
-        function closeModal(id) {
-            document.getElementById(id).style.display = "none";
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
         }
 
-        // Klik luar modal untuk tutup
+        function bukaFile(namaFile, tipe, keterangan) {
+            const modal = document.getElementById('modalPorto');
+            const gambar = document.getElementById('gambarPorto');
+            const video = document.getElementById('videoPorto');
+            const sumberVideo = document.getElementById('sumberVideo');
+            const keteranganElem = document.getElementById('keteranganPorto');
+
+            gambar.style.display = 'none';
+            video.style.display = 'none';
+            gambar.src = '';
+            sumberVideo.src = '';
+
+            if(tipe === 'gambar') {
+                gambar.src = namaFile;
+                gambar.style.display = 'block';
+            } else if(tipe === 'video') {
+                sumberVideo.src = namaFile;
+                video.load();
+                video.style.display = 'block';
+            }
+
+            keteranganElem.textContent = keterangan;
+            modal.style.display = 'block';
+        }
+
+        function tutupFile() {
+            const modal = document.getElementById('modalPorto');
+            const video = document.getElementById('videoPorto');
+            modal.style.display = 'none';
+            video.pause();
+            video.currentTime = 0;
+        }
+
         window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = "none";
+            if(event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+            if(event.target.classList.contains('modal-porto')) {
+                tutupFile();
             }
         }
     </script>
-
 </body>
 </html>
-    
