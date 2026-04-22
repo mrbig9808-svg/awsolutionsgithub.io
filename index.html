@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AW Solutions - Jasa Tugas Diklat</title>
+    
+    <!-- LINK PREVIEW LENGKAP HTTP & HTTPS -->
+    <meta property="og:title" content="AW Solutions - Jasa Tugas Diklat PKN Pelatihan Kepemimpinan Nasional Tingkat II dan Tingkat I, PKA Pelatihan Kepemimpinan Administrator, PKP Pelatihan Kepemimpinan Pengawas">
+    <meta property="og:description" content="Jasa Tugas Diklat: PKN Pelatihan Kepemimpinan Nasional Tingkat II dan Tingkat I, PKA Pelatihan Kepemimpinan Administrator, PKP Pelatihan Kepemimpinan Pengawas. Solusi Pengetikan, Desain dan Cetak Dokumen.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+    <meta property="og:url" content="https://awsolutions-id.github.io/jasa-tugas-diklat-pkn-pelatihan-kepemimpinan-nasional-tingkat-ii-dan-tingkat-i-pka-pelatihan-kepemimpinan-administrator-pkp-pelatihan-kepemimpinan-pengawas/">
+    <meta property="og:url" content="http://awsolutions-id.github.io/jasa-tugas-diklat-pkn-pelatihan-kepemimpinan-nasional-tingkat-ii-dan-tingkat-i-pka-pelatihan-kepemimpinan-administrator-pkp-pelatihan-kepemimpinan-pengawas/">
+    <meta name="twitter:card" content="summary_large_image">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
@@ -130,7 +139,7 @@
             }
 
             /* ============================================= */
-            /* MENU SIDEBAR - DIUBAH JADI WARNA KUNING FULL */
+            /* MENU SIDEBAR - TULISAN DIUBAH TIDAK TEBAL    */
             /* ============================================= */
             .sidebar-menu {
                 position: fixed;
@@ -138,7 +147,7 @@
                 left: 0;
                 width: 100vw;
                 height: 100vh;
-                background-color: #f3d278; /* BACKGROUND KUNING */
+                background-color: #f3d278;
                 z-index: 99999;
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in-out;
@@ -151,12 +160,12 @@
             }
             .sidebar-menu a {
                 display: block;
-                color: #0a2463; /* TULISAN BIRU TUA */
+                color: #0a2463;
                 padding: 15px 20px;
                 text-decoration: none;
                 font-size: 1.2rem;
                 border-bottom: 1px solid rgba(0,0,0,0.1);
-                font-weight: bold;
+                font-weight: normal; /* DIUBAH JADI TIDAK TEBAL */
                 transition: 0.3s;
             }
             .sidebar-menu a:hover {
@@ -207,7 +216,6 @@
             }
         }
     </style>
-    
     <style>
         * {
             margin: 0;
@@ -455,7 +463,6 @@
             height: 100%; 
             overflow: auto; 
             background-color: rgba(0,0,0,0.8); 
-           
             justify-content: center;
             align-items: center;
             padding-top: 0;
@@ -517,8 +524,7 @@
     </style>
 </head>
 <body>
-
-    <!-- HEADER DAN MENU -->
+        <!-- HEADER DAN MENU -->
     <div class="header">
         <a href="#beranda" class="logo-header">AW Solutions</a>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
@@ -637,9 +643,8 @@
                 <p>Semua Hak Dilindungi</p>
             </div>
         </div>
-    </div>
-
-    <!-- HALAMAN LAYANAN -->
+     </div>
+        <!-- HALAMAN LAYANAN -->
     <div id="layanan" class="page-content">
         <div class="min-h-screen bg-white flex flex-col">
             <div class="py-2 px-4 text-center bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
@@ -845,74 +850,8 @@
                 </div>
                 <div onclick="bukaFile('Majalah 02.jpg', 'gambar', 'Majalah hasil desain untuk kebutuhan tugas diklat PKA')" class="portfolio-item">
                     <div class="photo-area">
-                        <img src="Majalah 02.jpg" alt="Majalah 02">
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-                <div onclick="bukaFile('Majalah 03.jpg', 'gambar', 'Majalah hasil desain untuk kebutuhan tugas diklat PKP')" class="portfolio-item">
-                    <div class="photo-area">
-                        <img src="Majalah 03.jpg" alt="Majalah 03">
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-
-                <!-- BARIS 2 -->
-                <div onclick="bukaFile('Majalah 04.jpg', 'gambar', 'Majalah hasil desain dengan desain modern dan rapi')" class="portfolio-item">
-                    <div class="photo-area">
-                        <img src="Majalah 04.jpg" alt="Majalah 04">
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-                <div onclick="bukaFile('Banner 01.jpg', 'gambar', 'Banner hasil desain untuk kebutuhan pameran diklat')" class="portfolio-item">
-                    <div class="photo-area">
-                        <img src="Banner 01.jpg" alt="Banner 01">
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-                <div onclick="bukaFile('Banner 02.jpg', 'gambar', 'Banner hasil desain dengan ukuran standar pameran')" class="portfolio-item">
-                    <div class="photo-area">
-                        <img src="Banner 02.jpg" alt="Banner 02">
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-
-                <!-- BARIS 3 -->
-                <div onclick="bukaFile('Spanduk nama stand.jpg', 'gambar', 'Spanduk nama stand untuk kebutuhan pameran diklat')" class="portfolio-item">
-                    <div class="photo-area">
-                        <img src="Spanduk nama stand.jpg" alt="Spanduk">
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-                <div onclick="bukaFile('Cetak Majalah 01.mp4', 'video', 'Proses pencetakan majalah dengan kualitas terbaik')" class="portfolio-item">
-                    <div class="photo-area">
-                        <video src="Cetak Majalah 01.mp4" alt="Proses Cetak"></video>
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-                <div onclick="bukaFile('Cetak Majalah 02.mp4', 'video', 'Proses pencetakan majalah dengan mesin modern')" class="portfolio-item">
-                    <div class="photo-area">
-                        <video src="Cetak Majalah 02.mp4" alt="Proses Cetak"></video>
-                    </div>
-                    <button class="detail-button">
-                        <i class="fas fa-eye eye-icon"></i> Lihat Detail
-                    </button>
-                </div>
-
-                <!-- BARIS 4 -->
+                        <img src="Majalah 02.jpg" alt="
+                    <!-- BARIS 4 -->
                 <div onclick="bukaFile('Backdrop 01.jpg', 'gambar', 'Backdrop hasil desain untuk kebutuhan pameran diklat')" class="portfolio-item">
                     <div class="photo-area">
                         <img src="Backdrop 01.jpg" alt="Backdrop 01">
@@ -961,7 +900,7 @@
     </div>
 
     <!-- ============================================= -->
-    <!-- HALAMAN KONTAK - DESAIN BARU SUDAH DIPERBAIKI -->
+    <!-- HALAMAN KONTAK - DITAMBAH TULISAN & TANGAN   -->
     <!-- ============================================= -->
     <div id="kontak" class="page-content">
         <div class="min-h-screen bg-gray-50 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')] py-10 px-4">
@@ -982,15 +921,28 @@
                             <i class="fa fa-whatsapp text-2xl" style="color: #25D366;"></i>
                             <span class="font-bold">0821 8766 2626</span>
                         </div>
+                        <div class="text-center text-sm text-gold mb-4">
+                            👆 Klik Chat WhatsApp
+                        </div>
+
                         <div class="flex items-center gap-3 text-lg">
                             <i class="fa fa-whatsapp text-2xl" style="color: #25D366;"></i>
                             <span class="font-bold">0859 7515 3455</span>
                         </div>
+                        <div class="text-center text-sm text-gold mb-4">
+                            👆 Klik Chat WhatsApp
+                        </div>
+
                         <div class="flex items-center gap-3 text-lg">
                             <i class="fa fa-map-marker text-2xl text-gold"></i>
                             <span class="font-bold">Makassar, Sulawesi Selatan</span>
                         </div>
                     </div>
+
+                    <!-- TAMBAHAN KALIMAT TERIMA KASIH -->
+                    <p class="text-center text-base italic mt-6">
+                        "Terima kasih telah mengunjungi website kami"
+                    </p>
 
                     <div class="mt-6 pt-6 border-t border-white/30">
                         <h3 class="text-xl font-bold mb-4 text-gold">Jam Operasional</h3>
@@ -1107,3 +1059,5 @@
     </script>
 </body>
 </html>
+    
+                                                                     
