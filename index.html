@@ -41,16 +41,6 @@
             border: 1px solid rgba(212, 162, 87, 0.3);
         }
 
-        .modal {
-            display: none; position: fixed; z-index: 9999;
-            left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
-        }
-        .modal-content {
-            background-color: white; margin: 12% auto; padding: 25px;
-            border-radius: 20px; width: 90%; max-width: 450px; position: relative;
-        }
-
         .bottom-nav {
             position: fixed; bottom: 0; left: 0; width: 100%;
             background: #11316b; display: flex; justify-content: space-around;
@@ -59,8 +49,8 @@
         .nav-item { color: white; text-align: center; font-size: 10px; cursor: pointer; opacity: 0.5; }
         .nav-item.active { opacity: 1; color: #d4a257; font-weight: bold; }
         
-        .list-redaksi li { position: relative; padding-left: 28px; margin-bottom: 12px; font-size: 14px; color: #4a5568; }
-        .list-redaksi li::before { content: "\f058"; font-family: FontAwesome; position: absolute; left: 0; color: #d4a257; font-weight: bold; }
+        .list-tugas li { position: relative; padding-left: 30px; margin-bottom: 10px; font-size: 14px; color: #333; line-height: 1.4; }
+        .list-tugas li::before { content: "\f058"; font-family: FontAwesome; position: absolute; left: 0; color: #d4a257; font-size: 18px; }
     </style>
 </head>
 <body>
@@ -70,36 +60,42 @@
     </div>
 
     <div id="home" class="page-content active">
-        <div class="h-[50vh] bg-primary flex flex-col items-center justify-center text-center px-8 text-white bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
+        <div class="h-[45vh] bg-primary flex flex-col items-center justify-center text-center px-8 text-white bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
             <h1 class="text-4xl font-black mb-2 text-gold tracking-tighter uppercase">AW SOLUTIONS</h1>
             <p class="text-sm italic mb-10 opacity-90">"Solusi Profesional Tugas Diklat & Administrasi"</p>
             <button onclick="gantiHalaman('layanan', 2)" class="bg-gold text-primary px-10 py-3 rounded-full font-black shadow-xl active:scale-95 transition">LIHAT LAYANAN</button>
         </div>
         <div class="p-8">
-            <h2 class="text-2xl font-black text-primary text-center mb-8 uppercase tracking-tight">Keunggulan Layanan</h2>
+            <h2 class="text-2xl font-black text-primary text-center mb-8 uppercase tracking-tight">Kenapa Memilih Kami?</h2>
             <div class="space-y-4">
                 <div class="flex items-center gap-5 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm">
                     <i class="fa fa-clock-o text-3xl text-gold"></i>
-                    <div><h4 class="font-bold text-gray-800 text-sm uppercase">Tepat Waktu</h4><p class="text-xs text-gray-500">Penyelesaian cepat sesuai deadline ketat.</p></div>
+                    <div><h4 class="font-bold text-gray-800 text-sm uppercase">Tepat Waktu</h4><p class="text-xs text-gray-500">Penyelesaian cepat sesuai deadline.</p></div>
                 </div>
                 <div class="flex items-center gap-5 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm">
                     <i class="fa fa-check-square-o text-3xl text-gold"></i>
-                    <div><h4 class="font-bold text-gray-800 text-sm uppercase">Kualitas Premium</h4><p class="text-xs text-gray-500">Hasil substansi sesuai standar LAN RI.</p></div>
+                    <div><h4 class="font-bold text-gray-800 text-sm uppercase">Kualitas Terjamin</h4><p class="text-xs text-gray-500">Hasil sesuai standar instansi.</p></div>
+                </div>
+                <div class="flex items-center gap-5 p-5 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                    <i class="fa fa-users text-3xl text-gold"></i>
+                    <div><h4 class="font-bold text-gray-800 text-sm uppercase">Berpengalaman</h4><p class="text-xs text-gray-500">Telah menangani berbagai angkatan diklat.</p></div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="profil" class="page-content bg-white">
-        <div class="p-8">
-            <h2 class="text-3xl font-black text-primary mb-2 uppercase">Tentang Kami</h2>
-            <div class="w-16 h-1 bg-gold mb-6"></div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-                <strong>AW Solutions</strong> adalah mitra profesional di Makassar yang berdedikasi membantu para peserta <strong>Diklat Kepemimpinan (PKN, PKA, PKP)</strong>. Kami telah berpengalaman menangani berbagai angkatan, termasuk <strong>Diklat LAN Angkatan VI</strong>.
+        <div class="p-8 text-center">
+            <h2 class="text-3xl font-black text-primary mb-2 uppercase">Profil Kami</h2>
+            <div class="w-16 h-1 bg-gold mx-auto mb-6"></div>
+            <p class="text-gray-700 leading-relaxed mb-8">
+                <strong>AW Solutions</strong> adalah mitra profesional di Makassar yang berdedikasi membantu para peserta <strong>Diklat Kepemimpinan (PKN, PKA, PKP)</strong> serta layanan percetakan.
             </p>
-            <div class="bg-gray-50 p-6 rounded-2xl border-l-4 border-gold shadow-sm">
-                <h4 class="font-bold text-primary mb-2 uppercase text-xs tracking-widest">Misi Profesional</h4>
-                <p class="text-sm italic text-gray-600">Memberikan solusi administrasi dan desain kreatif yang akurat guna mendukung kelancaran karir para ASN di seluruh Indonesia.</p>
+            <div class="bg-gray-100 p-6 rounded-2xl border-l-4 border-gold text-left">
+                <p class="text-[10px] uppercase opacity-60 font-black mb-1">Lokasi Workshop:</p>
+                <p class="font-bold text-primary mb-4">Makassar, Sulawesi Selatan</p>
+                <p class="text-[10px] uppercase opacity-60 font-black mb-1">Admin Koordinator:</p>
+                <p class="font-bold text-xl tracking-widest uppercase text-primary">Admin</p>
             </div>
         </div>
     </div>
@@ -107,117 +103,85 @@
     <div id="layanan" class="page-content bg-gray-50">
         <div class="py-10 px-6">
             <h2 class="text-3xl font-black text-primary text-center mb-8 uppercase">Layanan Kami</h2>
-            <div class="space-y-4">
-                <div class="box-3d p-6 text-white cursor-pointer active:scale-95 transition" onclick="openModal('pknModal')">
-                    <div class="flex justify-between items-center">
-                        <div><h3 class="text-2xl font-bold text-gold uppercase">PKN</h3><p class="text-xs opacity-90 italic">Pelatihan Kepemimpinan Nasional</p></div>
-                        <i class="fa fa-chevron-right text-gold"></i>
-                    </div>
+            
+            <div class="space-y-8">
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+                    <div class="bg-primary text-gold inline-block px-6 py-1 rounded-full font-black text-sm mb-4 uppercase italic">PKN TK. II</div>
+                    <ul class="list-tugas">
+                        <li>Essay Agenda I, Agenda II, Agenda III</li>
+                        <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                        <li>Tugas Individu Observasi Lapangan (OL)</li>
+                        <li>Rancangan Proyek Perubahan</li>
+                        <li>Laporan Implementasi Proyek Perubahan</li>
+                        <li>Desain Infografis dan Majalah Proyek Perubahan</li>
+                        <li>Bahan Tayang Seminar Proyek Perubahan</li>
+                        <li>Desain Baliho/ Spanduk/ X-Banner Pameran Proper</li>
+                        <li>Video Presentasi</li>
+                    </ul>
                 </div>
-                <div class="box-3d p-6 text-white cursor-pointer active:scale-95 transition" onclick="openModal('pkaModal')">
-                    <div class="flex justify-between items-center">
-                        <div><h3 class="text-2xl font-bold text-gold uppercase">PKA</h3><p class="text-xs opacity-90 italic">Pelatihan Kepemimpinan Administrator</p></div>
-                        <i class="fa fa-chevron-right text-gold"></i>
-                    </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+                    <div class="bg-primary text-gold inline-block px-6 py-1 rounded-full font-black text-sm mb-4 uppercase italic">PKA & PKP</div>
+                    <ul class="list-tugas">
+                        <li>Essay Agenda I, Agenda II, Agenda III</li>
+                        <li>Tugas Individu Agenda I, Agenda II, Agenda III</li>
+                        <li>Tugas Individu Studi Lapangan (Stula)</li>
+                        <li>Rancangan Aksi Perubahan</li>
+                        <li>Laporan Implementasi Aksi Perubahan</li>
+                        <li>Desain Infografis dan Majalah Aksi Perubahan</li>
+                        <li>Bahan Tayang Seminar Aksi Perubahan</li>
+                        <li>Desain Baliho/ Spanduk/ X-Banner Pameran Akper</li>
+                        <li>Video Presentasi</li>
+                    </ul>
                 </div>
-                <div class="box-3d p-6 text-white cursor-pointer active:scale-95 transition" onclick="openModal('pkpModal')">
-                    <div class="flex justify-between items-center">
-                        <div><h3 class="text-2xl font-bold text-gold uppercase">PKP</h3><p class="text-xs opacity-90 italic">Pelatihan Kepemimpinan Pengawas</p></div>
-                        <i class="fa fa-chevron-right text-gold"></i>
-                    </div>
-                </div>
-                <div class="bg-gold p-6 rounded-2xl flex justify-between items-center text-primary shadow-lg cursor-pointer active:scale-95 transition" onclick="openModal('cetakModal')">
-                    <div><h3 class="text-xl font-black uppercase">DESAIN & CETAK</h3><p class="text-xs font-bold opacity-80 italic">Majalah, Banner, X-Banner & Atribut</p></div>
-                    <i class="fa fa-print text-2xl"></i>
+
+                <div class="bg-gold text-primary p-6 rounded-3xl shadow-lg">
+                    <h3 class="text-xl font-black uppercase mb-2">Desain & Cetak Profesional</h3>
+                    <p class="text-xs font-bold opacity-80 italic mb-4">Majalah, Banner, X-Banner & Atribut Dokumentasi</p>
+                    <ul class="space-y-2 text-sm font-bold">
+                        <li class="flex items-center gap-2"><i class="fa fa-check-circle"></i> Cetak Majalah Full Color</li>
+                        <li class="flex items-center gap-2"><i class="fa fa-check-circle"></i> Banner & X-Banner Proper</li>
+                        <li class="flex items-center gap-2"><i class="fa fa-check-circle"></i> Atribut Pameran Lengkap</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="porto" class="page-content bg-white">
-        <div class="p-6">
-            <h2 class="text-3xl font-black text-primary text-center mb-8 uppercase">Portofolio</h2>
+        <div class="p-6 text-center">
+            <h2 class="text-3xl font-black text-primary mb-2 uppercase">Portofolio</h2>
+            <p class="text-gray-500 text-xs mb-8 italic">Hasil pengerjaan tim AW Solutions</p>
             <div class="grid grid-cols-2 gap-4">
-                <div class="border rounded-xl overflow-hidden shadow-sm">
-                    <img src="Majalah 01.jpg" class="w-full h-40 object-cover bg-gray-50" onerror="this.src='https://placehold.co/400x500?text=Majalah+PKN'">
-                    <p class="p-2 text-[9px] font-bold text-center uppercase border-t bg-gray-50">Majalah PKN</p>
-                </div>
-                <div class="border rounded-xl overflow-hidden shadow-sm">
-                    <img src="Banner 01.jpg" class="w-full h-40 object-cover bg-gray-50" onerror="this.src='https://placehold.co/400x500?text=Banner+Aksi'">
-                    <p class="p-2 text-[9px] font-bold text-center uppercase border-t bg-gray-50">Banner Aksi</p>
-                </div>
-                </div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm"><img src="m1.jpg" class="w-full h-44 object-cover bg-gray-100" onerror="this.src='https://placehold.co/400x500?text=Majalah+PKN'"><p class="p-2 text-[10px] font-bold uppercase border-t">Majalah PKN</p></div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm"><img src="b1.jpg" class="w-full h-44 object-cover bg-gray-100" onerror="this.src='https://placehold.co/400x500?text=Banner+Aksi'"><p class="p-2 text-[10px] font-bold uppercase border-t">Banner Aksi</p></div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 3</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 4</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 5</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 6</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 7</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 8</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 9</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 10</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 11</div>
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center h-44 text-[10px] text-gray-400 font-bold uppercase">Slot Produk 12</div>
+            </div>
         </div>
     </div>
 
     <div id="kontak" class="page-content bg-primary flex flex-col items-center justify-center text-center px-10 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]">
-        <h2 class="text-4xl font-black text-gold mb-10 tracking-widest uppercase">HUBUNGI KAMI</h2>
+        <h2 class="text-3xl font-black text-gold mb-10 tracking-widest uppercase">HUBUNGI KAMI</h2>
         
-        <div class="w-full max-w-xs space-y-4 mb-8">
-            <a href="https://wa.me/6282187662626" class="bg-[#25D366] text-white py-4 px-6 rounded-2xl flex items-center justify-center gap-3 shadow-xl font-black text-base active:scale-95 transition">
-                <i class="fa fa-whatsapp text-2xl"></i> WhatsApp Admin 1
+        <div class="w-full max-w-xs space-y-4 mb-10">
+            <a href="https://wa.me/6282187662626" class="bg-[#25D366] text-white py-4 px-6 rounded-2xl flex items-center justify-center gap-3 shadow-xl font-black active:scale-95 transition">
+                <i class="fa fa-whatsapp text-2xl"></i> WHATSAPP ADMIN 1
             </a>
-            <a href="https://wa.me/6285975153455" class="bg-[#25D366] text-white py-4 px-6 rounded-2xl flex items-center justify-center gap-3 shadow-xl font-black text-base active:scale-95 transition">
-                <i class="fa fa-whatsapp text-2xl"></i> WhatsApp Admin 2
+            <a href="https://wa.me/6285975153455" class="bg-[#25D366] text-white py-4 px-6 rounded-2xl flex items-center justify-center gap-3 shadow-xl font-black active:scale-95 transition">
+                <i class="fa fa-whatsapp text-2xl"></i> WHATSAPP ADMIN 2
             </a>
         </div>
 
-        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-white text-left w-full max-w-xs">
-            <p class="text-[10px] uppercase opacity-60 font-black mb-1">Lokasi Workshop:</p>
-            <p class="font-bold mb-4">Makassar, Sulawesi Selatan</p>
-            <p class="text-[10px] uppercase opacity-60 font-black mb-1">Admin Koordinator:</p>
-            <p class="font-bold text-lg tracking-wide uppercase">Admin</p>
-        </div>
-        <p class="mt-12 text-[9px] text-white/30 uppercase tracking-[0.2em]">Hak Cipta © 2026 AW Solutions</p>
-    </div>
-
-    <div id="pknModal" class="modal" onclick="closeModal('pknModal')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <h3 class="font-black text-primary text-xl border-b-2 border-gold pb-2 mb-4 uppercase">PAKET PKN</h3>
-            <ul class="list-redaksi">
-                <li>Essay Agenda I, II, III (Substansi & Analisis)</li>
-                <li>Penyusunan RPP (Rancangan Proyek Perubahan)</li>
-                <li>Laporan Implementasi Aksi Perubahan (Laboratorium)</li>
-                <li>Desain Majalah Digital Berstandar Nasional</li>
-                <li>Video Presentasi & Bahan Tayang Premium</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="pkaModal" class="modal" onclick="closeModal('pkaModal')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <h3 class="font-black text-primary text-xl border-b-2 border-gold pb-2 mb-4 uppercase">PAKET PKA</h3>
-            <ul class="list-redaksi">
-                <li>Penyusunan Aksi Perubahan Kinerja Organisasi</li>
-                <li>Bahan Tayang (PowerPoint Premium)</li>
-                <li>Bukti Fisik Implementasi (Administrasi Lengkap)</li>
-                <li>Desain Brosur, Leaflet & Publikasi Digital</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="pkpModal" class="modal" onclick="closeModal('pkpModal')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <h3 class="font-black text-primary text-xl border-b-2 border-gold pb-2 mb-4 uppercase">PAKET PKP</h3>
-            <ul class="list-redaksi">
-                <li>Aksi Perubahan Peningkatan Kinerja Pelayanan</li>
-                <li>Laporan Studi Lapangan (Stulap)</li>
-                <li>Banner Aksi & Atribut Dokumentasi</li>
-                <li>Asistensi Penulisan Tugas Kelompok & Individu</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="cetakModal" class="modal" onclick="closeModal('cetakModal')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <h3 class="font-black text-primary text-xl border-b-2 border-gold pb-2 mb-4 uppercase">PERCETAKAN</h3>
-            <ul class="list-redaksi">
-                <li>Cetak Majalah Full Color High Quality</li>
-                <li>Cetak Banner, X-Banner & Roll-Up</li>
-                <li>Desain Infografis Resolusi Tinggi (300 DPI)</li>
-                <li>Edit Video Testimoni & Dokumentasi Aksi</li>
-            </ul>
-        </div>
+        <p class="text-[9px] text-white/30 uppercase tracking-[0.2em]">Hak Cipta © 2026 AW Solutions - Makassar</p>
     </div>
 
     <div class="bottom-nav">
@@ -236,8 +200,6 @@
             document.querySelectorAll('.nav-item')[index].classList.add('active');
             window.scrollTo(0,0);
         }
-        function openModal(id) { document.getElementById(id).style.display = 'block'; }
-        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
     </script>
 </body>
 </html>
