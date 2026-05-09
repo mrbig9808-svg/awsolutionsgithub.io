@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ✅ HALAMAN UTAMA - LENGKAP SEMUA KATA KUNCI -->
   <url>
     <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ✅ PROFIL AW SOLUTIONS -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#profil</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ✅ LAYANAN UTAMA -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#layanan</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- ✅ LAYANAN PKN - PELATIHAN KEPEMIMPINAN NASIONAL TK II & TK I -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#pkn-pelatihan-kepemimpinan-nasional-tingkat-2-dan-tingkat-1</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ✅ LAYANAN PKA - PELATIHAN KEPEMIMPINAN ADMINISTRATOR -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#pka-pelatihan-kepemimpinan-administrator</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ✅ LAYANAN PKP - PELATIHAN KEPEMIMPINAN PENGAWAS -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#pkp-pelatihan-kepemimpinan-pengawas</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ✅ DESAIN DAN CETAK DOKUMEN, MAKALAH, INFOGRAFIS, MAJALAH -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#desain-dan-cetak-dokumen-makalah-infografis-majalah</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ✅ PORTOFOLIO HASIL KARYA -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#portofolio</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ✅ KONTAK AW SOLUTIONS -->
+  <url>
+    <loc>https://awsolutions-id.github.io/jasa-tugas-diklat/#kontak</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
